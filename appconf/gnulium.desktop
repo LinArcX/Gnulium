@@ -1,0 +1,26 @@
+[Desktop Entry]
+Name=Gnulium
+Comment=Make Your Gnu/linux more Readble and Easy to Understand.
+Exec=pkexec gnulium
+Icon=gnulium
+Terminal=false
+Type=Application
+Keywords=Utility;
+Categories=Utility;Qt;
+
+#StartupNotify=true
+#Name[fa]=پرسپولیس
+#GenericName[fa]=نرم افزار مدیریت بارگیری
+#StartupWMClass=Persepolis Download Manager
+#Actions=Open;Tray;
+
+#[Desktop Action Open]
+#Name=Start Persepolis
+#Name[fa]=اجرای برنامه
+#Exec=persepolis
+
+#[Desktop Action Tray]
+#Name=Start in System Tray
+#Name[fa]=اجرای برنامه در سینی نمایه
+#Exec=persepolis --tray
+Name[en_US]=gnulium
