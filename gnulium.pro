@@ -19,6 +19,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += $$files(*.cpp, true)
 HEADERS += $$files(*.h, true)
 TRANSLATIONS = i18n/persian.ts
+OTHER_FILES += LICENSE\
+            README.md\
+            .gitignore
 
 RESOURCES += qml.qrc
 
