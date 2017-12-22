@@ -93,17 +93,32 @@ Dialog {
             id: rectLinks
             anchors.top: mRowGnulium.Bottom
             anchors.bottom: parent.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
             FontLoader {
                 id: fontAwesome
                 source: CORESTRINGS.fontAwesome
             }
 
+            Text {
+                id: gitVersionTitle
+                text: qsTr("Last Commit: ")
+                anchors.left: parent.left
+            }
 
+            Text {
+                id: gitVersion
+                text: qsTr(dispatcher.appVer)
+                anchors.left: gitVersionTitle.right
+                anchors.bottom: gitVersionTitle.bottom
+            }
 
             Text {
                 id: lnkGithub
-                anchors.centerIn: parent
+                anchors.left: gitVersion.right
+                anchors.bottom: gitVersion.bottom
+                anchors.leftMargin:
+                    dlgAboutQT.width / 2 -
+                    (gitVersionTitle.width + gitVersion.width +
+                     lnkGithub.width + lnkTelegram.width + lnkSite.width)
                 font.family: fontAwesome.name
                 font.pointSize: 15
                 text: "\uf09b"

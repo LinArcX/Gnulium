@@ -1,7 +1,7 @@
 QT += qml quick charts
 CONFIG += c++11
 #QMAKE_CXXFLAGS += -std=c++14
-VERSION = 1.0.0
+VERSION = $$system(git log --pretty=format:'%h' -n 1)
 
 DEFINES += APP_VER=\\\"$$VERSION\\\"
 

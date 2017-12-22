@@ -49,12 +49,17 @@ var imgGnulium = "qrc:/images/gnulium.svg";
 var imgRam = "qrc:/images/ram.svg";
 var imgArch = "qrc:/images/arch.svg";
 var imgChip = "qrc:/images/chip.svg";
+var imgQT = "qrc:/images/qtLogo.png";
+var imgHome = "qrc:/images/home.svg";
 var imgRadar = "qrc:/images/radar.svg";
 var imgError = "qrc:/images/error.svg";
 var imgPower = "qrc:/images/power.svg";
+var imgTvdoon = "qrc:/images/tvdoon.png";
+var imgPacman = "qrc:/images/pacman.png";
 var imgCircuit = "qrc:/images/circuit.svg";
 var imgService = "qrc:/images/service.svg";
 var imgPalette = "qrc:/images/palette.svg";
+var imgGnulium = "qrc:/images/gnulium.svg";
 var imgGnuLinux = "qrc:/images/gnuLinux.png";
 var imgHardDisk = "qrc:/images/hardDisk.svg";
 

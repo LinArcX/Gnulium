@@ -5,7 +5,7 @@ var linuxToolTip = "Linux at wikipedia";
 var lilyToolTip = "Lily Flower:)";
 
 
-var githubLink = "https://github.com/LinArcX";
+var githubLink = "https://github.com/LinArcX/Gnulium";
 var telegramLink = "https://t.me/neora";
 var websiteLink = "https://linarcx.github.io";
 

@@ -12,7 +12,7 @@ MenuBar {
             onTriggered: JS.createMenuItem(tabView, CORESTRINGS.home,
                                            CORESTRINGS.tabHomeLink);
             icon{
-                source: CORESTRINGS.imgService; width: 15; height: 15
+                source: CORESTRINGS.imgHome; width: 15; height: 15
             }
 
         }
@@ -47,6 +47,9 @@ MenuBar {
                 text: CORESTRINGS.pacman
                 onTriggered: JS.createMenuItem(tabView, CORESTRINGS.pacman,
                                                CORESTRINGS.tabProcessorsLink);
+                icon{
+                    source: CORESTRINGS.imgPacman; width: 15; height: 15
+                }
             }
         }
     }
@@ -57,6 +60,9 @@ MenuBar {
             text: qsTr(CORESTRINGS.tvdoon)
             onTriggered:JS.createMenuItem(tabView, CORESTRINGS.tvdoon,
                                           CORESTRINGS.tabProcessorsLink);
+            icon{
+                source: CORESTRINGS.imgTvdoon; width: 15; height: 15
+            }
         }
     }
 
@@ -68,10 +74,16 @@ MenuBar {
         Action {
             text: qsTr(CORESTRINGS.aboutGnulium)
             onTriggered: mAboutGnulium.open();
+            icon{
+                source: CORESTRINGS.imgGnulium; width: 15; height: 15
+            }
         }
         Action {
             text: qsTr(CORESTRINGS.aboutQT)
-            onTriggered: myApplication.aboutQt()
+            onTriggered: app.aboutQt()
+            icon{
+                source: CORESTRINGS.imgQT; width: 15; height: 15
+            }
         }
     }
 }
