@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Gnulium
 Comment=Make Your Gnu/linux more Readble and Easy to Understand.
-Exec=pkexec gnulium
+Exec=gksudo gnulium
 Icon=gnulium
 Terminal=false
 Type=Application

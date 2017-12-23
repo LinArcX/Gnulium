@@ -8,25 +8,7 @@ Row{
     spacing: CStr.rowSpacing
     anchors.fill: parent
 
-    Column{
-        width: parent.width / 5 * 1
-        height: parent.height
-        Image {
-            id: imgGnuLinux
-            source: CStr.imgGnuLinux
-            width: parent.width
-            height: parent.width
-        }
-        ScrollView {
-            Text {
-                id: sd
-                text: qsTr(Str.gnuLinux)
-                width: imgGnuLinux.width
-                height: 10
-                padding: 10
-                wrapMode: Text.WordWrap
-            }
-        }
+    LauncherPillar{
     }
 
     Grid {

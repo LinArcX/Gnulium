@@ -14,6 +14,7 @@
         <file alias="strings/LauncherStrings.js">launcher/view/strings/LauncherStrings.js</file>
         <file alias="LauncherOpenPorts.qml">launcher/view/LauncherOpenPorts.qml</file>
         <file alias="LauncherSystemdAnalyze.qml">launcher/view/LauncherSystemdAnalyze.qml</file>
+        <file alias="LauncherPillar.qml">launcher/view/LauncherPillar.qml</file>
     </qresource>
     <qresource prefix="/util">
         <file alias="js/TableCreator.js">util/js/TableCreator.js</file>
@@ -49,6 +50,10 @@
     </qresource>
     <qresource prefix="/fonts">
         <file alias="fontAwesome.ttf">fonts/fontawesome-webfont.ttf</file>
+        <file alias="radioSpace.ttf">fonts/radiospace.ttf</file>
+        <file alias="shabnam.ttf">fonts/Shabnam.ttf</file>
+        <file alias="vazir.ttf">fonts/Vazir.ttf</file>
+        <file alias="XmYekan.ttf">fonts/XM Yekan.ttf</file>
     </qresource>
     <qresource prefix="/dialogs">
         <file alias="AboutGnulium.qml">dialogs/AboutGnulium.qml</file>

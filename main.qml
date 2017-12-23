@@ -25,10 +25,6 @@ ApplicationWindow {
         id: mAppMenuBar
     }
 
-    //    Launcher{
-    //        id: mLauncher;
-    //    }
-
     Component.onCompleted: {
         var component = Qt.createComponent(CORESTRINGS.tabHomeLink);
         tabView.addTab(CORESTRINGS.home, component);

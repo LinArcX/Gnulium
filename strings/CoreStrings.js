@@ -65,6 +65,7 @@ var imgHardDisk = "qrc:/images/hardDisk.svg";
 
 // fonts
 var fontAwesome = "qrc:/fonts/fontAwesome.ttf";
+var fontRadioSpace = "qrc:/fonts/radioSpace.ttf";
 
 // colors
 var transparent = "transparent";

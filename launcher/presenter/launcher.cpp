@@ -16,6 +16,9 @@ using namespace std;
 
 Launcher::Launcher(QObject* parent)
 {
+    //history 50 | awk '{h[$2]++}END{for(i in h){print h[i],i|"sort -rn|head -20"}}'
+
+    //iwgetid -r; cat /sys/class/net/$(ip route show default | awk '/default/ {print $5}')/address;
 }
 
 void Launcher::execTopMemory()
@@ -59,7 +62,7 @@ void Launcher::execActiveServices()
 void Launcher::execOpenPorts()
 {
     pOpenPorts = new QProcess(this);
-    QString command = "echo 's' | sudo -S netstat -tlnp | awk '{print $7, $4, $1}'";
+    QString command = "sudo netstat -tlnp | awk '{print $7, $4, $1}'";
     connect(pOpenPorts, &QProcess::readyReadStandardOutput, this, &Launcher::returnOpenPorts);
     pOpenPorts->start("sh", QStringList() << "-c" << command);
 }
@@ -69,13 +72,20 @@ void Launcher::execSystemdAnalyze()
     pSystemdAnalyze = new QProcess(this);
     QString command = "systemd-analyze blame | head -10 |  sed -e 's/^[ \t]*//'";
     connect(pSystemdAnalyze, &QProcess::readyReadStandardOutput,
-            this, &Launcher::returnSystemdAnalyze);
+        this, &Launcher::returnSystemdAnalyze);
     pSystemdAnalyze->start("sh", QStringList() << "-c" << command);
 }
 
 void Launcher::execTime()
 {
+    //echo "Date=$(date +"%H:%M%p" )";echo "DateGMT=$(date -u +"%H:%M%p")";echo "DateDesc=$(date +%A,' '%d' '%B,' '%Y)";echo "DatePersian=$(jdate +%G' '%d' '%V','%Y|fribidi --ltr)";
 
+    //date +"%H:%M%p"; date -u +"%H:%M%p"; date +%A,' '%d' '%B,' '%Y; jdate +%G' '%d' '%V','%Y|fribidi --ltr;
+
+    pTime = new QProcess(this);
+    QString command = "date +\"%H:%M %p\"; date -u +\"%H:%M %p\"; date +%A,' '%d' '%B,' '%Y; jdate +%G' '%d' '%V' '%Y";
+    connect(pTime, &QProcess::readyReadStandardOutput, this, &Launcher::returnTime);
+    pTime->start("sh", QStringList() << "-c" << command);
 }
 
 void Launcher::execMainInfo()
@@ -153,7 +163,14 @@ void Launcher::returnSystemdAnalyze()
 
 void Launcher::returnTime()
 {
-    //date +"%H:%M %p"
+    QString outPut = QString(pTime->readAllStandardOutput());
+    QStringList list = outPut.split("\n");
+    list.removeLast();
+    QVariantList lst;
+    foreach (QString item, list) {
+        lst.append(item);
+    }
+    emit modelReady(lst);
 }
 
 void Launcher::returnMainInfo()
