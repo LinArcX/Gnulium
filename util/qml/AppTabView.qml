@@ -7,7 +7,7 @@ import "qrc:/dialogs"
 import "qrc:/strings/CoreStrings.js" as CStr
 
 TabView {
-    //id: mTabView
+    id: mTabView
     anchors.fill: parent
     anchors.margins: CStr.tabViewMargin
     anchors.topMargin: mAppMenuBar.height
@@ -20,7 +20,7 @@ TabView {
         property color fillColor: "#eee"
         frameOverlap: 1
         frame: Rectangle {
-            color: "#eee"
+            color: "#F9F9F9"//"#F1F1F1"//"#EFEFEF"//"#E6E6E6"
             border.color: frameColor
         }
         tab: Rectangle {
@@ -54,7 +54,7 @@ TabView {
                     onEntered: mButtonClose.color = "#FF5722";
                     onExited: mButtonClose.color = "black"
                     onClicked:{
-                        console.log(styleData.totalWidth);
+                        //console.log(styleData.totalWidth);
                         if(tabView.count>1){
                             tabView.removeTab(styleData.index)
                         }else{

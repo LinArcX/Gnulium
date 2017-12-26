@@ -2,61 +2,72 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file alias="qtquickcontrols2.conf">appconf/qtquickcontrols2.conf</file>
-        <file>strings/CoreStrings.js</file>
+        <file alias="strings/CoreStrings.js">util/strings/CoreStrings.js</file>
     </qresource>
     <qresource prefix="/launcher">
-        <file alias="launcher.qml">launcher/view/launcher.qml</file>
-        <file alias="LauncherProcess.qml">launcher/view/LauncherProcess.qml</file>
-        <file alias="LauncherMemory.qml">launcher/view/LauncherMemory.qml</file>
-        <file alias="LauncherHardDisk.qml">launcher/view/LauncherHardDisk.qml</file>
-        <file alias="LauncherActiveServices.qml">launcher/view/LauncherActiveServices.qml</file>
-        <file alias="LauncherInfo.qml">launcher/view/LauncherInfo.qml</file>
-        <file alias="strings/LauncherStrings.js">launcher/view/strings/LauncherStrings.js</file>
-        <file alias="LauncherOpenPorts.qml">launcher/view/LauncherOpenPorts.qml</file>
-        <file alias="LauncherSystemdAnalyze.qml">launcher/view/LauncherSystemdAnalyze.qml</file>
-        <file alias="LauncherPillar.qml">launcher/view/LauncherPillar.qml</file>
+        <file alias="launcher.qml">modules/launcher/view/launcher.qml</file>
+        <file alias="LauncherProcess.qml">modules/launcher/view/LauncherProcess.qml</file>
+        <file alias="LauncherMemory.qml">modules/launcher/view/LauncherMemory.qml</file>
+        <file alias="LauncherHardDisk.qml">modules/launcher/view/LauncherHardDisk.qml</file>
+        <file alias="LauncherActiveServices.qml">modules/launcher/view/LauncherActiveServices.qml</file>
+        <file alias="LauncherInfo.qml">modules/launcher/view/LauncherInfo.qml</file>
+        <file alias="strings/LauncherStrings.js">modules/launcher/view/strings/LauncherStrings.js</file>
+        <file alias="LauncherOpenPorts.qml">modules/launcher/view/LauncherOpenPorts.qml</file>
+        <file alias="LauncherSystemdAnalyze.qml">modules/launcher/view/LauncherSystemdAnalyze.qml</file>
+        <file alias="LauncherPillar.qml">modules/launcher/view/LauncherPillar.qml</file>
     </qresource>
     <qresource prefix="/util">
         <file alias="js/TableCreator.js">util/js/TableCreator.js</file>
-        <file alias="qml/ToolTipArea.qml">util/qml/ToolTipArea.qml</file>
-        <file alias="qml/ToolTiper.qml">util/qml/ToolTiper.qml</file>
-        <file alias="qml/Scaler.qml">util/qml/Scaler.qml</file>
         <file alias="qml/AppMenuBar.qml">util/qml/AppMenuBar.qml</file>
         <file alias="qml/AppTabView.qml">util/qml/AppTabView.qml</file>
         <file alias="js/MenuCreator.js">util/js/MenuCreator.js</file>
+        <file alias="qml/ToolTipArea.qml">util/qml/components/ToolTipArea.qml</file>
+        <file alias="qml/ToolTiper.qml">util/qml/components/ToolTiper.qml</file>
+        <file alias="qml/Scaler.qml">util/qml/components/Scaler.qml</file>
+        <file alias="qml/SpacerVertical.qml">util/qml/components/SpacerVertical.qml</file>
+        <file alias="qml/TextScroll.qml">util/qml/components/TextScroll.qml</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="diskette.svg">images/diskette.svg</file>
-        <file alias="hardDisk.svg">images/hard-disk.svg</file>
-        <file alias="ram.svg">images/ram.svg</file>
-        <file alias="service.svg">images/service.svg</file>
-        <file alias="gnulium.svg">images/gnulium.svg</file>
-        <file alias="gnu.png">images/Gnu.png</file>
-        <file alias="tux.png">images/tux.png</file>
-        <file alias="circuit.svg">images/circuit.svg</file>
-        <file alias="chip.svg">images/chip.svg</file>
-        <file alias="error.svg">images/error.svg</file>
-        <file alias="power.svg">images/power.svg</file>
-        <file alias="palette.svg">images/palette.svg</file>
-        <file alias="gnuLinux.png">images/gnu-linux.png</file>
-        <file alias="radar.svg">images/radar.svg</file>
-        <file alias="qtLogo.png">images/qtLogo.png</file>
-        <file alias="tvdoon.png">images/tvdoon.png</file>
-        <file alias="pacman.png">images/pacman.png</file>
-        <file alias="home.svg">images/home.svg</file>
+        <file alias="diskette.svg">util/images/diskette.svg</file>
+        <file alias="hardDisk.svg">util/images/hard-disk.svg</file>
+        <file alias="ram.svg">util/images/ram.svg</file>
+        <file alias="service.svg">util/images/service.svg</file>
+        <file alias="gnulium.svg">util/images/gnulium.svg</file>
+        <file alias="gnu.png">util/images/Gnu.png</file>
+        <file alias="tux.png">util/images/tux.png</file>
+        <file alias="circuit.svg">util/images/circuit.svg</file>
+        <file alias="chip.svg">util/images/chip.svg</file>
+        <file alias="error.svg">util/images/error.svg</file>
+        <file alias="power.svg">util/images/power.svg</file>
+        <file alias="palette.svg">util/images/palette.svg</file>
+        <file alias="gnuLinux.png">util/images/gnu-linux.png</file>
+        <file alias="radar.svg">util/images/radar.svg</file>
+        <file alias="qtLogo.png">util/images/qtLogo.png</file>
+        <file alias="tvdoon.png">util/images/tvdoon.png</file>
+        <file alias="home.svg">util/images/home.svg</file>
+        <file alias="pacman.png">util/images/pacman.png</file>
+        <file alias="settings.svg">util/images/settings-4.svg</file>
+        <file alias="text.svg">util/images/text.svg</file>
+        <file alias="fontSize.svg">util/images/fontSize.svg</file>
     </qresource>
     <qresource prefix="/i18n">
-        <file alias="persian.qm">i18n/persian.qm</file>
+        <file alias="persian.qm">util/i18n/persian.qm</file>
     </qresource>
     <qresource prefix="/fonts">
-        <file alias="fontAwesome.ttf">fonts/fontawesome-webfont.ttf</file>
-        <file alias="radioSpace.ttf">fonts/radiospace.ttf</file>
-        <file alias="shabnam.ttf">fonts/Shabnam.ttf</file>
-        <file alias="vazir.ttf">fonts/Vazir.ttf</file>
-        <file alias="XmYekan.ttf">fonts/XM Yekan.ttf</file>
+        <file alias="Vazir.ttf">util/fonts/Vazir.ttf</file>
+        <file alias="Shabnam.ttf">util/fonts/Shabnam.ttf</file>
+        <file alias="Adele.ttf">util/fonts/Adele.ttf</file>
+        <file alias="RadioSpace.ttf">util/fonts/RadioSpace.ttf</file>
+        <file alias="XmYekan.ttf">util/fonts/XMYekan.ttf</file>
+        <file alias="FontAwesome.ttf">util/fonts/FontAwesome.ttf</file>
     </qresource>
     <qresource prefix="/dialogs">
-        <file alias="AboutGnulium.qml">dialogs/AboutGnulium.qml</file>
-        <file alias="strings/DialogsStrings.js">dialogs/strings/DialogsStrings.js</file>
+        <file alias="AboutGnulium.qml">util/qml/dialogs/AboutGnulium.qml</file>
+        <file alias="strings/DialogStrings.js">util/qml/dialogs/strings/DialogsStrings.js</file>
+    </qresource>
+    <qresource prefix="/settings">
+        <file alias="settings.qml">modules/settings/view/settings.qml</file>
+        <file alias="SettingsPillar.qml">modules/settings/view/SettingsPillar.qml</file>
+        <file alias="strings/SettingsStrings.js">modules/settings/view/strings/SettingsStrings.js</file>
     </qresource>
 </RCC>

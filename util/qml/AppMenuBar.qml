@@ -2,88 +2,133 @@ import QtQuick 2.9
 import QtQuick.Controls 2.3
 import "qrc:/dialogs"
 import "qrc:/util/js/MenuCreator.js" as JS
-import "qrc:/strings/CoreStrings.js" as CORESTRINGS
+import "qrc:/strings/CoreStrings.js" as CStr
 
 MenuBar {
-    Menu {
-        title: qsTr(CORESTRINGS.gnulium)
-        Action{
-            text: CORESTRINGS.home
-            onTriggered: JS.createMenuItem(tabView, CORESTRINGS.home,
-                                           CORESTRINGS.tabHomeLink);
-            icon{
-                source: CORESTRINGS.imgHome; width: 15; height: 15
-            }
+    id: menuBar
 
+    Menu {
+        title: qsTr(CStr.gnulium)
+        Action{
+            text: CStr.home
+            onTriggered: JS.createMenuItem(tabView, CStr.home,
+                                           CStr.tabHomeLink);
+            icon{
+                source: CStr.imgHome; width: 15; height: 15
+            }
         }
         Menu{
-            title: qsTr(CORESTRINGS.hardware)
+            title: qsTr(CStr.hardware)
             Action {
-                text: qsTr(CORESTRINGS.memory)
+                text: qsTr(CStr.memory)
                 shortcut: StandardKey.Copy
                 //onTriggered: window.activeFocusItem.copy()
-                onTriggered:JS.createMenuItem(tabView, CORESTRINGS.memory,
-                                              CORESTRINGS.tabMemoryLink);
+                onTriggered:JS.createMenuItem(tabView, CStr.memory,
+                                              CStr.tabMemoryLink);
                 icon{
-                    source: CORESTRINGS.imgRam; width: 15; height: 15
+                    source: CStr.imgRam; width: 15; height: 15
                 }
             }
         }
         MenuSeparator { }
         Action {
-            text: qsTr(CORESTRINGS.quit);
+            text: qsTr(CStr.quit);
             onTriggered: Qt.quit();
             icon{
-                source: CORESTRINGS.imgPower; width: 15; height: 15
+                source: CStr.imgPower; width: 15; height: 15
             }
         }
+
     }
 
     Menu {
-        title: qsTr(CORESTRINGS.distribiutions)
+        title: qsTr(CStr.distribiutions)
         Menu{
-            title: qsTr(CORESTRINGS.arch)
+            title: qsTr(CStr.arch)
             Action{
-                text: CORESTRINGS.pacman
-                onTriggered: JS.createMenuItem(tabView, CORESTRINGS.pacman,
-                                               CORESTRINGS.tabProcessorsLink);
+                text: CStr.pacman
+                onTriggered: JS.createMenuItem(tabView, CStr.pacman,
+                                               CStr.tabProcessorsLink);
                 icon{
-                    source: CORESTRINGS.imgPacman; width: 15; height: 15
+                    source: CStr.imgPacman; width: 15; height: 15
                 }
             }
         }
     }
 
     Menu {
-        title: qsTr(CORESTRINGS.utitlity)
+        title: qsTr(CStr.utitlity)
         Action {
-            text: qsTr(CORESTRINGS.tvdoon)
-            onTriggered:JS.createMenuItem(tabView, CORESTRINGS.tvdoon,
-                                          CORESTRINGS.tabProcessorsLink);
+            text: qsTr(CStr.tvdoon)
+            onTriggered:JS.createMenuItem(tabView, CStr.tvdoon,
+                                          CStr.tabProcessorsLink);
             icon{
-                source: CORESTRINGS.imgTvdoon; width: 15; height: 15
+                source: CStr.imgTvdoon; width: 15; height: 15
             }
         }
     }
 
     Menu {
-        title: qsTr(CORESTRINGS.help)
+        title: qsTr(CStr.help)
         AboutGnulium{
             id: mAboutGnulium
         }
         Action {
-            text: qsTr(CORESTRINGS.aboutGnulium)
-            onTriggered: mAboutGnulium.open();
+            text: qsTr(CStr.settings)
+            onTriggered: JS.createMenuItem(tabView, CStr.settings,
+                                           CStr.tabSettingsLink);
             icon{
-                source: CORESTRINGS.imgGnulium; width: 15; height: 15
+                source: CStr.imgSettings; width: 15; height: 15
             }
         }
         Action {
-            text: qsTr(CORESTRINGS.aboutQT)
+            text: qsTr(CStr.aboutGnulium)
+            onTriggered: mAboutGnulium.open();
+            icon{
+                source: CStr.imgGnulium; width: 15; height: 15
+            }
+        }
+        Action {
+            text: qsTr(CStr.aboutQT)
             onTriggered: app.aboutQt()
             icon{
-                source: CORESTRINGS.imgQT; width: 15; height: 15
+                source: CStr.imgQT; width: 15; height: 15
             }
         }
     }
+
+    //    delegate: MenuBarItem {
+    //        id: menuBarItem
+
+    //        contentItem: Text {
+    //            text: menuBarItem.text
+    //            font: menuBarItem.font
+    //            opacity: enabled ? 1.0 : 0.3
+    //            color: menuBarItem.highlighted ? "#ffffff" : "#21be2b"
+    //            horizontalAlignment: Text.AlignLeft
+    //            verticalAlignment: Text.AlignVCenter
+    //            elide: Text.ElideRight
+    //            height: 10
+    //        }
+
+    //        background: Rectangle {
+    //            implicitWidth: 40
+    //            implicitHeight: 20
+    //            opacity: enabled ? 1 : 0.3
+    //            color: menuBarItem.highlighted ? "#21be2b" : "transparent"
+    //        }
+    //    }
+
+    //    background: Rectangle {
+    //        implicitWidth: 40
+    //        implicitHeight: 40
+    //        color: "#ffffff"
+
+    //        Rectangle {
+    //            color: "#21be2b"
+    //            width: parent.width
+    //            height: 1
+    //            anchors.bottom: parent.bottom
+    //        }
+    //    }
 }

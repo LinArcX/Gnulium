@@ -1,4 +1,4 @@
-QT += qml quick charts
+QT += qml quick charts quickcontrols2
 CONFIG += c++11
 #QMAKE_CXXFLAGS += -std=c++14
 VERSION = $$system(git log --pretty=format:'%h' -n 1)
@@ -19,11 +19,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += $$files(*.cpp, true)
 HEADERS += $$files(*.h, true)
 TRANSLATIONS = i18n/persian.ts
+RESOURCES += qml.qrc
 OTHER_FILES += LICENSE\
             README.md\
             .gitignore
 
-RESOURCES += qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
