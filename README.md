@@ -48,8 +48,6 @@ My first initial priority was to get this extension stable enough to upload to e
 |qt5-quickcontrols2|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |qt5-charts|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |jcal-git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-
-    `git, qt5-base, qt5-quickcontrols2, qt5-charts, jcal-git`
     
 3. clone the repo:
 
@@ -64,6 +62,7 @@ My first initial priority was to get this extension stable enough to upload to e
     `make`
     
 5. run the application:
+
     `./gnulium`
 
 
