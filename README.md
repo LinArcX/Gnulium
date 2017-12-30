@@ -45,8 +45,8 @@ My first initial priority was to get this extension stable enough to upload to e
 |-----|:-----:|-----|:-----:|
 |git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |gnome-tweak-tool|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|gnome-tweak-tool|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|gnome-menus|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|gnome-session|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|gnome-menus|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|gnome-menus|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|gnome-session|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|gnome-session|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 
     `git, qt5-base, qt5-quickcontrols2, qt5-charts, jcal-git`
     
