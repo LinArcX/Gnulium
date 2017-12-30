@@ -8,7 +8,9 @@ var fontSize = 14;
 // tables
 var openPortsTitle = "Open Ports";
 var systemdAnalyzeTitle = "Systemd Analyze";
+var bootTiemTitle = "Boot Time";
 var topMemoryTitle = "Top Memory";
+var upTimeTitle = "Up Time";
 var topProcessTitle = "Top Process";
 var hardDiskTitle = "Hard Disk Info";
 var activeServicetitle = "Active Services"
@@ -45,9 +47,16 @@ var lopThird = "Protocol";
 var lsdaFirst = "Time"
 var lsdaSecond = "Unit"
 
+// launcherBootTime
+var lbtFirst = "Title"
+var lbtSecond = "Time"
+
 // launcherProcess
 var lpFirst = "PID";
 var lpSecond = "COMMAND";
 var lpThird = "%CPU";
 
 var gnuLinux = "GNU/Linux is an operating system, a large piece of software that manages a computer. It is similar to Microsoft Windows, but it is entirely free. The accurate name is GNU/Linux.";
+
+var systemAge = "System Age: ";
+var upTime = "Up Time: ";

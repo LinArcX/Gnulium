@@ -1,7 +1,7 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
-#include "util/headers/PropertyHelper.h"
+#include "modules/utils/macros/PropertyHelper.h"
 #include <QObject>
 #include <QString>
 #include <QVariantMap>

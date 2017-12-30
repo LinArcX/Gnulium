@@ -1,7 +1,7 @@
 #ifndef LAUNCHER_H
 #define LAUNCHER_H
 
-#include "util/headers/PropertyHelper.h"
+#include "modules/utils/macros/PropertyHelper.h"
 #include <QObject>
 #include <QProcess>
 #include <QString>
@@ -25,6 +25,9 @@ public:
     QProcess* pOpenPorts;
     QProcess* pSystemdAnalyze;
     QProcess* pTime;
+    QProcess* pBootTime;
+    QProcess* pArchAge;
+    QProcess* pUpTime;
 
     void returnMainInfo();
     void returnTopMemory();
@@ -34,6 +37,9 @@ public:
     void returnOpenPorts();
     void returnSystemdAnalyze();
     void returnTime();
+    void returnBootTime();
+    void returnArchAge();
+    void returnUpTime();
 
 
     void returnStandardError();
@@ -52,6 +58,9 @@ public slots:
     void execOpenPorts();
     void execSystemdAnalyze();
     void execTime();
+    void execBootTime();
+    void execArchAge();
+    void execUpTime();
 
 signals:
     void modelReady(QVariantList model);

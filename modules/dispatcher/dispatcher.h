@@ -4,6 +4,7 @@
 #include <QApplication>
 #include <QObject>
 #include <QString>
+#include <QProcess>
 
 class QQmlApplicationEngine;
 class QApplication;
@@ -16,7 +17,6 @@ public:
     QString appVer() const { return APP_VER; }
     QQmlApplicationEngine& getEngine() const { return mEngine; }
     QApplication& getApp() const { return mApp; }
-
 
 signals:
 

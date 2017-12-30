@@ -69,6 +69,7 @@ Row{
                         anchors.top: imgStyle.bottom
                         anchors.horizontalCenter: parent.horizontalCenter
                         z:-1
+                        currentIndex: 1
                         model: ListModel {
                             id: styleModel
                             ListElement { text: "Default" }
@@ -104,6 +105,7 @@ Row{
                         anchors.top: imgFontFamily.bottom
                         anchors.horizontalCenter: parent.horizontalCenter
                         z:-1
+                        currentIndex: 2
                         model: ListModel {
                             id: styleFontFamily
                             ListElement { text: "Vazir"}
@@ -111,6 +113,7 @@ Row{
                             ListElement { text: "XmYekan" }
                             ListElement { text: "Shabnam" }
                             ListElement { text: "RadioSpace" }
+                            ListElement { text: "CaviarDreams" }
                         }
                     }
                 }

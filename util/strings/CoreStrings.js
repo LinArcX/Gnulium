@@ -14,11 +14,14 @@ var hardware = "&Hardware";
 var memory = "&Memory";
 
 var distribiutions = "&Distributions"
+var pkgManagers = "PKG-Managers"
 var arch = "Arch";
 var pacman = "Pacman";
 
 var utitlity = "&Utility";
+var scripts = "Scripts";
 var tvdoon = "&TvDoon";
+var histogram = "Histogram";
 
 var help = "&Help";
 var aboutQT = "&About Qt";
@@ -39,9 +42,9 @@ var sixthValue = "sixthValue";
 
 // qml's
 var tabHomeLink = "qrc:/launcher/launcher.qml";
-var tabMemoryLink = "qrc:/launcher/LauncherMemory.qml";
-var tabProcessorsLink = "qrc:/launcher/LauncherInfoUserName.qml";
 var tabSettingsLink = "qrc:/settings/settings.qml";
+var tabHistogramLink = "qrc:/histogram/histogram.qml";
+var tabMemoryLink = "qrc:/launcher/LauncherMemory.qml";
 
 // images
 var imgGnu = "qrc:/images/gnu.png";
@@ -50,6 +53,8 @@ var imgGnulium = "qrc:/images/gnulium.svg";
 
 // images-menu
 var imgRam = "qrc:/images/ram.svg";
+var imgMan = "qrc:/images/man.svg";
+var imgHourGlass = "qrc:/images/hourGlass.svg";
 var imgQT = "qrc:/images/qtLogo.png";
 var imgArch = "qrc:/images/arch.svg";
 var imgChip = "qrc:/images/chip.svg";
@@ -68,6 +73,9 @@ var imgFontSize = "qrc:/images/fontSize.svg";
 var imgSettings = "qrc:/images/settings.svg";
 var imgGnuLinux = "qrc:/images/gnuLinux.png";
 var imgHardDisk = "qrc:/images/hardDisk.svg";
+var imgAnalytics = "qrc:/images/analytics.svg";
+var imgAnalytics = "qrc:/images/analytics.svg";
+var imgAlarmClock = "qrc:/images/alarmClock.svg";
 
 // fonts
 var fontVazir = "qrc:/fonts/Vazir.ttf";
@@ -76,6 +84,7 @@ var fontShabnam = "qrc:/fonts/Shabnam.ttf";
 var fontXmYekan = "qrc:/fonts/XmYekan.ttf";
 var fontAwesome = "qrc:/fonts/FontAwesome.ttf";
 var fontRadioSpace = "qrc:/fonts/RadioSpace.ttf";
+var fontCaviarDreams = "qrc:/fonts/CaviarDreams.ttf";
 
 // colors
 var transparent = "transparent";

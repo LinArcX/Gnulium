@@ -15,6 +15,9 @@
         <file alias="LauncherOpenPorts.qml">modules/launcher/view/LauncherOpenPorts.qml</file>
         <file alias="LauncherSystemdAnalyze.qml">modules/launcher/view/LauncherSystemdAnalyze.qml</file>
         <file alias="LauncherPillar.qml">modules/launcher/view/LauncherPillar.qml</file>
+        <file alias="LauncherBootTime.qml">modules/launcher/view/LauncherBootTime.qml</file>
+        <file alias="LauncherArchAge.qml">modules/launcher/view/LauncherArchAge.qml</file>
+        <file alias="LauncherUpTime.qml">modules/launcher/view/LauncherUpTime.qml</file>
     </qresource>
     <qresource prefix="/util">
         <file alias="js/TableCreator.js">util/js/TableCreator.js</file>
@@ -49,6 +52,10 @@
         <file alias="settings.svg">util/images/settings-4.svg</file>
         <file alias="text.svg">util/images/text.svg</file>
         <file alias="fontSize.svg">util/images/fontSize.svg</file>
+        <file alias="alarmClock.svg">util/images/alarm-clock.svg</file>
+        <file alias="man.svg">util/images/man.svg</file>
+        <file alias="hourGlass.svg">util/images/hourglass.svg</file>
+        <file alias="analytics.svg">util/images/analytics.svg</file>
     </qresource>
     <qresource prefix="/i18n">
         <file alias="persian.qm">util/i18n/persian.qm</file>
@@ -60,6 +67,7 @@
         <file alias="RadioSpace.ttf">util/fonts/RadioSpace.ttf</file>
         <file alias="XmYekan.ttf">util/fonts/XMYekan.ttf</file>
         <file alias="FontAwesome.ttf">util/fonts/FontAwesome.ttf</file>
+        <file alias="CaviarDreams.ttf">util/fonts/CaviarDreams.ttf</file>
     </qresource>
     <qresource prefix="/dialogs">
         <file alias="AboutGnulium.qml">util/qml/dialogs/AboutGnulium.qml</file>
@@ -69,5 +77,10 @@
         <file alias="settings.qml">modules/settings/view/settings.qml</file>
         <file alias="SettingsPillar.qml">modules/settings/view/SettingsPillar.qml</file>
         <file alias="strings/SettingsStrings.js">modules/settings/view/strings/SettingsStrings.js</file>
+    </qresource>
+    <qresource prefix="/histogram">
+        <file alias="histogram.qml">modules/histogram/view/histogram.qml</file>
+        <file alias="HistogramPillar.qml">modules/histogram/view/HistogramPillar.qml</file>
+        <file alias="strings/HistogramStrings.js">modules/histogram/view/strings/HistogramStrings.js</file>
     </qresource>
 </RCC>

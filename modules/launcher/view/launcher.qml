@@ -17,46 +17,73 @@ Row{
     SpacerVertical{
     }
 
-    Grid {
-        columnSpacing: 2
-        rowSpacing: 8
-        columns: 4
+    Rectangle{
         width: (parent.width / 5 * 4) - (2 * CStr.tabViewMargin)
         height: parent.height
+        color: CStr.transparent
+        Grid {
+            id: mGrid
+            width: parent.width
+            height: parent.height / 5 * 4
+            anchors.top: parent.top
+            columns: 4
+            rowSpacing: 10
+            columnSpacing: 2
 
-        LauncherMemory {
-            width: (parent.width / 4) * 1
-            height: (parent.height / 3)
+            LauncherMemory {
+                width: (parent.width / 4) * 1
+                height: (parent.height / 2)
+            }
+
+            LauncherProcess {
+                width: (parent.width / 4) * 1
+                height: (parent.height / 2)
+            }
+
+            LauncherHardDisk{
+                width: (parent.width / 4) * 1
+                height: (parent.height / 2)
+            }
+
+            LauncherActiveServices{
+                width: (parent.width / 4) * 1
+                height: (parent.height / 2)
+            }
+
+            LauncherInfo{
+                width: (parent.width / 4) * 1
+                height: (parent.height / 2)
+            }
+
+            LauncherOpenPorts{
+                width: (parent.width / 4) * 1
+                height: (parent.height / 2)
+            }
+
+            LauncherSystemdAnalyze{
+                width: (parent.width / 4) * 1
+                height: (parent.height / 2)
+            }
+            LauncherBootTime{
+                width: (parent.width / 4) * 1
+                height: (parent.height / 2)
+            }
         }
-
-        LauncherProcess {
-            width: (parent.width / 4) * 1
-            height: (parent.height / 3)
-        }
-
-        LauncherHardDisk{
-            width: (parent.width / 4) * 1
-            height: (parent.height / 3)
-        }
-
-        LauncherActiveServices{
-            width: (parent.width / 4) * 1
-            height: (parent.height / 3)
-        }
-
-        LauncherInfo{
-            width: (parent.width / 4) * 1
-            height: (parent.height / 3)
-        }
-
-        LauncherOpenPorts{
-            width: (parent.width / 4) * 1
-            height: (parent.height / 3)
-        }
-
-        LauncherSystemdAnalyze{
-            width: (parent.width / 4) * 1
-            height: (parent.height / 3)
+        Rectangle{
+            width: parent.width
+            height: parent.height / 5 * 1
+            anchors.topMargin: 20
+            anchors.top: mGrid.bottom
+            anchors.bottom: parent.bottom
+            color: CStr.transparent
+            LauncherArchAge{
+                id:lnchArchAge
+            }
+            LauncherUpTime{
+                width: parent.width / 2
+                height: parent.height
+                anchors.left: lnchArchAge.right
+            }
         }
     }
 }

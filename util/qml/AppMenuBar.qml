@@ -17,17 +17,12 @@ MenuBar {
                 source: CStr.imgHome; width: 15; height: 15
             }
         }
-        Menu{
-            title: qsTr(CStr.hardware)
-            Action {
-                text: qsTr(CStr.memory)
-                shortcut: StandardKey.Copy
-                //onTriggered: window.activeFocusItem.copy()
-                onTriggered:JS.createMenuItem(tabView, CStr.memory,
-                                              CStr.tabMemoryLink);
-                icon{
-                    source: CStr.imgRam; width: 15; height: 15
-                }
+        Action {
+            text: qsTr(CStr.settings)
+            onTriggered: JS.createMenuItem(tabView, CStr.settings,
+                                           CStr.tabSettingsLink);
+            icon{
+                source: CStr.imgSettings; width: 15; height: 15
             }
         }
         MenuSeparator { }
@@ -42,45 +37,67 @@ MenuBar {
     }
 
     Menu {
-        title: qsTr(CStr.distribiutions)
-        Menu{
-            title: qsTr(CStr.arch)
-            Action{
-                text: CStr.pacman
-                onTriggered: JS.createMenuItem(tabView, CStr.pacman,
-                                               CStr.tabProcessorsLink);
-                icon{
-                    source: CStr.imgPacman; width: 15; height: 15
-                }
+        title: qsTr(CStr.scripts)
+        Action {
+            text: qsTr(CStr.histogram)
+            onTriggered:JS.createMenuItem(tabView, CStr.histogram,
+                                          CStr.tabHistogramLink);
+
+            icon{
+
+                source: CStr.imgAnalytics; width: 15; height: 15
             }
         }
     }
 
-    Menu {
-        title: qsTr(CStr.utitlity)
-        Action {
-            text: qsTr(CStr.tvdoon)
-            onTriggered:JS.createMenuItem(tabView, CStr.tvdoon,
-                                          CStr.tabProcessorsLink);
-            icon{
-                source: CStr.imgTvdoon; width: 15; height: 15
-            }
-        }
-    }
+//    Menu {
+//        title: qsTr(CStr.pkgManagers)
+//        Action{
+//            text: CStr.pacman
+//            onTriggered: JS.createMenuItem(tabView, CStr.pacman,
+//                                           CStr.tabProcessorsLink);
+//            icon{
+//                source: CStr.imgPacman; width: 15; height: 15
+//            }
+//        }
+//        //        Menu{
+//        //            title: qsTr(CStr.arch)
+//        //        }
+//    }
+
+
+
+//    Menu {
+//        title: qsTr(CStr.utitlity)
+//        Action {
+//            text: qsTr(CStr.tvdoon)
+//            onTriggered:JS.createMenuItem(tabView, CStr.tvdoon,
+//                                          CStr.tabProcessorsLink);
+//            icon{
+//                source: CStr.imgTvdoon; width: 15; height: 15
+//            }
+//        }
+//        Menu{
+//            title: qsTr(CStr.hardware)
+//            Action {
+//                text: qsTr(CStr.memory)
+//                shortcut: StandardKey.Copy
+//                //onTriggered: window.activeFocusItem.copy()
+//                onTriggered:JS.createMenuItem(tabView, CStr.memory,
+//                                              CStr.tabMemoryLink);
+//                icon{
+//                    source: CStr.imgRam; width: 15; height: 15
+//                }
+//            }
+//        }
+//    }
 
     Menu {
         title: qsTr(CStr.help)
         AboutGnulium{
             id: mAboutGnulium
         }
-        Action {
-            text: qsTr(CStr.settings)
-            onTriggered: JS.createMenuItem(tabView, CStr.settings,
-                                           CStr.tabSettingsLink);
-            icon{
-                source: CStr.imgSettings; width: 15; height: 15
-            }
-        }
+
         Action {
             text: qsTr(CStr.aboutGnulium)
             onTriggered: mAboutGnulium.open();

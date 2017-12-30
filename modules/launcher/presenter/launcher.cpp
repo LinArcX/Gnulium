@@ -88,6 +88,34 @@ void Launcher::execTime()
     pTime->start("sh", QStringList() << "-c" << command);
 }
 
+void Launcher::execBootTime()
+{
+    //systemd-analyze | head -n1 | cut -d" " -f4;systemd-analyze | head -n1 | cut -d" " -f7 ;systemd-analyze | head -n1 | cut -d" " -f10;
+
+    pBootTime = new QProcess(this);
+    QString command = "echo \"kernel=$(systemd-analyze | head -n1 | cut -d\" \" -f4)\";echo \"UserSpace=$(systemd-analyze | head -n1 | cut -d\" \" -f7)\";echo \"Total=$(systemd-analyze | head -n1 | cut -d\" \" -f10)\";";
+    connect(pBootTime, &QProcess::readyReadStandardOutput, this, &Launcher::returnBootTime);
+    pBootTime->start("sh", QStringList() << "-c" << command);
+}
+
+void Launcher::execArchAge()
+{
+    //todaySecond=$(date -d "$date" +"%s");installTime=$(ls -ld /lost+found | awk '{print $6, $7, $8}');installTimeSecond=$(date -d "$installTime" +"%s") ;ageSecond=$((todaySecond - installTimeSecond));alldays=$((ageSecond / 86400 ));monthfirst=$((alldays/30));year=$((monthfirst/12));month=$((monthfirst%12));day=$((alldays%30));echo "$year year,$month month,$day day";
+
+    pArchAge = new QProcess(this);
+    QString command = "todaySecond=$(date -d \"$date\" +\"%s\");installTime=$(ls -ld /lost+found | awk '{print $6, $7, $8}');installTimeSecond=$(date -d \"$installTime\" +\"%s\");ageSecond=$((todaySecond - installTimeSecond));alldays=$((ageSecond / 86400 ));monthfirst=$((alldays/30));year=$((monthfirst/12));month=$((monthfirst%12));day=$((alldays%30));echo \"$year year,$month month,$day day\";";
+    connect(pArchAge, &QProcess::readyReadStandardOutput, this, &Launcher::returnArchAge);
+    pArchAge->start("sh", QStringList() << "-c" << command);
+}
+
+void Launcher::execUpTime()
+{
+    pUpTime = new QProcess(this);
+    QString command = "uptime -p | sed -e 's/^\\w*\\ *//'";
+    connect(pUpTime, &QProcess::readyReadStandardOutput, this, &Launcher::returnUpTime);
+    pUpTime->start("sh", QStringList() << "-c" << command);
+}
+
 void Launcher::execMainInfo()
 {
     //uname -o; uname -r; uname -n; uname -m; echo $SHELL; echo $LANG; echo $EDITOR; echo $PAGER; echo $XDG_CURRENT_DESKTOP; echo $QT_QPA_PLATFORMTHEME; echo $DISPLAY;[ -d /sys/firmware/efi ] && echo UEFI || echo BIOS; echo $(lspci | grep VGA | cut -d" " -f5 | sed ':a;N;$!ba;s/\n/+/g'); echo $(xrandr --listproviders | awk '{print $(NF)}' | tail -2 | sed ':a;N;$!ba;s/\n/+/g' | sed -e 's/name://g');systemctl list-units -t service --all | wc -l; systemctl list-units -t service --failed | wc -l;lsmod | wc -l;
@@ -171,6 +199,34 @@ void Launcher::returnTime()
         lst.append(item);
     }
     emit modelReady(lst);
+}
+
+void Launcher::returnBootTime()
+{
+    QString outPut = QString(pBootTime->readAllStandardOutput());
+    QVariantList lst = beautifer(outPut);
+    emit modelReady(lst);
+}
+
+void Launcher::returnArchAge()
+{
+    QString outPut = QString(pArchAge->readAllStandardOutput());
+    //    QStringList list = outPut.split("\n");
+    //    list.removeLast();
+    QVariant qv(outPut);
+    //QVariantList lst;
+    //lst << outPut;
+    //    foreach (QString item, list) {
+    //        lst.append(item);
+    //    }
+    emit singleModelReady(qv);
+}
+
+void Launcher::returnUpTime()
+{
+    QString outPut = QString(pUpTime->readAllStandardOutput());
+    QVariant qv(outPut);
+    emit singleModelReady(qv);
 }
 
 void Launcher::returnMainInfo()
