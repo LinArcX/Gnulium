@@ -86,6 +86,15 @@ E-Mail:linarcx@gmail.com
 ## Special Thanks
 <img src="https://avatars.githubusercontent.com/esasharahi" width="48"> [esasharahi](https://github.com/esasharahi)
 
+<p align="center">
+  <b>Some Links:</b><br>
+  <a href="#">Link 1</a> |
+  <a href="#">Link 2</a> |
+  <a href="#">Link 3</a>
+  <br><br>
+  <img src="http://s.4cdn.org/image/title/105.gif">
+</p>
+
 
 ## License
 Gnulium is available under the terms of the [`GPL-3.0`](https://github.com/LinArcX/Gnulium/blob/master/LICENSE) license.
