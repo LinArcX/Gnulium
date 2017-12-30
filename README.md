@@ -2,7 +2,7 @@
 A Graphical Ui for managing scripts and ideas!
 
 ## Preview
-!["gnulium"](https://imgsafe.org/image/79d25487c7 "gnulium")
+!["gnulium"](http://uupload.ir/files/mzr7_screenshot_from_2017-12-30_15-54-10.png "gnulium")
 
 ## Features
 1. You Can Search TvShows According to Their Name.
