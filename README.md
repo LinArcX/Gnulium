@@ -1,3 +1,6 @@
+##
+ ![](https://img.shields.io/badge/Language-C++-yellow.svg) ![](https://img.shields.io/badge/Licence-GPL--3.0-blue.svg)
+ 
 # Gnulium
 A Graphical Ui for managing scripts and ideas!
 
@@ -164,5 +167,4 @@ Additional credits: This extension also leverages the work from [Giovanni Campag
 |@[elsieholmes](https://github.com/elsieholmes)|Ukrainian|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[PSSGCSim](https://github.com/PSSGCSim)|Czech|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |@[ipanamski](https://github.com/ipanamski)|Bulgarian|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[muhfajar](https://github.com/muhfajar) > updated by @[emhaye](https://github.com/emhaye)|Indonesian|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |@[artnay](https://github.com/artnay)|Finnish|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[Lrss](https://github.com/Lrss)|Danish|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|
-##
- ![](https://img.shields.io/badge/Language-C++-yellow.svg) ![](https://img.shields.io/badge/Licence-GPL--3.0-blue.svg)
+
