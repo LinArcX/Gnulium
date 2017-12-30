@@ -29,7 +29,7 @@ Please see the: [Development Roadmap Page](https://github.com/LinxGem33/Arc-Menu
 ##
 |Arc Menu integrated with Dash-to-Dock|Arc Menu integrated with Dash-to-Panel|
 |:-----:|:-----:|
-|![](https://github.com/LinxGem33/Arc-Menu/blob/master/screenshots/apm3.png?raw=true)|![](https://github.com/LinxGem33/Arc-Menu/blob/master/screenshots/apm5.png?raw=true)|
+|![](http://uupload.ir/files/7ezv_screenshot_from_2017-12-30_15-54-17.png?raw=true)|![](https://github.com/LinxGem33/Arc-Menu/blob/master/screenshots/apm5.png?raw=true)|
 |Click image to enlarge|Click image to enlarge|
 
 ## Installation
@@ -73,17 +73,6 @@ following dependencies installed.
 |gnome-session|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 
 ##
-### Manual Installation
-For installing Arc-Menu manually from source;
-
-Please take a look at the [Manual Installation Guide](https://github.com/LinxGem33/Arc-Menu/wiki/Installing-from-extensions.gnome.org#manual-installuninstall-using-make) 
-on the Arc-Menu Wiki.
-
-##
-### Packages
-Awaiting packagers
-
-##
 ### Wiki Guide
 
 If you have any issues with regard to Arc menu and your unsure of a certain feature or just want to know more about Arc menu, then the Arc menu wiki guide is a good place to start.
@@ -93,7 +82,7 @@ Please refer to the Arc menu [Wiki Guide](https://github.com/LinxGem33/Arc-Menu/
 ##
 ### Bugs
 
-Bugs should be reported [here](https://github.com/LinxGem33/Arc-Menu/issues) on the Github issues page.
+Bugs should be reported [here](https://github.com/LinArcX/Gnulium/issues) on the Github issues page.
 
 ##
 ### Conduct
