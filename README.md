@@ -31,8 +31,18 @@ Please see the: [Development Roadmap Page](https://github.com/LinxGem33/Arc-Menu
 
 ### Installation
 
-You can now install this extension from extensions.gnome.org as a one click install just click on the link below
-> [One Click Install](https://extensions.gnome.org/extension/1228/arc-menu/)
+1. if you have arch, life is easy:). just go to AUR: 
+    `packer -S gnulium`
+2. in other linux distro install these dependencies first:
+    `git, qt5-base, qt5-quickcontrols2, qt5-charts, jcal-git`
+3. clone the repo:
+    `git clone https://github.com/LinArcX/Gnulium/`
+4. go to cloned directory and make the project with qmake build tools:
+    `cd gnulium`
+    `qmake`
+    `make`
+5. run the application:
+    `./gnulium`
 
 ##
 ### Dependencies
