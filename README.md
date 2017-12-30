@@ -1,7 +1,7 @@
 # Gnulium
 A Graphical Ui for managing scripts and ideas!
 
-![](https://github.com/LinxGem33/Neon/blob/master/artwork/arc-wide-banner-new.png?raw=true)
+![](https://imgsafe.org/image/79d25487c7)
 
 ##
 ![](https://github.com/LinxGem33/Arc-Menu/blob/master/screenshots/browser.png?raw=true)
