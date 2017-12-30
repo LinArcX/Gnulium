@@ -27,8 +27,6 @@ Please see the: [Development Roadmap Page](https://github.com/LinxGem33/Arc-Menu
 |![](https://github.com/LinxGem33/Arc-Menu/blob/master/screenshots/apm3.png?raw=true)|![](https://github.com/LinxGem33/Arc-Menu/blob/master/screenshots/apm5.png?raw=true)|
 |Click image to enlarge|Click image to enlarge|
 
-##
-
 ## Installation
 
 1. if you have arch, life is easy:). just go to AUR: 
