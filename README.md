@@ -90,6 +90,29 @@ Please refer to the Arc menu [Wiki Guide](https://github.com/LinxGem33/Arc-Menu/
 
 Bugs should be reported [here](https://github.com/LinArcX/Gnulium/issues) on the Github issues page.
 
+
+## Contributing
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
+
+
+## VisitUs
+[bbs.archusers.ir](http://bbs.archusers.ir/index.php)
+
+## Credits
+LinArcX
+Blog:[stack.blog.ir](http://stack.blog.ir/)
+
+## Special Thanks
+[esasharahi](https://github.com/esasharahi)
+
+E-Mail:linarcx@gmail.com
+## License
+GNU GENERAL PUBLIC LICENSE(Version 3, 29 June 2007)
+
 ##
 ### Conduct
 
@@ -113,55 +136,3 @@ So, please provide us information about your GNU/Linux distribution and the GNOM
 
 Arc Menu is available under the terms of the GPL-2.0 license See [`COPYING`](https://github.com/LinxGem33/Arc-Menu/blob/master/COPYING) for details.
 ##
-
-### Credits
-
-This extension leverages some of the work from [Zorin OS menu](https://zorinos.com/).
-
-Additional credits: This extension also leverages the work from [Giovanni Campagna ](https://git.gnome.org//browse/gnome-shell-extensions) gnome Application Menu used in [Gnome 3](https://www.gnome.org/) to allow the menu to be embedded in the Gnome main panel.
-##
-
-### Project Developers
-
-#### @[LinxGem33](https://github.com/LinxGem33) - **Founder** - **Developer** - Digital Art Designer
-> Hi I'm LinxGem33 aka Andy and the founder of Arc menu, my role on the project is to manage and plan the technical and digital production and distribution of the Arc menu software, as you can imagine I’m a open source and Linux software enthusiast as well as a digital art designer and GTK3 theme developer,I also like to contribute to other projects where i can.  
-
-#### @[lexruee](https://github.com/lexruee) - **Lead Project Developer** - UI/UX Designer
-> Hi I’m lexruee aka Alex and the lead software developer and UI/UX designer on the Arc menu project, my role on the project is to manage and develop the code base and software integrity of Arc menu I’m also responsible for the UI/UX design and implimentation of the Arc menu software, I'm also a passionate programmer, hacker, and tinkerer. But I'm also a single Board Computer and GNU/Linux enthusiast. Besides all that I also like mountainbiking and reading. 
-
-##
-### Technical Advisors
-
-
-##
-
-### Pull Requests
-
-#### Thanks to the following people for contributing via pull requests:
-
-- @[fishears](https://github.com/fishears/Arc-Menu) (1) compiling the schema's (2) Added suspend button and re-order buttons
-- @[JasonLG1979](https://github.com/JasonLG1979)  (1) menu style fix, (2) Asynchronously set an icon and handle errors
-- @[itmitica](https://github.com/itmitica) (1) icon symbolic
-
-#### Bug Fixes:
-
-- @[JasonLG1979](https://github.com/JasonLG1979) (1) menu style fix
-- @[lexruee](https://github.com/lexruee/Arc-Menu) (1) correctly restore the Activities button
-##
-#### Please refer to the Wiki section for a [Translation Guide](https://github.com/LinxGem33/Arc-Menu/wiki/Translation-Guide)
-
-|Contributor|Language|Translated|Contributor|Language|Translated|
-|:-----|:-----|:-----:|:-----|:-----|:-----:|
-|@[h3r0n](https://github.com/h3r0n)|Italian|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[megasyl](https://github.com/megasyl) > updated by @[16NoCo](https://github.com/16NoCo)|French|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|@[pkomur](https://github.com/pkomur) > updated by @[Ixoos](https://github.com/Ixoos)|Polish|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[madaramost](https://github.com/madaramost)|Arabic|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|@[danielstuart14](https://github.com/danielstuart14)|Brazilian portuguese|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)||Chinese|
-|@[zakkak](https://github.com/zakkak)|Greek|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[mjtullio](https://github.com/mjtullio)|Spanish|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|@[mrprobot](https://github.com/mrprobot)|German|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[saisasidhar](https://github.com/saisasidhar)|Hindi|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-||Portuguese|||Bengali||
-|@[elsieholmes](https://github.com/elsieholmes)|Russian|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)||Japanese||
-||Swedish|||Dutch||
-|@[neynefes](https://github.com/neynefes)|Turkish|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)||Javanese||
-|@[elsieholmes](https://github.com/elsieholmes)|Ukrainian|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[PSSGCSim](https://github.com/PSSGCSim)|Czech|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|@[ipanamski](https://github.com/ipanamski)|Bulgarian|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[muhfajar](https://github.com/muhfajar) > updated by @[emhaye](https://github.com/emhaye)|Indonesian|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|@[artnay](https://github.com/artnay)|Finnish|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[Lrss](https://github.com/Lrss)|Danish|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|
-
