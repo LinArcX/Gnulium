@@ -104,35 +104,11 @@ Bugs should be reported [here](https://github.com/LinArcX/Gnulium/issues) on the
 
 ## Credits
 LinArcX
-Blog:[stack.blog.ir](http://stack.blog.ir/)
+Github Repo:[https://github.com/LinArcX](https://github.com/LinArcX)
 
 ## Special Thanks
 [esasharahi](https://github.com/esasharahi)
 
 E-Mail:linarcx@gmail.com
 ## License
-GNU GENERAL PUBLIC LICENSE(Version 3, 29 June 2007)
-
-##
-### Conduct
-
-There are basic rules of conduct that should be followed at all times by everyone participating in the discussions.  While this is generally a relaxed environment, please remember the following:
-
-- Do not insult, harass, or demean anyone.
-- Do not intentionally multi-post an issue.
-- Do not use ALL CAPS when creating an issue report.
-- Do not repeatedly update an open issue remarking that the issue persists.
-
-**Remember**: Just because the issue you reported was reported here does not mean that it is an issue with Arc menu. As well, should your issue not be resolved immediately, it does not mean that a resolution is not being researched or tested. Patience is always appreciated.
-##
-
-Please refer to the Wiki section for a guide on: [Reporting Bugs](https://github.com/LinxGem33/Arc-Menu/wiki/Reporting-Bug's)
-
-Please note that without any information about your system, the Arc Menu Team can only speculate what the problem is.
-So, please provide us information about your GNU/Linux distribution and the GNOME Shell version. Otherwise, we are not able to try and solve your problem.
-
-##
-### License & Terms ![](https://github.com/LinxGem33/IP-Finder/blob/master/screens/Copyleft-16.png?raw=true)
-
-Arc Menu is available under the terms of the GPL-2.0 license See [`COPYING`](https://github.com/LinxGem33/Arc-Menu/blob/master/COPYING) for details.
-##
+Gnulium is available under the terms of the [`GPL-3.0`](https://github.com/LinArcX/Gnulium/blob/master/LICENSE) license.
