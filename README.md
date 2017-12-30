@@ -85,7 +85,7 @@ E-Mail:linarcx@gmail.com
 
 ## Special Thanks
 !["esasharahi"](https://avatars.githubusercontent.com/esasharahi "esasharahi")
-<img src="https://github.com/favicon.ico" width="48">
+<img src="https://avatars.githubusercontent.com/esasharahi" width="48">
 [esasharahi](https://github.com/esasharahi)
 
 
