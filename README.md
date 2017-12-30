@@ -85,11 +85,6 @@ If you have any issues with regard to Arc menu and your unsure of a certain feat
 
 Please refer to the Arc menu [Wiki Guide](https://github.com/LinxGem33/Arc-Menu/wiki) 
 
-##
-### Bugs
-
-Bugs should be reported [here](https://github.com/LinArcX/Gnulium/issues) on the Github issues page.
-
 
 ## Contributing
 1. Fork it!
@@ -98,17 +93,25 @@ Bugs should be reported [here](https://github.com/LinArcX/Gnulium/issues) on the
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
+##
+### Bugs
+
+Bugs should be reported [here](https://github.com/LinArcX/Gnulium/issues) on the Github issues page.
+
 
 ## VisitUs
 [bbs.archusers.ir](http://bbs.archusers.ir/index.php)
 
+
 ## Credits
 LinArcX
 Github Repo:[https://github.com/LinArcX](https://github.com/LinArcX)
+E-Mail:linarcx@gmail.com
+
 
 ## Special Thanks
 [esasharahi](https://github.com/esasharahi)
 
-E-Mail:linarcx@gmail.com
+
 ## License
 Gnulium is available under the terms of the [`GPL-3.0`](https://github.com/LinArcX/Gnulium/blob/master/LICENSE) license.
