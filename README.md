@@ -7,22 +7,17 @@ A Graphical Ui for managing scripts and ideas!
 
 ### Introduction
 
-Gnulium is a Gnome shell extension designed to replace the standard menu found in Gnome 3 this application menu extension has  some added benefits over the standard menu found in Gnome 3, these include the long awaited search functionality as well as quick access to files on your system and also the current logged in user along with quick access to the software centre and system settings and other features which can be accessed from the settings menu.
+Gnulium is a Utility app that want to manage all users scripts in a new modern way.
 
+## Purposes
+1. Replace conky to avoid show information on desktop and increasy user security.
+2. Gather and manage all user scripts that can be managed and show in graphical manner for simplicity.
+3. Show usefull system information that need extra efforts to achive them in terminal.
 
 ## Features
-1. You Can Search TvShows According to Their Name.
-2. Show TvShow Name, Genres, Rating, Status, Premiered, Next Episode and so many Cool Features.
-3. You Can Add TvShows To Your Favourite List.
-4. See List Of Actors And Crews.
-5. There Is SubMenu For Show Details Of Seasons In Seasons/Episodes part.
-6. And Finally See The Schedule Box.(Enter a Desired Time And See Episode List.)
-
-
-##
-### What's next for Arc Menu?
-
-My first initial priority was to get this extension stable enough to upload to extensions.gnome.org as it had to be ported to work with the gnome shell eco system, now the first stage of development is over features are now being added and I'm pleased to announce a new member of the team [lexruee](https://github.com/lexruee) and now a lead developer in the design and development of this extension hopefully more features are planned for future development and a lot has already been implemented.
+1. Show all information that user needs in Main Page.
+2. Show Shell History in Graphical way in Scripts->Histogram.
+3. You Can Change application fonts and theme via: Gnulium->Settings.
 
 
 ##
@@ -39,7 +34,7 @@ My first initial priority was to get this extension stable enough to upload to e
     `packer -S gnulium`
 
 ### Build From Source
-2. in other linux distro install these dependencies first:
+2. Install these dependencies first:
 
 |On Arch based systems||On Ubuntu/Debian based systems||
 |-----|:-----:|-----|:-----:|
