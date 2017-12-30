@@ -29,7 +29,7 @@ Please see the: [Development Roadmap Page](https://github.com/LinxGem33/Arc-Menu
 
 ##
 
-### Installation
+## Installation
 
 1. if you have arch, life is easy:). just go to AUR: 
     `packer -S gnulium`
