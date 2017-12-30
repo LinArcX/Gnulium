@@ -1,4 +1,4 @@
-# Gnulium ![](https://img.shields.io/badge/Language-C++-yellow.svg) ![](https://img.shields.io/badge/Licence-GPL--3.0-blue.svg)
+# Gnulium ![](https://img.shields.io/badge/Language-C++%20Qml-pink.svg) ![](https://img.shields.io/badge/Licence-GPL--3.0-blue.svg)
 A Graphical Ui for managing scripts and ideas!
 
 ## Preview
