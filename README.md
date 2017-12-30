@@ -4,6 +4,12 @@ A Graphical Ui for managing scripts and ideas!
 ## Preview
 !["gnulium"](http://uupload.ir/files/mzr7_screenshot_from_2017-12-30_15-54-10.png "gnulium")
 
+
+### Introduction
+
+'Arc Menu is a Gnome shell extension designed to replace the standard menu found in Gnome 3 this application menu extension has  some added benefits over the standard menu found in Gnome 3, these include the long awaited search functionality as well as quick access to files on your system and also the current logged in user along with quick access to the software centre and system settings and other features which can be accessed from the settings menu.
+
+
 ## Features
 1. You Can Search TvShows According to Their Name.
 2. Show TvShow Name, Genres, Rating, Status, Premiered, Next Episode and so many Cool Features.
@@ -12,20 +18,7 @@ A Graphical Ui for managing scripts and ideas!
 5. There Is SubMenu For Show Details Of Seasons In Seasons/Episodes part.
 6. And Finally See The Schedule Box.(Enter a Desired Time And See Episode List.)
 
-### Introduction
 
-'Arc Menu is a Gnome shell extension designed to replace the standard menu found in Gnome 3 this application menu extension has  some added benefits over the standard menu found in Gnome 3, these include the long awaited search functionality as well as quick access to files on your system and also the current logged in user along with quick access to the software centre and system settings and other features which can be accessed from the settings menu.
-
-##
-### What's next for Arc Menu?
-
-My first initial priority was to get this extension stable enough to upload to extensions.gnome.org as it had to be ported to work with the gnome shell eco system, now the first stage of development is over features are now being added and I'm pleased to announce a new member of the team [lexruee](https://github.com/lexruee) and now a lead developer in the design and development of this extension hopefully more features are planned for future development and a lot has already been implemented.
-##
-### Development Roadmap !
-
-If your interested to see the current development cycle of Arc menu or the current status of a particular feature in development then head over to the new Development Roadmap page which will give you a idea of what’s planned or what’s currently being developed by the Arc menu team the link is below.
-
-Please see the: [Development Roadmap Page](https://github.com/LinxGem33/Arc-Menu/issues/42)
 ##
 |About Gnulium|Histogram|
 |:-----:|:-----:|
@@ -71,6 +64,19 @@ following dependencies installed.
 |gnome-tweak-tool|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|gnome-tweak-tool|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |gnome-menus|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |gnome-session|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+
+
+##
+### What's next for Arc Menu?
+
+My first initial priority was to get this extension stable enough to upload to extensions.gnome.org as it had to be ported to work with the gnome shell eco system, now the first stage of development is over features are now being added and I'm pleased to announce a new member of the team [lexruee](https://github.com/lexruee) and now a lead developer in the design and development of this extension hopefully more features are planned for future development and a lot has already been implemented.
+##
+### Development Roadmap !
+
+If your interested to see the current development cycle of Arc menu or the current status of a particular feature in development then head over to the new Development Roadmap page which will give you a idea of what’s planned or what’s currently being developed by the Arc menu team the link is below.
+
+Please see the: [Development Roadmap Page](https://github.com/LinxGem33/Arc-Menu/issues/42)
+
 
 ##
 ### Wiki Guide
