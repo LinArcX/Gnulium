@@ -1,11 +1,16 @@
 # Gnulium
 A Graphical Ui for managing scripts and ideas!
 
-![](https://imgsafe.org/image/79d25487c7)
+## Preview
+!["gnulium"](https://imgsafe.org/image/79d25487c7 "gnulium")
 
-##
-![](https://imgsafe.org/image/79d25487c7)
-##
+## Features
+1. You Can Search TvShows According to Their Name.
+2. Show TvShow Name, Genres, Rating, Status, Premiered, Next Episode and so many Cool Features.
+3. You Can Add TvShows To Your Favourite List.
+4. See List Of Actors And Crews.
+5. There Is SubMenu For Show Details Of Seasons In Seasons/Episodes part.
+6. And Finally See The Schedule Box.(Enter a Desired Time And See Episode List.)
 
 ### Introduction
 
