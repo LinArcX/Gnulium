@@ -36,6 +36,7 @@ Please see the: [Development Roadmap Page](https://github.com/LinxGem33/Arc-Menu
     `git, qt5-base, qt5-quickcontrols2, qt5-charts, jcal-git`
     
 3. clone the repo:
+
     `git clone https://github.com/LinArcX/Gnulium/`
     
 4. go to cloned directory and make the project with qmake build tools:
