@@ -44,9 +44,10 @@ My first initial priority was to get this extension stable enough to upload to e
 |On Arch based systems||On Ubuntu/Debian based systems||
 |-----|:-----:|-----|:-----:|
 |git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|gnome-tweak-tool|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|gnome-tweak-tool|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|gnome-menus|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|gnome-menus|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|gnome-session|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|gnome-session|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|qt5-base|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|qt5-quickcontrols2|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|qt5-charts|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|jcal-git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 
     `git, qt5-base, qt5-quickcontrols2, qt5-charts, jcal-git`
     
