@@ -165,4 +165,4 @@ Additional credits: This extension also leverages the work from [Giovanni Campag
 |@[ipanamski](https://github.com/ipanamski)|Bulgarian|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[muhfajar](https://github.com/muhfajar) > updated by @[emhaye](https://github.com/emhaye)|Indonesian|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |@[artnay](https://github.com/artnay)|Finnish|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|@[Lrss](https://github.com/Lrss)|Danish|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|
 ##
- ![](https://img.shields.io/badge/Language-JavaScript-yellow.svg) ![](https://img.shields.io/badge/Licence-GPL--2.0-blue.svg)
+ ![](https://img.shields.io/badge/Language-C++-yellow.svg) ![](https://img.shields.io/badge/Licence-GPL--3.0-blue.svg)
