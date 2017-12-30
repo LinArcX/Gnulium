@@ -27,9 +27,9 @@ If your interested to see the current development cycle of Arc menu or the curre
 
 Please see the: [Development Roadmap Page](https://github.com/LinxGem33/Arc-Menu/issues/42)
 ##
-|Arc Menu integrated with Dash-to-Dock|Arc Menu integrated with Dash-to-Panel|
+|About Gnulium|Histogram|
 |:-----:|:-----:|
-|![](http://uupload.ir/files/7ezv_screenshot_from_2017-12-30_15-54-17.png?raw=true)|![](https://github.com/LinxGem33/Arc-Menu/blob/master/screenshots/apm5.png?raw=true)|
+|![](http://uupload.ir/files/7ezv_screenshot_from_2017-12-30_15-54-17.png?raw=true)|![](http://uupload.ir/files/u8jq_screenshot_from_2017-12-30_15-54-24.png?raw=true)|
 |Click image to enlarge|Click image to enlarge|
 
 ## Installation
