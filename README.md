@@ -41,6 +41,13 @@ My first initial priority was to get this extension stable enough to upload to e
 ### Build From Source
 2. in other linux distro install these dependencies first:
 
+|On Arch based systems||On Ubuntu/Debian based systems||
+|-----|:-----:|-----|:-----:|
+|git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|gnome-tweak-tool|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|gnome-tweak-tool|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|gnome-menus|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|gnome-session|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+
     `git, qt5-base, qt5-quickcontrols2, qt5-charts, jcal-git`
     
 3. clone the repo:
@@ -57,19 +64,6 @@ My first initial priority was to get this extension stable enough to upload to e
     
 5. run the application:
     `./gnulium`
-
-##
-### Dependencies
-
-__Please note:__ For Arc-Menu to work properly, your GNOME Desktop must have the
-following dependencies installed.
-
-|On Arch based systems||On Ubuntu/Debian based systems||
-|-----|:-----:|-----|:-----:|
-|git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|gnome-tweak-tool|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|gnome-tweak-tool|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|gnome-menus|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|gnome-session|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 
 
 ## Contributing
