@@ -62,7 +62,7 @@ void Launcher::execActiveServices()
 void Launcher::execOpenPorts()
 {
     pOpenPorts = new QProcess(this);
-    QString command = "echo 's' | sudo -S netstat -tlnp | awk '{print $7, $4, $1}'";
+    QString command = "pkexec netstat -tlnp | awk '{print $7, $4, $1}'";
     connect(pOpenPorts, &QProcess::readyReadStandardOutput, this, &Launcher::returnOpenPorts);
     pOpenPorts->start("sh", QStringList() << "-c" << command);
 }

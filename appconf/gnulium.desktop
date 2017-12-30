@@ -1,7 +1,9 @@
 [Desktop Entry]
 Name=Gnulium
+Name[fa]=گنولیوم
+GenericName[fa]=مدیریت اسکریپت و تسهیل گر گنو/لینوکس
 Comment=Make Your Gnu/linux more Readble and Easy to Understand.
-Exec=gksudo gnulium
+Exec=gnulium
 Icon=gnulium
 Terminal=false
 Type=Application
@@ -9,8 +11,6 @@ Keywords=Utility;
 Categories=Utility;Qt;
 
 #StartupNotify=true
-#Name[fa]=پرسپولیس
-#GenericName[fa]=نرم افزار مدیریت بارگیری
 #StartupWMClass=Persepolis Download Manager
 #Actions=Open;Tray;
 

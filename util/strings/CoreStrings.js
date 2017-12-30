@@ -24,9 +24,9 @@ var tvdoon = "&TvDoon";
 var histogram = "Histogram";
 
 var help = "&Help";
-var aboutQT = "&About Qt";
-var aboutGnulium = "&About Gnulium";
-var settings = "&Settings";
+var aboutQT = "About Qt";
+var aboutGnulium = "About Gnulium";
+var settings = "Settings";
 
 // values-global
 var referesh = "Refresh";
