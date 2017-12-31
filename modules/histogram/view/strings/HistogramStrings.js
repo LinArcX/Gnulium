@@ -11,7 +11,7 @@ var fontSize = 14;
 
 var histogramPillarBody =
     "Histogram tab. In this page you can see:\n
-1. Top ten of most repetitive commands you've usesd in dayle usage of your shell.\n
+1. Top ten of most repetitive commands you've used in daily usage of your shell.\n
 2. We Use HorizontalBarGraph to see results in a fashion style.";
 
 var inspiredLink = "inspired by: <a href='http://bbs.archusers.ir/viewtopic.php?id=402'>This Scripts</a>";
