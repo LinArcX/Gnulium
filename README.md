@@ -80,6 +80,7 @@ Bugs should be reported [here](https://github.com/LinArcX/Gnulium/issues) on the
 ## Credits
 LinArcX
 Github Repo:[https://github.com/LinArcX](https://github.com/LinArcX)
+
 E-Mail:linarcx@gmail.com
 
 
