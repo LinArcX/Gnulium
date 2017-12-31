@@ -95,7 +95,7 @@ void Launcher::execBootTime()
     //systemd-analyze | head -n1 | cut -d" " -f4;systemd-analyze | head -n1 | cut -d" " -f7 ;systemd-analyze | head -n1 | cut -d" " -f10;
 
     pBootTime = new QProcess(this);
-    QString command = "echo \"kernel=$(systemd-analyze | head -n1 | cut -d\" \" -f4)\";echo \"UserSpace=$(systemd-analyze | head -n1 | cut -d\" \" -f7,8)\";echo \"Total=$(systemd-analyze | head -n1 | cut -d\"=\" -f2)\";";
+    QString command = "echo \"kernel=$(systemd-analyze | head -n1 | cut -d\" \" -f4)\";echo \"UserSpace=$(systemd-analyze | head -n1 | awk '{print $7}')\";echo \"Total=$(systemd-analyze | head -n1 | cut -d\"=\" -f2)\";";
     connect(pBootTime, &QProcess::readyReadStandardOutput, this, &Launcher::returnBootTime);
     pBootTime->start("sh", QStringList() << "-c" << command);
 }
@@ -104,8 +104,10 @@ void Launcher::execArchAge()
 {
     //todaySecond=$(date -d "$date" +"%s");installTime=$(ls -ld /lost+found | awk '{print $6, $7, $8}');installTimeSecond=$(date -d "$installTime" +"%s") ;ageSecond=$((todaySecond - installTimeSecond));alldays=$((ageSecond / 86400 ));monthfirst=$((alldays/30));year=$((monthfirst/12));month=$((monthfirst%12));day=$((alldays%30));echo "$year year,$month month,$day day";
 
+    //todaySecond=$(date -d "$date" +"%s");installTime=$(cat /var/log/pacman.log | head -1 | cut -d"]" -f1 | cut -d"[" -f2 |  awk '{print $1}');installTimeSecond=$(date -d "$installTime" +"%s");ageSecond=$((todaySecond - installTimeSecond));alldays=$((ageSecond / 86400 ));monthfirst=$((alldays/30));year=$((monthfirst/12));month=$((monthfirst%12));day=$((alldays%30));echo "$year year,$month month,$day day";
+
     pArchAge = new QProcess(this);
-    QString command = "todaySecond=$(date -d \"$date\" +\"%s\");installTime=$(ls -ld /lost+found | awk '{print $6, $7, $8}');installTimeSecond=$(date -d \"$installTime\" +\"%s\");ageSecond=$((todaySecond - installTimeSecond));alldays=$((ageSecond / 86400 ));monthfirst=$((alldays/30));year=$((monthfirst/12));month=$((monthfirst%12));day=$((alldays%30));echo \"$year year,$month month,$day day\";";
+    QString command = "todaySecond=$(date -d \"$date\" +\"%s\");installTime=$(cat /var/log/pacman.log | head -1 | cut -d\"]\" -f1 | cut -d\"[\" -f2 |  awk '{print $1}');installTimeSecond=$(date -d \"$installTime\" +\"%s\");ageSecond=$((todaySecond - installTimeSecond));alldays=$((ageSecond / 86400 ));monthfirst=$((alldays/30));year=$((monthfirst/12));month=$((monthfirst%12));day=$((alldays%30));echo \"$year year,$month month,$day day\";";
     connect(pArchAge, &QProcess::readyReadStandardOutput, this, &Launcher::returnArchAge);
     pArchAge->start("sh", QStringList() << "-c" << command);
 }
@@ -137,7 +139,7 @@ void Launcher::returnTopMemory()
 {
     QString outPut = QString(pReadMemory->readAllStandardOutput());
     QStringList list = beautifyOutput(outPut);
-    std::regex word_regex = getPattern();
+    std::regex word_regex = getHugePattern();
     QVariantList parent = performRegx(word_regex, list);
     emit modelReady(parent);
 }
@@ -146,7 +148,7 @@ void Launcher::returnTopProcess()
 {
     QString outPut = QString(pReadProcess->readAllStandardOutput());
     QStringList list = beautifyOutput(outPut);
-    std::regex word_regex = getPattern();
+    std::regex word_regex = getHugePattern();
     QVariantList parent = performRegx(word_regex, list);
     emit modelReady(parent);
 }
@@ -268,7 +270,7 @@ regex Launcher::getPattern()
 {
     // ((\d)+\.?([\dkmgKGM%])*)|(\/([\w\d\-\/])*)|([a-zA-z]+ [a-zA-Z]+)|((\w+-)+\w+)|(\w+)
     // link: https://regex101.com/r/VKsGMs/1
-    std::string blendedNumbers = "((\\d)+\.?([\\dkmgKGM%])*)";
+    std::string blendedNumbers = "((\\d)+\.?([\\dgkmKGM%])*)";
     std::string dashSlashWord = "(\/([\\w\\d\-\/])*)";
     std::string distinctWord = "([a-zA-z]+ [a-zA-Z]+)";
     std::string dashWord = "((\\w+-)+\\w+)";
@@ -276,6 +278,26 @@ regex Launcher::getPattern()
     std::string spacer = "|";
 
     std::regex word_regex(blendedNumbers + spacer
+            + dashSlashWord + spacer
+            + distinctWord + spacer
+            + dashWord + spacer
+            + singleWord,
+        std::regex_constants::ECMAScript);
+
+    return word_regex;
+}
+
+regex Launcher::getHugePattern()
+{
+    //std::string blendedNumbers = "((\\d)+\.?([\\dgkmKGM%])*)";
+    std::string fractionalNumbers = "(\\d+[\\/\\d. ]*|\\d)";
+    std::string dashSlashWord = "(\/([\\w\\d\-\/])*)";
+    std::string distinctWord = "([a-zA-z]+ [a-zA-Z]+)";
+    std::string dashWord = "((\\w+-)+\\w+)";
+    std::string singleWord = "(\\w+)";
+    std::string spacer = "|";
+
+    std::regex word_regex(fractionalNumbers + spacer
             + dashSlashWord + spacer
             + distinctWord + spacer
             + dashWord + spacer

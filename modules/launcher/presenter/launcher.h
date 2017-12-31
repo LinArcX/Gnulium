@@ -44,6 +44,7 @@ public:
 
     void returnStandardError();
     std::regex getPattern();
+    std::regex getHugePattern();
     std::regex getSimplePattern();
     QStringList beautifyOutput(QString outPut);
     QVariantList beautifer(QString outPut);
