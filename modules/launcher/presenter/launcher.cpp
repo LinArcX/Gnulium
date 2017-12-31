@@ -95,7 +95,7 @@ void Launcher::execBootTime()
     //systemd-analyze | head -n1 | cut -d" " -f4;systemd-analyze | head -n1 | cut -d" " -f7 ;systemd-analyze | head -n1 | cut -d" " -f10;
 
     pBootTime = new QProcess(this);
-    QString command = "echo \"kernel=$(systemd-analyze | head -n1 | cut -d\" \" -f4)\";echo \"UserSpace=$(systemd-analyze | head -n1 | cut -d\" \" -f7)\";echo \"Total=$(systemd-analyze | head -n1 | cut -d\" \" -f10)\";";
+    QString command = "echo \"kernel=$(systemd-analyze | head -n1 | cut -d\" \" -f4)\";echo \"UserSpace=$(systemd-analyze | head -n1 | cut -d\" \" -f7,8)\";echo \"Total=$(systemd-analyze | head -n1 | cut -d\"=\" -f2)\";";
     connect(pBootTime, &QProcess::readyReadStandardOutput, this, &Launcher::returnBootTime);
     pBootTime->start("sh", QStringList() << "-c" << command);
 }
