@@ -71,7 +71,7 @@ Dialog {
                 width: 150
                 height: 150
                 source: CStr.imgGnulium
-                // Rmove z: -1
+                // Remove z: -1
 
                 ToolTiper {
                     toolTip: Str.lilyToolTip
@@ -97,7 +97,7 @@ Dialog {
             anchors.bottom: parent.bottom
             z: 10
             //Must be 10 and placed in here to take a effect
-            
+
             FontLoader {
                 id: fontAwesome
                 source: CStr.fontAwesome
