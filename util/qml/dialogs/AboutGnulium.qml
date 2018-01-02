@@ -65,12 +65,13 @@ Dialog {
         }
         Row{
             id: mRowGnulium
+            z: -1
             Image {
                 id: imgGnulium
                 width: 150
                 height: 150
                 source: CStr.imgGnulium
-                z:-1
+                // Rmove z: -1
 
                 ToolTiper {
                     toolTip: Str.lilyToolTip
@@ -94,6 +95,9 @@ Dialog {
             id: rectLinks
             anchors.top: mRowGnulium.Bottom
             anchors.bottom: parent.bottom
+            z: 10
+            //Must be 10 and placed in here to take a effect
+            
             FontLoader {
                 id: fontAwesome
                 source: CStr.fontAwesome
