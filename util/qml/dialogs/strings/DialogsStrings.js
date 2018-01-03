@@ -1,4 +1,4 @@
-var title = "About Gnulium"
+var title = "About Gnulium";
 
 var gnuToolTip = "Gnu Project";
 var linuxToolTip = "Linux at wikipedia";

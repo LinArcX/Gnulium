@@ -6,15 +6,15 @@ var tabViewMargin = 10;
 var rowSpacing = 5;
 
 // values-menu
-var gnulium = "&Gnulium"
+var gnulium = "&Gnulium";
 var home = "Home";
 var quit = "&Quit";
 
 var hardware = "&Hardware";
 var memory = "&Memory";
 
-var distribiutions = "&Distributions"
-var pkgManagers = "PKG-Managers"
+var distribiutions = "&Distributions";
+var pkgManagers = "PKG-Managers";
 var arch = "Arch";
 var pacman = "Pacman";
 
@@ -88,4 +88,3 @@ var fontCaviarDreams = "qrc:/fonts/CaviarDreams.ttf";
 
 // colors
 var transparent = "transparent";
-
