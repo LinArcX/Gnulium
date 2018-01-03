@@ -114,4 +114,24 @@ So we skip some of them, these are important :
 3. qml.qrc
 4. gnulium.pro
 
-So
+So at first `gnulium.pro` it's for qtCreator generated file that is configuration during using this IDE and it's not so important.
+
+Next, `qml.qrc` it's for defining and set the files to the qml and say what's in this folder that you must use and these are your resources file, like shared library.
+
+`main.cpp` this is important file as it's name **main** you maybe found out what is it, but we say again, this file is the main structure for running gnulium on Linux.
+
+`main.qml` so gnulium using qt quick for its UI and these qml files in these project define UI in application. qt quick is one of the Qt project that is like a qss like css in web applications.
+
+So for now you can read and see what is these files.
+
+**We will continue this document.**
+
+#### Help Us
+
+Thanks for reading this doc but for sure it needs your mind and ideas, so help us to improve this documentation to be greater.
+
+#### Author
+
+Amir Mohammad Safari Livari (am-sl) - Second maintainer
+
+LinArcX the Main maintainer - Creator
