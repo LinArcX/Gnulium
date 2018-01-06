@@ -72,8 +72,8 @@ Gnulium is a Utility app that want to manage all users scripts in a new modern w
 
 
 ## Bugs
+![Open Issues](https://img.shields.io/github/issues-raw/LinArcX/Gnulium.svg?style=flat-square) ![Issues](https://img.shields.io/github/issues-closed-raw/LinArcX/Gnulium.svg?style=flat-square) 
 Bugs should be reported [here](https://github.com/LinArcX/Gnulium/issues) on the Github issues page.
-![Issues](https://img.shields.io/github/issues/LinArcX/Gnulium.svg?style=flat-square) 
 
 ## VisitUs
 [bbs.archusers.ir](http://bbs.archusers.ir/index.php)
