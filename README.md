@@ -1,4 +1,4 @@
-# Gnulium ![](https://img.shields.io/badge/Language-C++%20Qml-pink.svg) ![](https://img.shields.io/badge/Licence-GPL--3.0-blue.svg) [![GitHub issues](https://img.shields.io/github/issues/LinArcX/Gnulium.svg)]( https://github.com/LinArcX/Gnulium/issues) ![GitHub release](https://img.shields.io/github/release/LinArcX/Gnulium.svg)![](https://img.shields.io/github/tag/LinArcX/Gnulium.svg)
+# Gnulium ![](https://img.shields.io/badge/Language-C++%20Qml-pink.svg) ![](https://img.shields.io/badge/Licence-GPL--3.0-blue.svg) ![Issues](https://img.shields.io/github/issues/LinArcX/Gnulium.svg)( https://github.com/LinArcX/Gnulium/issues) ![Release](https://img.shields.io/github/release/LinArcX/Gnulium.svg) ![](https://img.shields.io/github/tag/LinArcX/Gnulium.svg) ![Pull Requests](https://img.shields.io/github/issues-pr/LinArcX/Gnulium.svg)
 A Graphical Ui for managing scripts and ideas!
 
 ## Preview
