@@ -31,7 +31,7 @@ Gnulium is a Utility app that want to manage all users scripts in a new modern w
 ### Arch
 1. if you have arch, life is easy:). just go to AUR: 
 
-    `packer -S gnulium`
+    `packer -S gnulium-git`
 
 ### Build From Source
 2. Install these dependencies first:
