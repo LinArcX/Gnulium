@@ -1,6 +1,6 @@
 # Gnulium ![Language](https://img.shields.io/badge/Language-C++%20Qml-pink.svg?style=flat-square) ![Latest Tag](https://img.shields.io/github/tag/LinArcX/Gnulium.svg?colorB=green&style=flat-square)
 A Graphical Ui for managing scripts and ideas!
-<a href="https://opencollective.com/shields#backers" target="_blank"><img src="https://opencollective.com/shields/backers.svg?width=890"></a>
+
 ## Preview
 !["gnulium"](http://uupload.ir/files/mzr7_screenshot_from_2017-12-30_15-54-10.png "gnulium")
 
