@@ -1,4 +1,4 @@
-# Gnulium ![Language](https://img.shields.io/badge/Language-C++%20Qml-pink.svg?style=flat-square) ![License](https://img.shields.io/github/license/LinArcX/Gnulium.svg?style=flat-square) ![Latest Tag](https://img.shields.io/github/tag/LinArcX/Gnulium.svg)
+# Gnulium ![Language](https://img.shields.io/badge/Language-C++%20Qml-pink.svg?style=flat-square) ![Latest Tag](https://img.shields.io/github/tag/LinArcX/Gnulium.svg?style=flat-square) ![Release](https://img.shields.io/github/release/LinArcX/Gnulium.svg?style=flat-square) 
 A Graphical Ui for managing scripts and ideas!
 
 ## Preview
@@ -63,7 +63,7 @@ Gnulium is a Utility app that want to manage all users scripts in a new modern w
 
 
 ## Contributing
-![Release](https://img.shields.io/github/release/LinArcX/Gnulium.svg) ![Pull Requests](https://img.shields.io/github/issues-pr/LinArcX/Gnulium.svg) 
+![Open PR](https://img.shields.io/github/issues-pr/LinArcX/Gnulium.svg?style=flat-square) ![Closed PR](https://img.shields.io/github/issues-pr-closed/LinArcX/Gnulium.svg?style=flat-square)
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
@@ -73,7 +73,7 @@ Gnulium is a Utility app that want to manage all users scripts in a new modern w
 
 ## Bugs
 Bugs should be reported [here](https://github.com/LinArcX/Gnulium/issues) on the Github issues page.
-![Issues](https://img.shields.io/github/issues/LinArcX/Gnulium.svg) ![Closed Issues](https://img.shields.io/github/issues-pr-closed/LinArcX/Gnulium.svg)
+![Issues](https://img.shields.io/github/issues/LinArcX/Gnulium.svg?style=flat-square) 
 
 ## VisitUs
 [bbs.archusers.ir](http://bbs.archusers.ir/index.php)
@@ -91,4 +91,4 @@ E-Mail:linarcx@gmail.com
 
 
 ## License
-Gnulium is available under the terms of the [`GPL-3.0`](https://github.com/LinArcX/Gnulium/blob/master/LICENSE) license.
+![License](https://img.shields.io/github/license/LinArcX/Gnulium.svg?style=flat-square)
