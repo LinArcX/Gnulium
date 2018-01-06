@@ -35,6 +35,7 @@ Column {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
+                    mLauncher.execBootTime();
                     console.log(Str.bootTiemTitle);
                 }
             }

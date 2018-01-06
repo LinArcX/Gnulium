@@ -73,8 +73,8 @@ Row{
                 mBarSet.color = "#2196F3"
                 //mBarSet.labelColor = "green"
 
-                mChart.axisX(mHorSeries).min= 0 //Math.min.apply(null, mBarSet.values)
-                mChart.axisX(mHorSeries).max= 2500 //Math.max.apply(null, mBarSet.values)
+                mChart.axisX(mHorSeries).min= 0;
+                mChart.axisX(mHorSeries).max= Math.max.apply(null, mBarSet.values);
             }
         }
 
