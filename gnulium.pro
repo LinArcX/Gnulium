@@ -1,6 +1,7 @@
 QT += qml quick charts quickcontrols2
 CONFIG += c++11
 #QMAKE_CXXFLAGS += -std=c++14
+QMAKE_CXXFLAGS_WARN_OFF -= -Wunused-parameter
 VERSION = $$system(git log --pretty=format:'%h' -n 1)
 
 DEFINES += APP_VER=\\\"$$VERSION\\\"

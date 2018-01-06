@@ -9,14 +9,12 @@
 #include <QString>
 #include <QStringList>
 #include <QStyleFactory>
+#include <modules/settings/presenter/macros/settingsMacro.h>
 
 using namespace std;
 
 Settings::Settings(QObject* parent)
 {
-    //history 50 | awk '{h[$2]++}END{for(i in h){print h[i],i|"sort -rn|head -20"}}'
-
-    //iwgetid -r; cat /sys/class/net/$(ip route show default | awk '/default/ {print $5}')/address;
 }
 
 void Settings::setSettings(QVariantMap mSettings)
@@ -24,25 +22,25 @@ void Settings::setSettings(QVariantMap mSettings)
     // QVariantMap::const_iterator
     for (auto iter = mSettings.begin(); iter != mSettings.end(); ++iter) {
         QString mKey = iter.key();
-        if (mKey == "fontFamily") {
+        if (mKey == FONT_FAMILY) {
             QFont fontFamily(iter.value().toString());
-            QSettings settings("io.github.linarcx", "gnulium");
-            settings.beginGroup("Font");
-            settings.setValue("font-family", fontFamily);
+            QSettings settings(COMPANY_NAME, APP_NAME);
+            settings.beginGroup(FONT_GROUP);
+            settings.setValue(FONT_FAMILY, fontFamily);
             settings.endGroup();
             loadFontFamily();
-        } else if (mKey == "fontSize") {
+        } else if (mKey == FONT_SIZE) {
             int fontSize = iter.value().toInt();
-            QSettings settings("io.github.linarcx", "gnulium");
-            settings.beginGroup("Font");
-            settings.setValue("font-size", fontSize);
+            QSettings settings(COMPANY_NAME, APP_NAME);
+            settings.beginGroup(FONT_GROUP);
+            settings.setValue(FONT_SIZE, fontSize);
             settings.endGroup();
             loadFontSize();
-        } else if (mKey == "style") {
+        } else if (mKey == STYLE) {
             QString appStyle = iter.value().toString();
-            QSettings settings("io.github.linarcx", "gnulium");
-            settings.beginGroup("App");
-            settings.setValue("style", appStyle);
+            QSettings settings(COMPANY_NAME, APP_NAME);
+            settings.beginGroup(APP_GROUP);
+            settings.setValue(STYLE, appStyle);
             settings.endGroup();
             loadAppStyle();
         }
@@ -51,28 +49,28 @@ void Settings::setSettings(QVariantMap mSettings)
 
 void Settings::loadFontFamily()
 {
-    QSettings settings("io.github.linarcx", "gnulium");
-    settings.beginGroup("Font");
-    QFont mFont = qvariant_cast<QFont>(settings.value("font-family", "XmYekan"));
+    QSettings settings(COMPANY_NAME, APP_NAME);
+    settings.beginGroup(FONT_GROUP);
+    QFont mFont = qvariant_cast<QFont>(settings.value(FONT_FAMILY, FONT_XM_YEKAN));
     QApplication::setFont(mFont);
     settings.endGroup();
 }
 
 void Settings::loadFontSize()
 {
-    QSettings settings("io.github.linarcx", "gnulium");
-    settings.beginGroup("Font");
+    QSettings settings(COMPANY_NAME, APP_NAME);
+    settings.beginGroup(FONT_GROUP);
     QFont mFont;
-    mFont.setPixelSize(qvariant_cast<int>(settings.value("font-size", 12)));
+    mFont.setPixelSize(qvariant_cast<int>(settings.value(FONT_SIZE, 12)));
     QApplication::setFont(mFont);
     settings.endGroup();
 }
 
 void Settings::loadAppStyle()
 {
-    QSettings settings("io.github.linarcx", "gnulium");
-    settings.beginGroup("App");
-    QString mStyle = qvariant_cast<QString>(settings.value("style", "Imagine"));
+    QSettings settings(COMPANY_NAME, APP_NAME);
+    settings.beginGroup(APP_GROUP);
+    QString mStyle = qvariant_cast<QString>(settings.value(STYLE, STYLE_IMAGING));
     QQuickStyle::setStyle(mStyle);
     settings.endGroup();
 }

@@ -1,4 +1,5 @@
 #include "modules/utils/utils.h"
+#include "modules/utils/macros/utilsMacro.h"
 #include <QDebug>
 #include <QString>
 #include <QStringList>
@@ -22,33 +23,31 @@ void Utils::DestructorMsg(const QObject* const object)
 
 std::regex Utils::getPattern()
 {
-    // ((\d)+\.?([\dkmgKGM%])*)|(\/([\w\d\-\/])*)|([a-zA-z]+ [a-zA-Z]+)|((\w+-)+\w+)|(\w+)
-    // link: https://regex101.com/r/VKsGMs/1
-    std::string blendedNumbers = "((\\d)+\.?([\\dkmgKGM%])*)";
-    std::string dashSlashWord = "(\/([\\w\\d\-\/])*)";
-    std::string distinctWord = "([a-zA-z]+ [a-zA-Z]+)";
-    std::string dashWord = "((\\w+-)+\\w+)";
-    std::string singleWord = "(\\w+)";
     std::string spacer = "|";
-
-    std::regex word_regex(blendedNumbers + spacer
-            + dashSlashWord + spacer
-            + distinctWord + spacer
-            + dashWord + spacer
-            + singleWord,
+    std::regex word_regex(BLENDED_NUBERS + spacer
+            + DASH_SLASH_WORD + spacer
+            + DISTINCT_WORD + spacer
+            + DASH_WORD + spacer
+            + SINGLE_WORD,
         std::regex_constants::ECMAScript);
+    return word_regex;
+}
 
+std::regex Utils::getHugePattern()
+{
+    std::string spacer = "|";
+    std::regex word_regex(FRACTIONAL_NUMBER + spacer
+            + DASH_SLASH_WORD + spacer
+            + DISTINCT_WORD + spacer
+            + DASH_WORD + spacer
+            + SINGLE_WORD,
+        std::regex_constants::ECMAScript);
     return word_regex;
 }
 
 std::regex Utils::getSimplePattern()
 {
-    // select until new line: (?<=\n\n)(.*)(?=\n\n)
-    // distint words with only one tab: (\S*?)(\s|$) or .+?(?=\s|$)
-    // get all words: (\S*)(\s*)
-    std::string distinctWords = "(\\S*)(\\s*)";
-
-    std::regex word_regex(distinctWords, std::regex_constants::ECMAScript);
+    std::regex word_regex(DISTINCT_GENERAL_WORD, std::regex_constants::ECMAScript);
     return word_regex;
 }
 
@@ -77,6 +76,14 @@ QVariantList Utils::beautifer(QString outPut)
         finalList.append(splittedList);
     }
     return finalList;
+}
+
+QStringList Utils::beautifyOutput(QString outPut)
+{
+    QStringList list = outPut.split("\n");
+    list.removeFirst();
+    list.removeLast();
+    return list;
 }
 
 QVariantList Utils::performRegx(std::regex word_regex, QStringList list)

@@ -16,9 +16,11 @@ public:
 
     static std::regex getPattern();
     static std::regex getSimplePattern();
+    static std::regex getHugePattern();
     static QStringList beautifyFirstLast(QString outPut);
     static QStringList beautifyLast(QString outPut);
     static QVariantList beautifer(QString outPut);
+    static QStringList beautifyOutput(QString outPut);
     static QVariantList performRegx(std::regex word_regex, QStringList list);
 
     static void DestructorMsg(const QString value);
