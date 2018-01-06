@@ -1,4 +1,4 @@
-# Gnulium ![Language](https://img.shields.io/badge/Language-C++%20Qml-pink.svg?style=flat-square) ![Latest Tag](https://img.shields.io/github/tag/LinArcX/Gnulium-green.svg?style=flat-square)
+# Gnulium ![Language](https://img.shields.io/badge/Language-C++%20Qml-pink.svg?style=flat-square) ![Latest Tag](https://img.shields.io/github/tag/LinArcX/Gnulium.svg?style=flat-square)
 A Graphical Ui for managing scripts and ideas!
 
 ## Preview
