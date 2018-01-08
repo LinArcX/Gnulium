@@ -46,7 +46,8 @@ Gnulium is a Utility app that want to manage all users scripts in a new modern w
 |jcal-git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|jcal|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |qml|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |qt5-qmake|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-    
+ |qtbase5-dev|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|||qt5-style-plugins|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 3. clone the repo:
 
     `git clone https://github.com/LinArcX/Gnulium/`
