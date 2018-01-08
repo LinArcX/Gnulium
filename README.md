@@ -38,7 +38,7 @@ Gnulium is a Utility app that want to manage all users scripts in a new modern w
 
 |On Arch based systems||On Ubuntu/Debian based systems||
 |-----|:-----:|-----|:-----:|
-|[git](https://www.archlinux.org/packages/extra/x86_64/git/)||git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|[git](https://www.archlinux.org/packages/extra/x86_64/git/)|[git](https://packages.debian.org/stretch/git)|
 |[qt5-base](https://www.archlinux.org/packages/extra/x86_64/qt5-base/)|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|qt5-default|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |qt5-quickcontrols|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|qml-module-qtquick-controls|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |qt5-quickcontrols2|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|qml-module-qtquick-controls2|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
