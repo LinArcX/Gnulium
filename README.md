@@ -37,7 +37,7 @@ Gnulium is a Utility app that want to manage all users scripts in a new modern w
 2. Install these dependencies first:
 
 |On Arch based systems||On Ubuntu/Debian based systems||
-|-----|-----|
+|-----|:-----:|:-----:|-----|
 |[git](https://www.archlinux.org/packages/extra/x86_64/git/)|[git](https://packages.debian.org/stretch/git)
 |[qt5-base](https://www.archlinux.org/packages/extra/x86_64/qt5-base/)|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|qt5-default|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |qt5-quickcontrols|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|qml-module-qtquick-controls|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
