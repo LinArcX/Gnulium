@@ -39,11 +39,11 @@ Gnulium is a Utility app that want to manage all users scripts in a new modern w
 |On Arch based systems||On Ubuntu/Debian based systems||
 |-----|:-----:|-----|:-----:|
 |git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|qt5-base|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|qt5-quickcontrols|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|qt5-quickcontrols2|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|qt5-charts|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
-|jcal-git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|?|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|qt5-base|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|qt5-default|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|qt5-quickcontrols|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|qml-module-qtquick-controls|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|qt5-quickcontrols2|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|qml-module-qtquick-controls2|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|qt5-charts|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|qml-module-qtcharts|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|jcal-git|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)|jcal|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
     
 3. clone the repo:
 
