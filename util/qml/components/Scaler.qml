@@ -1,39 +1,40 @@
 import QtQuick 2.9
+
 Item {
     anchors.fill: parent
     property variant mTarget
     property real initValue
     property real endValue
+    property real mDuration
     //    topPadding: 5
 
-    //    states: [
-    //        State {
-    //            name: "rotate"
-    //            PropertyChanges { target: mTarget; scale: endValue }
-    //        },
-    //        State {
-    //            name: "normal"
-    //            PropertyChanges { target: mTarget; scale: initValue }
-    //        }
-    //    ]
+    states: [
+        State {
+            name: "normal"
+            PropertyChanges { target: mTarget; scale: initValue }
+        },
+        State {
+            name: "scale"
+            PropertyChanges { target: mTarget; scale: endValue }
+        }
+    ]
 
-    //    transitions: Transition {
-    //        RotationAnimation { duration: 100; direction: RotationAnimation.Counterclockwise; }
-    //    }
+    transitions: Transition {
+        //RotationAnimation { duration: 100; direction: RotationAnimation.Counterclockwise; }
+        ScaleAnimator { duration: mDuration; }
+    }
 
     MouseArea {
         anchors.fill: parent
         hoverEnabled: true
 
         onEntered: {
-            mTarget.opacity = endValue
-            //mTarget.state = "rotate"
-            //console.log("enter")
+            mTarget.state = "scale"
+            //console.log("scaled")
         }
         onExited:{
-            mTarget.opacity = initValue
-            //mTarget.state = "normal"
-            //console.log("exit")
+            mTarget.state = "normal"
+            //console.log("normal")
         }
     }
 }

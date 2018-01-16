@@ -28,12 +28,12 @@ Rectangle{
         id: mScrollView
         clip: true
         width: parent.width
-        height: parent.height - (imgSettings.height + txtInspired)
+        height: parent.height - (imgSettings.height + txtInspired + 20)
         padding: Str.padding
         anchors.top: imgSettings.bottom
         ScrollBar.vertical.policy: ScrollBar.AsNeeded
         ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
-        ScrollBar.vertical.interactive: true
+
         Text {
             id: txtPillarBody
             text: Str.histogramPillarBody

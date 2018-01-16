@@ -1,5 +1,7 @@
 import QtQuick 2.9
+
 Item {
+    id: mtooltiper
     anchors.fill: parent
     property string toolTip
     property bool showToolTip: false
@@ -10,14 +12,15 @@ Item {
 
     Rectangle {
         id: toolTipRectangle
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: parent.bottom
         width: toolTipText.width + 4
         height: toolTipText.height + 4
-        z: 400
-        opacity: toolTip != "" && showToolTip ? 1 : 0
+        anchors.top: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        z: 2
         color: "#ffffaa"
         border.color: "#0a0a0a"
+        opacity: toolTip != "" && showToolTip ? 1 : 0
+
         Text {
             id: toolTipText
             text: toolTip
@@ -31,9 +34,12 @@ Item {
             }
         }
     }
+
     MouseArea {
         id: mouseArea
+        hoverEnabled: true
         anchors.fill: parent
+
         onEntered: {
             showTimer.start();
             if (typeof mItem != 'undefined'){
@@ -48,12 +54,13 @@ Item {
                 mItem.color = exitColor;
             }
         }
-
-        hoverEnabled: true
     }
+
     Timer {
         id: showTimer
         interval: 250
-        onTriggered: showToolTip = true;
+        onTriggered: {
+            showToolTip = true;
+        }
     }
 }

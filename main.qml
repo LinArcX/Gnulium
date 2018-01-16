@@ -8,9 +8,12 @@ import "qrc:/strings/CoreStrings.js" as CStr
 
 ApplicationWindow {
     id : myApp
+    property int appWidth: myApp.width
+    property int appHeight: myApp.height
+    property int appX: myApp.x
+    property int appY: myApp.y
+
     visible: true
-    width: CStr.appWidth
-    height: CStr.appHeight
     title: qsTr(CStr.appName)
     minimumWidth: Screen.width / 3 * 2
     minimumHeight: Screen.height / 3 * 2

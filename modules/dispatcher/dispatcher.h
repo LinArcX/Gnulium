@@ -3,8 +3,9 @@
 
 #include <QApplication>
 #include <QObject>
-#include <QString>
 #include <QProcess>
+#include <QQmlContext>
+#include <QString>
 
 class QQmlApplicationEngine;
 class QApplication;
@@ -17,6 +18,9 @@ public:
     QString appVer() const { return APP_VER; }
     QQmlApplicationEngine& getEngine() const { return mEngine; }
     QApplication& getApp() const { return mApp; }
+    void loadLanguage();
+
+    Q_INVOKABLE void getAppFeatures();
 
 signals:
 
@@ -25,6 +29,7 @@ public slots:
 private:
     QQmlApplicationEngine& mEngine;
     QApplication& mApp;
+    QQmlContext* mRootContext = nullptr;
 };
 
 #endif // DISPATCHER_H

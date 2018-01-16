@@ -1,18 +1,9 @@
 #include "modules/launcher/presenter/launcher.h"
 #include "modules/launcher/presenter/macros/launcherMacro.h"
 #include "modules/utils/utils.h"
-#include <QApplication>
-#include <QDebug>
-#include <QMessageBox>
 #include <QProcess>
-#include <QQmlApplicationEngine>
 #include <QString>
 #include <QStringList>
-
-#include <functional>
-#include <iostream>
-#include <iterator>
-#include <regex>
 
 using namespace std;
 
@@ -102,6 +93,20 @@ void Launcher::execMainInfo()
     pMainInfo = new QProcess(this);
     connect(pMainInfo, &QProcess::readyReadStandardOutput, this, &Launcher::returnMainInfo);
     pMainInfo->start("sh", QStringList() << "-c" << MAIN_INFO);
+}
+
+void Launcher::execTorStatus()
+{
+    pTorStatus = new QProcess(this);
+    connect(pTorStatus, &QProcess::readyReadStandardOutput, this, &Launcher::returnTorStatus);
+    pTorStatus->start(TOR_STATUS);
+}
+
+void Launcher::execVGA()
+{
+    pVGA = new QProcess(this);
+    connect(pVGA, &QProcess::readyReadStandardOutput, this, &Launcher::returnVGA);
+    pVGA->start("sh", QStringList() << "-c" << VGA);
 }
 
 void Launcher::returnTopMemory()
@@ -195,6 +200,38 @@ void Launcher::returnUpTime()
     emit singleModelReady(qv);
 }
 
+void Launcher::returnTorStatus()
+{
+    QString outPut = QString(pTorStatus->readAllStandardOutput());
+    if (outPut.contains("Bootstrapped")) {
+        QString status = outPut.split("Bootstrapped").last();
+        QString percent = status.split(":").first();
+        QVariant qv(percent);
+        emit singleModelReady(qv);
+    } else {
+        QString percent = "0%";
+        QVariant qv(percent);
+        emit singleModelReady(qv);
+    }
+}
+
+void Launcher::returnVGA()
+{
+    QStringList outPut = QString(pVGA->readAllStandardOutput()).split("\n");
+    outPut.removeLast();
+
+    QString vgas;
+    for (int i = 0; i < outPut.size(); ++i) {
+        if (i == outPut.size() - 1) {
+            vgas.append(outPut.at(i));
+        } else {
+            vgas.append(outPut.at(i) + "+");
+        }
+    }
+    QVariant qv(vgas);
+    emit singleModelReady(qv);
+}
+
 void Launcher::returnMainInfo()
 {
     QString outPut = QString(pMainInfo->readAllStandardOutput());
@@ -205,5 +242,4 @@ void Launcher::returnMainInfo()
 void Launcher::returnStandardError()
 {
     QString outPut = QString(pReadActiveServices->readAllStandardOutput());
-    qDebug() << outPut;
 }

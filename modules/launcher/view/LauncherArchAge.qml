@@ -1,6 +1,6 @@
 import QtQuick 2.9
-import QtQuick.Controls 2.2
-import QtQuick.Controls 1.4
+import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.3
 import linarcx.gnulium.launcher 1.0
 
 import "qrc:/util/qml/"
@@ -8,53 +8,105 @@ import "qrc:/strings/CoreStrings.js" as CStr
 import "qrc:/launcher/strings/LauncherStrings.js" as Str
 
 Rectangle {
-    id: mLauncherArchAge
-    width: parent.width / 2
-    height: parent.height
+    id: mParent
     color: CStr.transparent
 
     Launcher{
         id: mLauncher
     }
 
-    Image{
-        id: imgBootTime
-        source: CStr.imgMan
-        antialiasing: true
-        anchors.left: parent.left
-        sourceSize.width: parent.height / 3 * 2
-        sourceSize.height: parent.height / 3 * 2
-        anchors.verticalCenter: parent.verticalCenter
-    }
-
-    Text {
-        id: lblSystemAge
-        text: qsTr(Str.systemAge)
-        anchors.left: imgBootTime.right
-        anchors.verticalCenter: parent.verticalCenter
-    }
-
     FontLoader {
-        id: fontRadioSpace
+        id: mFont
         source: CStr.fontCaviarDreams
     }
 
-    Component{
-        id: txtArchAge
-        Text {
-            anchors.left: lblSystemAge.right
-            anchors.top: lblSystemAge.top
-            font.pixelSize: 17
-            font.family: fontRadioSpace.name
+    ////// Popup
+    LinArcxPopUp{
+        id: mPopUp
+        mParent: mLauncherTab
+        mWidth: appWidth / 2
+        mHeight: appHeight / 2
+        mImage: CStr.imgMan
+        mTitle: qsTr(Str.systemAgeTitle)
+        mBody: qsTr(Str.systemAgePopUp)
+    }
+
+    ////// Content
+    MouseArea {
+        anchors.fill: parent
+        acceptedButtons: Qt.RightButton
+        onClicked: contextMenu.popup()
+        Menu {
+            id: contextMenu
+            Action{
+                text: "What's This?"
+                onTriggered: mPopUp.open();
+                icon{
+                    source: CStr.imgQuestionMark; width: 20; height: 20
+                }
+            }
+        }
+    }
+
+    Rectangle{
+        id: mRect
+        color: "#BDBDBD"
+        radius: 5
+        width: parent.width / 4 * 3
+        height: parent.height / 2
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 5
+        anchors.rightMargin: parent.width / 2 - mRect.width / 2
+        anchors.leftMargin: parent.width / 2 - mRect.width / 2
+
+        Image {
+            id: mLogo
+            source: CStr.imgMan
+            sourceSize.width: mLogo.height
+            sourceSize.height: parent.height
+            anchors.left: parent.left
+            anchors.verticalCenter: parent.verticalCenter
             antialiasing: true
         }
+
+        Text {
+            id: mLabel
+            text: qsTr(Str.systemAgeTitle)
+            anchors.right: parent.right
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.rightMargin: (mRect.width - mLogo.width - mLabel.width) / 2
+        }
+    }
+
+    Text {
+        id: mData
+        antialiasing: true
+        font.pixelSize: 15
+        font.family: mFont.name
+        anchors.bottom: mRect.top
+        anchors.right: mRect.right
+        anchors.bottomMargin: -10
+        anchors.rightMargin: mRect.width / 2 - mData.width / 2
+    }
+
+    AnimatedImage{
+        id: mGiffy
+        z:1
+        opacity: 1
+        visible: false
+        width: mGiffy.height
+        height: parent.height - mRect.height
+        source: CStr.gifPacman
+        anchors.bottom: mRect.top
+        anchors.centerIn: parent
     }
 
     Connections{
         target: mLauncher
         onSingleModelReady:{
-            var mText = txtArchAge.createObject(mLauncherArchAge);
-            mText.text = singleModel;
+            mGiffy.visible = false;
+            mData.text = singleModel;
         }
     }
 

@@ -5,10 +5,7 @@
 #include <QObject>
 #include <QProcess>
 #include <QString>
-#include <QTimer>
 #include <QVariant>
-#include <functional>
-#include <iostream>
 #include <regex>
 
 class Launcher : public QObject {
@@ -28,6 +25,22 @@ public:
     QProcess* pBootTime;
     QProcess* pArchAge;
     QProcess* pUpTime;
+    QProcess* pTorStatus;
+    QProcess* pVGA;
+
+    Q_INVOKABLE void execMainInfo();
+    Q_INVOKABLE void execTopMemory();
+    Q_INVOKABLE void execTopProcess();
+    Q_INVOKABLE void execHardDisk();
+    Q_INVOKABLE void execActiveServices();
+    Q_INVOKABLE void execOpenPorts();
+    Q_INVOKABLE void execSystemdAnalyze();
+    Q_INVOKABLE void execTime();
+    Q_INVOKABLE void execBootTime();
+    Q_INVOKABLE void execArchAge();
+    Q_INVOKABLE void execUpTime();
+    Q_INVOKABLE void execTorStatus();
+    Q_INVOKABLE void execVGA();
 
     void returnMainInfo();
     void returnTopMemory();
@@ -40,7 +53,8 @@ public:
     void returnBootTime();
     void returnArchAge();
     void returnUpTime();
-
+    void returnTorStatus();
+    void returnVGA();
 
     void returnStandardError();
     std::regex getPattern();
@@ -51,17 +65,6 @@ public:
     QVariantList performRegx(std::regex word_regex, QStringList list);
 
 public slots:
-    void execMainInfo();
-    void execTopMemory();
-    void execTopProcess();
-    void execHardDisk();
-    void execActiveServices();
-    void execOpenPorts();
-    void execSystemdAnalyze();
-    void execTime();
-    void execBootTime();
-    void execArchAge();
-    void execUpTime();
 
 signals:
     void modelReady(QVariantList model);

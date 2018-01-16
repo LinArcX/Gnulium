@@ -1,8 +1,8 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
         <file alias="qtquickcontrols2.conf">appconf/qtquickcontrols2.conf</file>
         <file alias="strings/CoreStrings.js">util/strings/CoreStrings.js</file>
+        <file>main.qml</file>
     </qresource>
     <qresource prefix="/launcher">
         <file alias="launcher.qml">modules/launcher/view/launcher.qml</file>
@@ -10,7 +10,6 @@
         <file alias="LauncherMemory.qml">modules/launcher/view/LauncherMemory.qml</file>
         <file alias="LauncherHardDisk.qml">modules/launcher/view/LauncherHardDisk.qml</file>
         <file alias="LauncherActiveServices.qml">modules/launcher/view/LauncherActiveServices.qml</file>
-        <file alias="LauncherInfo.qml">modules/launcher/view/LauncherInfo.qml</file>
         <file alias="strings/LauncherStrings.js">modules/launcher/view/strings/LauncherStrings.js</file>
         <file alias="LauncherOpenPorts.qml">modules/launcher/view/LauncherOpenPorts.qml</file>
         <file alias="LauncherSystemdAnalyze.qml">modules/launcher/view/LauncherSystemdAnalyze.qml</file>
@@ -18,9 +17,11 @@
         <file alias="LauncherBootTime.qml">modules/launcher/view/LauncherBootTime.qml</file>
         <file alias="LauncherArchAge.qml">modules/launcher/view/LauncherArchAge.qml</file>
         <file alias="LauncherUpTime.qml">modules/launcher/view/LauncherUpTime.qml</file>
+        <file alias="LauncherEnv.qml">modules/launcher/view/LauncherEnv.qml</file>
+        <file alias="LauncherVGAs.qml">modules/launcher/view/LauncherVGAs.qml</file>
+        <file alias="LauncherTorStatus.qml">modules/launcher/view/LauncherTorStatus.qml</file>
     </qresource>
     <qresource prefix="/util">
-        <file alias="js/TableCreator.js">util/js/TableCreator.js</file>
         <file alias="qml/AppMenuBar.qml">util/qml/AppMenuBar.qml</file>
         <file alias="qml/AppTabView.qml">util/qml/AppTabView.qml</file>
         <file alias="js/MenuCreator.js">util/js/MenuCreator.js</file>
@@ -29,6 +30,16 @@
         <file alias="qml/Scaler.qml">util/qml/components/Scaler.qml</file>
         <file alias="qml/SpacerVertical.qml">util/qml/components/SpacerVertical.qml</file>
         <file alias="qml/TextScroll.qml">util/qml/components/TextScroll.qml</file>
+        <file alias="js/ElementCreator.js">util/js/ElementCreator.js</file>
+        <file alias="qml/Opacitor.qml">util/qml/components/Opacitor.qml</file>
+        <file alias="qml/LinArcxTextField.qml">util/qml/components/LinArcxTextField.qml</file>
+        <file alias="qml/TableThreeColumn.qml">util/qml/components/TableThreeColumn.qml</file>
+        <file alias="qml/TableOneColumn.qml">util/qml/components/TableOneColumn.qml</file>
+        <file alias="qml/TableTwoColumn.qml">util/qml/components/TableTwoColumn.qml</file>
+        <file alias="qml/TableFourColumn.qml">util/qml/components/TableFourColumn.qml</file>
+        <file alias="qml/LinArcxPopUp.qml">util/qml/components/LinArcxPopUp.qml</file>
+        <file alias="qml/TableFifthColumn.qml">util/qml/components/TableFifthColumn.qml</file>
+        <file alias="qml/TableSixColumn.qml">util/qml/components/TableSixColumn.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="diskette.svg">util/images/diskette.svg</file>
@@ -56,6 +67,26 @@
         <file alias="man.svg">util/images/man.svg</file>
         <file alias="hourGlass.svg">util/images/hourglass.svg</file>
         <file alias="analytics.svg">util/images/analytics.svg</file>
+        <file alias="pacmanLogo.jpg">util/images/pacmanLogo.jpg</file>
+        <file alias="repository.svg">util/images/repository.svg</file>
+        <file alias="onion.svg">util/images/onion.svg</file>
+        <file alias="nvidia.svg">util/images/nvidia.svg</file>
+        <file alias="box.svg">util/images/box.svg</file>
+        <file alias="gif/pacmanGIF.gif">util/images/gifs/pacmanGIF.gif</file>
+        <file alias="summary.svg">util/images/summary.svg</file>
+        <file alias="accumulator.svg">util/images/accumulator.svg</file>
+        <file alias="questionMark.svg">util/images/questionMark.svg</file>
+        <file alias="close.svg">util/images/close.svg</file>
+        <file alias="border.png">util/images/border.png</file>
+        <file alias="gif/loader.gif">util/images/gifs/loader.gif</file>
+        <file alias="gif/cirlo.gif">util/images/gifs/cirlo.gif</file>
+        <file alias="calendar.svg">util/images/calendar.svg</file>
+        <file alias="baby.svg">util/images/baby.svg</file>
+        <file alias="database.svg">util/images/database.svg</file>
+        <file alias="sweep.svg">util/images/sweep.svg</file>
+        <file alias="stop.svg">util/images/stop.svg</file>
+        <file alias="key.svg">util/images/key.svg</file>
+        <file alias="lock.svg">util/images/lock.svg</file>
     </qresource>
     <qresource prefix="/i18n">
         <file alias="persian.qm">util/i18n/persian.qm</file>
@@ -82,5 +113,17 @@
         <file alias="histogram.qml">modules/histogram/view/histogram.qml</file>
         <file alias="HistogramPillar.qml">modules/histogram/view/HistogramPillar.qml</file>
         <file alias="strings/HistogramStrings.js">modules/histogram/view/strings/HistogramStrings.js</file>
+    </qresource>
+    <qresource prefix="/pacman">
+        <file alias="pacman.qml">modules/pacman/view/pacman.qml</file>
+        <file alias="PacmanPillar.qml">modules/pacman/view/PacmanPillar.qml</file>
+        <file alias="strings/PacmanStrings.js">modules/pacman/view/strings/PacmanStrings.js</file>
+        <file alias="PacmanRepositories.qml">modules/pacman/view/PacmanRepositories.qml</file>
+        <file alias="PacmanMyAurHelper.qml">modules/pacman/view/PacmanMyAurHelper.qml</file>
+        <file alias="PacmanLastUpdateTime.qml">modules/pacman/view/PacmanLastUpdateTime.qml</file>
+        <file alias="PacmanQueryFileDB.qml">modules/pacman/view/PacmanQueryFileDB.qml</file>
+        <file alias="PacmanUpdatePKGs.qml">modules/pacman/view/PacmanUpdatePKGs.qml</file>
+        <file alias="PacmanUpdateSize.qml">modules/pacman/view/PacmanUpdateSize.qml</file>
+        <file alias="PacmanSummary.qml">modules/pacman/view/PacmanSummary.qml</file>
     </qresource>
 </RCC>

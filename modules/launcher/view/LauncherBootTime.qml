@@ -1,32 +1,53 @@
 import QtQuick 2.9
-import QtQuick.Controls 2.2
-import QtQuick.Controls 1.4
+import QtQuick.Controls 2.3
 import linarcx.gnulium.launcher 1.0
+import linarcx.gnulium.sortFilterProxyModel 0.1
 
 import "qrc:/util/qml/"
-import "qrc:/util/js/TableCreator.js" as JS
+import "qrc:/util/js/ElementCreator.js" as JS
 import "qrc:/strings/CoreStrings.js" as CStr
 import "qrc:/launcher/strings/LauncherStrings.js" as Str
 
 Column {
-    id: mLauncherBootTime
-    spacing: 5
-    property variant mTable: ({})
-    property int mImageSize: Str.imageSize
+    id: mParent
+    property int init: 0
 
     Launcher{
         id: mLauncher
     }
 
-    Row{
-        Image{
-            id: imgBootTime
-            sourceSize.width: mImageSize
-            sourceSize.height: mImageSize
-            antialiasing: true
+    FontLoader {
+        id: mFont
+        source: CStr.fontCaviarDreams
+    }
 
-            source: CStr.imgAlarmClock
+    ////// Popup
+    LinArcxPopUp{
+        id: mPopUp
+        mParent: mLauncherTab
+        mWidth: appWidth / 2
+        mHeight: appHeight / 2
+        mImage: CStr.imgAlarmClock
+        mTitle: qsTr(Str.bootTiemTitle)
+        mBody: qsTr(Str.bootTiemPopUp)
+    }
+
+    ////// Content
+    Rectangle{
+        width: parent.width
+        height: 30
+        color: CStr.transparent
+
+        Image{
+            id: mLogo
             property string toolTip
+            source: CStr.imgAlarmClock
+            sourceSize.width: parent.height
+            sourceSize.height: parent.height
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.topMargin: 5
+            antialiasing: true
 
             ToolTiper {
                 toolTip: CStr.referesh
@@ -35,48 +56,93 @@ Column {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    mLauncher.execBootTime();
                     console.log(Str.bootTiemTitle);
                 }
             }
         }
 
-        Rectangle{
-            width: mLauncherBootTime.width - mImageSize
-            height: imgBootTime.height
-            color: CStr.transparent
-            Text {
-                text: qsTr(Str.bootTiemTitle)
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.verticalCenter: parent.verticalCenter
+        LinArcxTextField {
+            id: searchBox
+            width: parent.width - (mLogo.width + searchBox.anchors.leftMargin)
+            height: parent.height
+            anchors.top: parent.top
+            anchors.left: mLogo.right
+            anchors.margins: 5
+            placeholderText: qsTr(Str.bootTiemTitle)
+        }
+
+        TableTwoColumn{
+            id: mTable
+            width: mParent.width
+            height: mParent.height - (mLogo.height + 10)
+            sortIndicatorVisible: true
+            anchors.left: parent.left
+            anchors.top: mLogo.bottom
+            anchors.topMargin: 5
+            z: CStr.mOne
+
+            firstTitle: qsTr(Str.lbtFirst)
+            secondTitle: qsTr(Str.lbtSecond)
+
+            MouseArea {
+                anchors.fill: parent
+                acceptedButtons: Qt.RightButton
+                onClicked: contextMenu.popup()
+                Menu {
+                    id: contextMenu
+                    Action{
+                        text: "Clear";
+                        onTriggered: {
+                            if(mTable.model){
+                                mTable.model.source = null;
+                            }
+                        }
+                        icon{
+                            source: CStr.imgSweep; width: 20; height: 20
+                        }
+                    }
+                    Action{
+                        text: "What's This?"
+                        onTriggered: mPopUp.open();
+                        icon{
+                            source: CStr.imgQuestionMark; width: 20; height: 20
+                        }
+                    }
+                }
             }
         }
 
-        Component{
-            id: tblMainInfo
-            TableView{
-                width: parent.width
-                height: parent.height - mImageSize
-                sortIndicatorVisible: true
-                z: Str.zTable
-                TableViewColumn{
-                    role: CStr.firstValue; title: qsTr(Str.lbtFirst); width: parent.width / 2;
-                }
-                TableViewColumn{
-                    role:CStr.secondValue; title: qsTr(Str.lbtSecond);width: parent.width / 2;
-                }
-            }
+        SortFilterProxyModel{
+            id: proxyModel
+            sortOrder: mTable.sortIndicatorOrder
+            sortCaseSensitivity: Qt.CaseInsensitive
+            filterString: "*" + searchBox.text + "*"
+            filterSyntax: SortFilterProxyModel.Wildcard
+            filterCaseSensitivity: Qt.CaseInsensitive
         }
 
         Connections{
             target: mLauncher
             onModelReady:{
-                JS.createTable(model, mLauncherBootTime, mTable, JS.createTwoModel);
+                JS.toogleGif(mGiffy, false, mTable, 1);
+                var sourceModel = JS.createTwoModel(model, mParent);
+                mTable.model = JS.createProxyModel(sourceModel, proxyModel, mTable);
             }
         }
 
+        AnimatedImage{
+            id: mGiffy
+            z:1
+            width: 50
+            height: 50
+            opacity: 1
+            visible: false
+            source: CStr.gifLoader
+            anchors.centerIn: mTable
+        }
+
         Component.onCompleted: {
-            mTable = tblMainInfo.createObject(mLauncherBootTime);
+            JS.toogleGif(mGiffy, true, mTable, 0.5);
             mLauncher.execBootTime();
         }
     }

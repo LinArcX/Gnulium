@@ -1,32 +1,53 @@
 import QtQuick 2.9
-import QtQuick.Controls 2.2
-import QtQuick.Controls 1.4
+import QtQuick.Controls 2.3
 import linarcx.gnulium.launcher 1.0
+import linarcx.gnulium.sortFilterProxyModel 0.1
 
 import "qrc:/util/qml/"
-import "qrc:/util/js/TableCreator.js" as JS
+import "qrc:/util/js/ElementCreator.js" as JS
 import "qrc:/strings/CoreStrings.js" as CStr
 import "qrc:/launcher/strings/LauncherStrings.js" as Str
 
 Column {
-    id: mLauncherMemory
-    spacing: 5
-    property variant mTable: ({})
-    property int mImageSize: Str.imageSize
+    id: mParent
+    property int init: 0
 
     Launcher{
         id: mLauncher
     }
 
-    Row{
-        Image{
-            id: imgTopMemory
-            sourceSize.width: mImageSize
-            sourceSize.height: mImageSize
-            antialiasing: true
+    FontLoader {
+        id: mFont
+        source: CStr.fontCaviarDreams
+    }
 
-            source: CStr.imgRam
+    ////// Popup
+    LinArcxPopUp{
+        id: mPopUp
+        mParent: mLauncherTab
+        mWidth: appWidth / 2
+        mHeight: appHeight / 2
+        mImage: CStr.imgRam
+        mTitle: qsTr(Str.topMemoryTitle)
+        mBody: qsTr(Str.topMemoryPopUp)
+    }
+
+    ////// Content
+    Rectangle{
+        width: parent.width
+        height: 30
+        color: CStr.transparent
+
+        Image{
+            id: mLogo
             property string toolTip
+            source: CStr.imgRam
+            sourceSize.width: parent.height
+            sourceSize.height: parent.height
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.topMargin: 5
+            antialiasing: true
 
             ToolTiper {
                 toolTip: CStr.referesh
@@ -35,65 +56,110 @@ Column {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
+                    JS.toogleGif(mGiffy, true, mTable, 0.5);
                     mLauncher.execTopMemory()
                     console.log(Str.topMemoryTitle);
                 }
             }
         }
 
-        Rectangle{
-            width: mLauncherMemory.width - mImageSize
-            height: imgTopMemory.height
-            color: CStr.transparent
-            Text {
-                text: qsTr(Str.topMemoryTitle)
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.verticalCenter: parent.verticalCenter
-            }
+        LinArcxTextField {
+            id: searchBox
+            width: parent.width - (mLogo.width + searchBox.anchors.leftMargin)
+            height: parent.height
+            anchors.top: parent.top
+            anchors.left: mLogo.right
+            anchors.margins: 5
+            placeholderText: qsTr(Str.topMemoryTitle)
         }
 
-    }
-
-    Component{
-        id: tblTopMemory
-        TableView{
-            width: parent.width
-            height: parent.height - mImageSize
+        TableThreeColumn{
+            id: mTable
+            width: mParent.width
+            height: mParent.height - (mLogo.height + 10)
             sortIndicatorVisible: true
-            z:-1
-            TableViewColumn{
-                role: CStr.firstValue; title: qsTr(Str.lmFirst); width: parent.width / 4;
-            }
-            TableViewColumn{
-                role: CStr.secondValue; title: qsTr(Str.lmSecond); width: parent.width / 2;
-            }
-            TableViewColumn{
-                role: CStr.thirdValue; title: qsTr(Str.lmThird); width: parent.width / 4;
+            anchors.left: parent.left
+            anchors.top: mLogo.bottom
+            anchors.topMargin: 5
+            z: CStr.mOne
+
+            firstTitle: qsTr(Str.lmFirst)
+            secondTitle: qsTr(Str.lmSecond)
+            thirdTitle: qsTr(Str.lmThird)
+
+            MouseArea {
+                anchors.fill: parent
+                acceptedButtons: Qt.RightButton
+                onClicked: contextMenu.popup()
+                Menu {
+                    id: contextMenu
+                    Action{
+                        text: "Clear";
+                        onTriggered: {
+                            if(mTable.model){
+                                mTable.model.source = null;
+                            }
+                        }
+                        icon{
+                            source: CStr.imgSweep; width: 20; height: 20
+                        }
+                    }
+                    Action{
+                        text: "What's This?"
+                        onTriggered: mPopUp.open();
+                        icon{
+                            source: CStr.imgQuestionMark; width: 20; height: 20
+                        }
+                    }
+                }
             }
         }
-    }
 
-    Component{
-        id : mTimer
-        Timer {
-            interval: Str.interval; running: true; repeat: true
-            onTriggered:{
-                mLauncher.execTopMemory()
-                console.log(Str.topMemoryTitle);
+        SortFilterProxyModel{
+            id: proxyModel
+            sortOrder: mTable.sortIndicatorOrder
+            sortCaseSensitivity: Qt.CaseInsensitive
+            filterString: "*" + searchBox.text + "*"
+            filterSyntax: SortFilterProxyModel.Wildcard
+            filterCaseSensitivity: Qt.CaseInsensitive
+        }
+
+        Component{
+            id : mTimer
+            Timer {
+                interval: Str.interval; running: true; repeat: true
+                onTriggered:{
+                    //JS.toogleGif(mGiffy, true, mTable, 0.5);
+                    mLauncher.execTopMemory()
+                    console.log(Str.topMemoryTitle);
+                }
             }
         }
-    }
 
-    Connections{
-        target: mLauncher
-        onModelReady:{
-            JS.createTable(model, mLauncherMemory, mTable, JS.createThreeModel);
+        Connections{
+            target: mLauncher
+            onModelReady:{
+                JS.toogleGif(mGiffy, false, mTable, 1);
+                var sourceModel = JS.createThreeModel(model, mParent);
+                mTable.model = JS.createProxyModel(sourceModel, proxyModel, mTable);
+            }
         }
-    }
 
-    Component.onCompleted: {
-        mTable = tblTopMemory.createObject(mLauncherMemory);
-        mLauncher.execTopMemory();
-        mTimer.createObject(mLauncherMemory);
+        AnimatedImage{
+            id: mGiffy
+            z:1
+            width: 50
+            height: 50
+            opacity: 1
+            visible: false
+            source: CStr.gifLoader
+            anchors.centerIn: mTable
+        }
+
+        Component.onCompleted: {
+            JS.toogleGif(mGiffy, true, mTable, 0.5);
+            mLauncher.execTopMemory();
+            mTimer.createObject(mParent);
+        }
     }
 }

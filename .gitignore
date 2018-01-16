@@ -12,7 +12,9 @@
 #!src/*
 #!src/*/*
 
+
 #!target/
+#PKGBUILD/gnulium-git/.git/*/*/*
 #target/classes/
 #target/generated-sources/
 #target/m2e-wtp/

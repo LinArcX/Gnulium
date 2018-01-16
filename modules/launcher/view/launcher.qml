@@ -1,13 +1,13 @@
 import QtQuick 2.9
-import QtQuick.Controls 2.2
+import QtQuick.Controls 2.3
 
 import "qrc:/util/qml"
 import "qrc:/strings/CoreStrings.js" as CStr
-import "qrc:/launcher/strings/LauncherStrings.js" as Str
 
 Row{
-    anchors.fill: parent
+    id: mLauncherTab
     spacing: CStr.rowSpacing
+    anchors.fill: parent
 
     LauncherPillar{
         width: parent.width / 5 * 1
@@ -18,16 +18,16 @@ Row{
     }
 
     Rectangle{
-        width: (parent.width / 5 * 4) - (2 * CStr.tabViewMargin)
-        height: parent.height
         color: CStr.transparent
+        height: parent.height
+        width: (parent.width / 5 * 4) - (2 * CStr.tabViewMargin)
+
         Grid {
             id: mGrid
             width: parent.width
-            height: parent.height / 5 * 4
+            height: parent.height / 6 * 5
             anchors.top: parent.top
             columns: 4
-            rowSpacing: 10
             columnSpacing: 2
 
             LauncherMemory {
@@ -50,7 +50,7 @@ Row{
                 height: (parent.height / 2)
             }
 
-            LauncherInfo{
+            LauncherEnv{
                 width: (parent.width / 4) * 1
                 height: (parent.height / 2)
             }
@@ -70,22 +70,40 @@ Row{
             }
         }
         Rectangle{
+            color: CStr.transparent
             width: parent.width
-            height: parent.height / 5 * 1
-            anchors.topMargin: 20
+            height: parent.height / 6 * 1
             anchors.top: mGrid.bottom
             anchors.bottom: parent.bottom
-            color: CStr.transparent
+
             LauncherArchAge{
-                id:lnchArchAge
+                id: mArchAge
+                width: parent.width / 4 * 1
+                height: parent.height
+                anchors.left: parent.left
+                anchors.bottom: parent.bottom
             }
             LauncherUpTime{
-                width: parent.width / 2
+                id: mUpTime
+                width: parent.width / 4 * 1
                 height: parent.height
-                anchors.left: lnchArchAge.right
+                anchors.left: mArchAge.right
+                anchors.bottom: parent.bottom
+            }
+            LauncherVGAs{
+                id: mVGAs
+                width: parent.width / 4 * 1
+                height: parent.height
+                anchors.left: mUpTime.right
+                anchors.bottom: parent.bottom
+            }
+            LauncherTorStatus{
+                id: mTorStatus
+                width: parent.width / 4 * 1
+                height: parent.height
+                anchors.left: mVGAs.right
+                anchors.bottom: parent.bottom
             }
         }
     }
 }
-
-

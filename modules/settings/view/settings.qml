@@ -4,6 +4,7 @@ import QtQuick.Dialogs 1.2
 import linarcx.gnulium.settings 1.0
 
 import "qrc:/util/qml"
+import "qrc:/util/js/ElementCreator.js" as JS
 import "qrc:/strings/CoreStrings.js" as CStr
 import "qrc:/settings/strings/SettingsStrings.js" as Str
 
@@ -69,19 +70,15 @@ Row{
                         anchors.top: imgStyle.bottom
                         anchors.horizontalCenter: parent.horizontalCenter
                         z:-1
-                        currentIndex: 1
-                        model: ListModel {
-                            id: styleModel
-                            ListElement { text: "Default" }
-                            ListElement { text: "Imagine" }
-                            ListElement { text: "Fusion" }
-                            ListElement { text: "Universal" }
-                            ListElement { text: "Material" }
+                        Component.onCompleted: {
+                            JS.createCombo(appSettings.appStyles(), appSettings.appStyleIndex(),
+                                           mRectStyle, cbStyle);
                         }
                     }
                 }
 
                 Rectangle{
+                    id: mRectFontFamily
                     width: (parent.width / 4 * 1)
                     height: imgFontFamily.height + cbFontFamily.height + 10
                     color: CStr.transparent
@@ -105,21 +102,16 @@ Row{
                         anchors.top: imgFontFamily.bottom
                         anchors.horizontalCenter: parent.horizontalCenter
                         z:-1
-                        currentIndex: 2
-                        model: ListModel {
-                            id: styleFontFamily
-                            ListElement { text: "Vazir"}
-                            ListElement { text: "Adele"}
-                            ListElement { text: "XmYekan" }
-                            ListElement { text: "Shabnam" }
-                            ListElement { text: "RadioSpace" }
-                            ListElement { text: "CaviarDreams" }
+                        Component.onCompleted: {
+                            JS.createCombo(appSettings.fontFamilies(), appSettings.fontFamilyIndex(),
+                                           mRectFontFamily, cbFontFamily);
                         }
                     }
                 }
 
 
                 Rectangle{
+                    id: mRectFontSize
                     width: (parent.width / 4 * 1)
                     height: imgFontSize.height + cbFontSize.height + 10
                     color: CStr.transparent
@@ -143,14 +135,9 @@ Row{
                         anchors.top: imgFontSize.bottom
                         anchors.horizontalCenter: parent.horizontalCenter
                         z:-1
-                        currentIndex: 2
-                        model: ListModel {
-                            id: styleFontSize
-                            ListElement { text: "8" }
-                            ListElement { text: "10" }
-                            ListElement { text: "12" }
-                            ListElement { text: "14" }
-                            ListElement { text: "16" }
+                        Component.onCompleted: {
+                            JS.createCombo(appSettings.fontSizes(), appSettings.fontSizeIndex(),
+                                           mRectFontSize, cbFontSize);
                         }
                     }
                 }
@@ -160,7 +147,6 @@ Row{
         Component{
             id: mDialogChangeSettings
             Dialog {
-                id: dateDialog
                 visible: true
                 title: "Choose a date"
                 standardButtons: StandardButton.Yes | StandardButton.No | StandardButton.Cancel
@@ -193,6 +179,43 @@ Row{
                 mSettings.setSettings(mySettings);
 
                 var mDialog = mDialogChangeSettings.createObject(mSettingsContent);
+                mDialog.open();
+            }
+        }
+
+        Component{
+            id: mDialogResetSettings
+            Dialog {
+                visible: true
+                title: "Reset Settings!"
+                standardButtons: StandardButton.Yes | StandardButton.No | StandardButton.Cancel
+
+                onYes: {
+                    mSettings.resetSettings();
+                    mSettings.restartApp();
+                }
+                onNo: console.log("no");
+                onRejected: console.log("reject")
+
+                Text {
+                    text: qsTr(Str.settingsReset)
+                    anchors.centerIn: parent
+                    width: parent.width
+                    height: parent.height
+                }
+            }
+        }
+
+        Button{
+            id: btnDefaults
+            text: CStr.defaults
+            anchors.right: btnSave.left
+            anchors.bottom: parent.bottom
+            anchors.rightMargin: 5
+            anchors.topMargin: 5
+            anchors.bottomMargin: 5
+            onClicked:{
+                var mDialog = mDialogResetSettings.createObject(mSettingsContent);
                 mDialog.open();
             }
         }

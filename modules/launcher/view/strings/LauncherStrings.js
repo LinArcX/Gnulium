@@ -1,6 +1,6 @@
 // constants
 var zTable = -1;
-var imageSize = 25;
+var twenty = 25;
 var interval = 2000;
 var padding = 10;
 var fontSize = 14;
@@ -13,8 +13,19 @@ var topMemoryTitle = "Top Memory";
 var upTimeTitle = "Up Time";
 var topProcessTitle = "Top Process";
 var hardDiskTitle = "Hard Disk Info";
-var activeServicetitle = "Active Services"
+var activeServiceTitle = "Active Services"
 var environmentTitle = "Environment Variables";
+
+var locked = "Locked :(";
+
+var topMemoryPopUp = "Show top-10 applications that consume your memory."
+var topProcessPopUp = "Show top-10 applications that consume your Cpu."
+var hardDiskPopUp = "Show hard disk info."
+var activeServicePopUp = "Show running services."
+var environmentPopUp = "Show Environment Variables."
+var openPortsPopUp = "Show Open Ports."
+var systemdAnalyzePopUp = "The result of systemd-analyze blame"
+var bootTiemPopUp = "Show the system boot time."
 
 // columns
 // launcherActiveServices
@@ -58,5 +69,11 @@ var lpThird = "%CPU";
 
 var gnuLinux = "GNU/Linux is an operating system, a large piece of software that manages a computer. It is similar to Microsoft Windows, but it is entirely free. The accurate name is GNU/Linux.";
 
-var systemAge = "System Age: ";
-var upTime = "Up Time: ";
+var systemAgeTitle = "System Age";
+var grapchicCardsTitle = "Graphic Cards";
+var torStatusTitle = "Tor Status";
+var grapchicCardsPopUp = "Show all graphic cards available in the system.";
+var torStatusPopUp = "Show the status of tor service.";
+var systemAgePopUp = "How old are your system?";
+var upTimeTitle = "Up Time";
+var upTimePopUp = "Show the Uptime";

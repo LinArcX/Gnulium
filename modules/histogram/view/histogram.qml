@@ -47,7 +47,7 @@ Row{
                 var counter = [];
                 var command = [];
                 for (var i = 0; i < model.length; i++) {
-                    var firstValue, secondValue = "";
+                    var firstRole, secondRole = "";
                     for (var j = 0; j < model[i].length; j++) {
                         var node = model[i][j];
                         switch(j) {

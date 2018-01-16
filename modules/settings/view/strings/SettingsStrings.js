@@ -1,6 +1,6 @@
 // constants
 var zTable = -1;
-var imageSize = 25;
+var twenty = 25;
 var interval = 2000;
 var padding = 10;
 var fontSize = 14;
@@ -17,3 +17,6 @@ var settingsStrings =
 
 var settingsDone = "Your Preferences Done!\n
 to see changes, restart the app. RESTART NOW?"
+
+var settingsReset = "Your settings will be gone!\n
+Are you agree?"
