@@ -2,7 +2,7 @@
 A Graphical Ui for managing scripts and ideas!
 
 ## Preview
-!["gnulium"](http://uupload.ir/files/mzr7_screenshot_from_2017-12-30_15-54-10.png "gnulium")
+!["gnulium"](http://uupload.ir/files/fmvv_home.png "gnulium")
 
 
 ### Introduction
