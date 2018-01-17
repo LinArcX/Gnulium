@@ -9,7 +9,6 @@
 
 //class QString;
 
-//namespace Utils {
 class Utils {
 public:
     Utils();
@@ -35,4 +34,3 @@ private:
     explicit Utils(const Utils& rhs) = delete;
     Utils& operator=(const Utils& rhs) = delete;
 };
-//}
