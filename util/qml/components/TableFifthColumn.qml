@@ -9,6 +9,8 @@ TableView{
     property string forthTitle
     property string fifthTitle
 
+    style: LinArcxTableViewStyle{}
+
     TableViewColumn{
         role: CStr.firstRole; title: firstTitle; width: mParent.width / 5;
     }

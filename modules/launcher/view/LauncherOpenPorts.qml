@@ -132,8 +132,11 @@ Column {
         Connections{
             target: mLauncher
             onModelReady:{
+                mTable.opacity = 1;
+                searchBox.enabled = true;
                 searchBox.placeholderText = Str.openPortsTitle;
-                JS.toogleGif(mGiffy, false, mTable, 1);
+                imgKey.visible = false;
+
                 var sourceModel = JS.createThreeModel(model, mParent);
                 mTable.model = JS.createProxyModel(sourceModel, proxyModel, mTable);
             }
@@ -178,9 +181,6 @@ Column {
                 onEntered: imgKey.state = "IN"
                 onExited: imgKey.state = "OUT"
                 onClicked: {
-                    mTable.opacity = 1;
-                    searchBox.enabled = true;
-                    imgKey.visible = false;
                     mLauncher.execOpenPorts();
                 }
             }

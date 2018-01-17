@@ -40,6 +40,7 @@
         <file alias="qml/LinArcxPopUp.qml">util/qml/components/LinArcxPopUp.qml</file>
         <file alias="qml/TableFifthColumn.qml">util/qml/components/TableFifthColumn.qml</file>
         <file alias="qml/TableSixColumn.qml">util/qml/components/TableSixColumn.qml</file>
+        <file alias="qml/LinArcxTableViewStyle.qml">util/qml/components/LinArcxTableViewStyle.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="diskette.svg">util/images/diskette.svg</file>

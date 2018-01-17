@@ -17,6 +17,8 @@ TableView{
     property int fifthW
     property int sixthW
 
+    style: LinArcxTableViewStyle{}
+
     TableViewColumn{
         role: CStr.firstRole;
         title: firstTitle;

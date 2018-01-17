@@ -57,22 +57,24 @@ Row{
             height: parent.height / 5 * 1
             anchors.top: mGrid.bottom
             anchors.bottom: parent.bottom
-            PacmanUpdateSize{
-                id: mNextUpdateSize
-                width: parent.width / 3
+            //            PacmanUpdateSize{
+            //                id: mNextUpdateSize
+            //                width: parent.width / 3
+            //                height: parent.height
+            //                anchors.left: parent.left
+            //                anchors.bottom: parent.bottom
+            //            }
+            PacmanLastUpdateTime{
+                id: mLastUpdateTime
+                width: parent.width / 2
                 height: parent.height
                 anchors.left: parent.left
                 anchors.bottom: parent.bottom
-            }
-            PacmanLastUpdateTime{
-                id: mLastUpdateTime
-                width: parent.width / 3
-                height: parent.height
-                anchors.left: mNextUpdateSize.right
+                //                anchors.left: mNextUpdateSize.right
             }
             PacmanMyAurHelper{
                 id: myAurHelper
-                width: parent.width / 3
+                width: parent.width / 2
                 height: parent.height
                 anchors.left: mLastUpdateTime.right
             }

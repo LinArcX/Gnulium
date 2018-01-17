@@ -7,7 +7,7 @@ import "qrc:/strings/CoreStrings.js" as CStr
 import "qrc:/launcher/strings/LauncherStrings.js" as Str
 
 Rectangle{
-    id: mLauncherPillar
+    id: mParent
     color: CStr.transparent
 
     Launcher{
@@ -15,7 +15,7 @@ Rectangle{
     }
 
     FontLoader {
-        id: fontRadioSpace
+        id: mFont
         source: CStr.fontRadioSpace
     }
 
@@ -24,6 +24,7 @@ Rectangle{
         source: CStr.imgGnuLinux
         sourceSize.width: parent.width
         sourceSize.height: parent.width
+        anchors.top: parent.top
     }
 
     ScrollView {
@@ -45,70 +46,53 @@ Rectangle{
         }
     }
 
-    Component{
+    Text {
         id: txtDate
-        Text {
-            font.family: fontRadioSpace.name
-            font.pixelSize: 30
-            anchors.horizontalCenter: parent.horizontalCenter
-        }
+        font.family: mFont.name
+        font.pixelSize: 30
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: txtDateGMT.top
     }
 
-    Component{
+    Text {
         id: txtDateGMT
-        Text {
-            anchors.horizontalCenter: parent.horizontalCenter
-        }
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: txtDateDesc.top
     }
 
-    Component{
+    Text {
         id: txtDateDesc
-        Text {
-            anchors.horizontalCenter: parent.horizontalCenter
-        }
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottom: txtDatePersian.top
     }
 
-    Component{
+    Text {
         id: txtDatePersian
-        Text {
-            anchors.horizontalCenter: parent.horizontalCenter
-            font.pixelSize: 20
-        }
+        anchors.horizontalCenter: parent.horizontalCenter
+        font.pixelSize: 20
+        anchors.bottom: mParent.bottom
     }
 
     Connections{
         target: mLauncher
         onModelReady:{
-            var mText;
-            var mTextGMT;
-            var mTextDesc;
-            var mTextDatePersian;
             for (var i=0; i< model.length; i++){
                 var node = model[i];
                 switch(i) {
                 case 0:
-                    mText = txtDate.createObject(mLauncherPillar);
-                    mText.text = node
+                    txtDate.text = node
                     break;
                 case 1:
-                    mTextGMT = txtDateGMT.createObject(mLauncherPillar);
-                    mTextGMT.text = "<font color=\"orange\">GMT </font>" + node;
+                    txtDateGMT.text = "<font color=\"orange\">GMT </font>" + node;
                     break;
                 case 2:
-                    mTextDesc = txtDateDesc.createObject(mLauncherPillar);
-                    mTextDesc.text = node
+                    txtDateDesc.text = node
                     break;
                 case 3:
-                    mTextDatePersian = txtDatePersian.createObject(mLauncherPillar);
-                    mTextDatePersian.text = node
+                    txtDatePersian.text = node
                     break;
                 }
-                //console.log("Array item:", model[i])
             }
-            mTextDatePersian.anchors.bottom = mLauncherPillar.bottom;
-            mTextDesc.anchors.bottom = mTextDatePersian.top;
-            mTextGMT.anchors.bottom = mTextDesc.top
-            mText.anchors.bottom = mTextGMT.top
         }
     }
 
