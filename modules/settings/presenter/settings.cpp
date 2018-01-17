@@ -44,7 +44,21 @@ void Settings::setSettings(QVariantMap mSettings)
             settings.setValue(STYLE, appStyle);
             settings.endGroup();
             loadAppStyle();
-        }
+        }/* else if (mKey == "style_night") {
+            QString appStyle = iter.value().toString();
+            QSettings settings("io.github.linarcx", "gnulium");
+            settings.beginGroup("Interface Mode");
+            settings.setValue("style_night", appStyle);
+            settings.endGroup();
+            loadAppStyle();
+
+
+            Add first step to nightMode
+            Need time for creating new several files, also
+            New style qml
+
+            State: Working On it .....
+        }*/
     }
 }
 

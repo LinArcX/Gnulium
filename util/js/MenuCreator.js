@@ -6,7 +6,7 @@ function createMenuItem(tabView, tabTitle, tabLink){
     var isRepeat = false;
     var index=0;
     for(var i=0; i< tabView.count;i++){
-        var currentTitle = tabView.getTab(i).title
+        var currentTitle = tabView.getTab(i).title;
         if(currentTitle === tabTitle){
             isRepeat = true;
             index = i;
@@ -15,8 +15,8 @@ function createMenuItem(tabView, tabTitle, tabLink){
     if(!isRepeat){
         var component = Qt.createComponent(tabLink);
         tabView.addTab(tabTitle, component);
-        tabView.currentIndex = tabView.count - 1
+        tabView.currentIndex = tabView.count - 1;
     }else{
-        tabView.currentIndex = index
+        tabView.currentIndex = index;
     }
 }
