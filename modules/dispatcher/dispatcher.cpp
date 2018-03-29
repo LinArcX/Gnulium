@@ -1,8 +1,10 @@
 #include "modules/dispatcher/dispatcher.h"
 #include "modules/histogram/presenter/histogram.h"
-#include "modules/launcher/presenter/launcher.h"
+#include "modules/home/presenter/home.h"
 #include "modules/pacman/presenter/pacman.h"
 #include "modules/settings/presenter/settings.h"
+#include "modules/subFixer/presenter/subFixer.h"
+#include "modules/deCreator/presenter/deCreator.h"
 #include <QFont>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
@@ -16,11 +18,14 @@ Dispatcher::Dispatcher(QApplication& app, QObject* parent)
     , QObject(parent)
     , mEngine(*new QQmlApplicationEngine())
 {
-    qmlRegisterType<Launcher>(LAUNCHER_NAME_SPACE, 1, 0, LAUNCHER_NAME);
+    qmlRegisterType<SortFilterProxyModel>(SORT_FILTER_PROXT_NAME_SPACE, 0, 1, SORT_FILTER_PROXT_NAME);
+
+    qmlRegisterType<Home>(HOME_NAME_SPACE, 1, 0, HOME_NAME);
     qmlRegisterType<Settings>(SETTINGS_NAME_SPACE, 1, 0, SETTINGS_NAME);
     qmlRegisterType<Histogram>(HISTOGRAM_NAME_SPACE, 1, 0, HISTOGRAM_NAME);
     qmlRegisterType<Pacman>(PACMAN_NAME_SPACE, 1, 0, PACMAN_NAME);
-    qmlRegisterType<SortFilterProxyModel>(SORT_FILTER_PROXT_NAME_SPACE, 0, 1, SORT_FILTER_PROXT_NAME);
+    qmlRegisterType<SubFixer>(SUBFIXER_NAME_SPACE, 1, 0, SUBFIXER_NAME);
+    qmlRegisterType<DeCreator>(DECREATOR_NAME_SPACE, 1, 0, DECREATOR_NAME);
 
     Settings& settings = *new Settings();
     settings.loadFontFamily();

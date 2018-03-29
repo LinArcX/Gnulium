@@ -4,22 +4,22 @@
         <file alias="strings/CoreStrings.js">util/strings/CoreStrings.js</file>
         <file>main.qml</file>
     </qresource>
-    <qresource prefix="/launcher">
-        <file alias="launcher.qml">modules/launcher/view/launcher.qml</file>
-        <file alias="LauncherProcess.qml">modules/launcher/view/LauncherProcess.qml</file>
-        <file alias="LauncherMemory.qml">modules/launcher/view/LauncherMemory.qml</file>
-        <file alias="LauncherHardDisk.qml">modules/launcher/view/LauncherHardDisk.qml</file>
-        <file alias="LauncherActiveServices.qml">modules/launcher/view/LauncherActiveServices.qml</file>
-        <file alias="strings/LauncherStrings.js">modules/launcher/view/strings/LauncherStrings.js</file>
-        <file alias="LauncherOpenPorts.qml">modules/launcher/view/LauncherOpenPorts.qml</file>
-        <file alias="LauncherSystemdAnalyze.qml">modules/launcher/view/LauncherSystemdAnalyze.qml</file>
-        <file alias="LauncherPillar.qml">modules/launcher/view/LauncherPillar.qml</file>
-        <file alias="LauncherBootTime.qml">modules/launcher/view/LauncherBootTime.qml</file>
-        <file alias="LauncherArchAge.qml">modules/launcher/view/LauncherArchAge.qml</file>
-        <file alias="LauncherUpTime.qml">modules/launcher/view/LauncherUpTime.qml</file>
-        <file alias="LauncherEnv.qml">modules/launcher/view/LauncherEnv.qml</file>
-        <file alias="LauncherVGAs.qml">modules/launcher/view/LauncherVGAs.qml</file>
-        <file alias="LauncherTorStatus.qml">modules/launcher/view/LauncherTorStatus.qml</file>
+    <qresource prefix="/home">
+        <file alias="Home.qml">modules/home/view/Home.qml</file>
+        <file alias="HomeProcess.qml">modules/home/view/HomeProcess.qml</file>
+        <file alias="HomeMemory.qml">modules/home/view/HomeMemory.qml</file>
+        <file alias="HomeHardDisk.qml">modules/home/view/HomeHardDisk.qml</file>
+        <file alias="HomeActiveServices.qml">modules/home/view/HomeActiveServices.qml</file>
+        <file alias="strings/HomeStrings.js">modules/home/view/strings/HomeStrings.js</file>
+        <file alias="HomeOpenPorts.qml">modules/home/view/HomeOpenPorts.qml</file>
+        <file alias="HomeSystemdAnalyze.qml">modules/home/view/HomeSystemdAnalyze.qml</file>
+        <file alias="HomePillar.qml">modules/home/view/HomePillar.qml</file>
+        <file alias="HomeBootTime.qml">modules/home/view/HomeBootTime.qml</file>
+        <file alias="HomeArchAge.qml">modules/home/view/HomeArchAge.qml</file>
+        <file alias="HomeUpTime.qml">modules/home/view/HomeUpTime.qml</file>
+        <file alias="HomeEnv.qml">modules/home/view/HomeEnv.qml</file>
+        <file alias="HomeVGAs.qml">modules/home/view/HomeVGAs.qml</file>
+        <file alias="HomeTorStatus.qml">modules/home/view/HomeTorStatus.qml</file>
     </qresource>
     <qresource prefix="/util">
         <file alias="qml/AppMenuBar.qml">util/qml/AppMenuBar.qml</file>
@@ -41,6 +41,7 @@
         <file alias="qml/TableFifthColumn.qml">util/qml/components/TableFifthColumn.qml</file>
         <file alias="qml/TableSixColumn.qml">util/qml/components/TableSixColumn.qml</file>
         <file alias="qml/LinArcxTableViewStyle.qml">util/qml/components/LinArcxTableViewStyle.qml</file>
+        <file alias="qml/DragAndDropTextItem.qml">util/qml/DragAndDropTextItem.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="diskette.svg">util/images/diskette.svg</file>
@@ -88,6 +89,16 @@
         <file alias="stop.svg">util/images/stop.svg</file>
         <file alias="key.svg">util/images/key.svg</file>
         <file alias="lock.svg">util/images/lock.svg</file>
+        <file alias="subFixer.svg">util/images/subFixer.svg</file>
+        <file alias="desktopEntry.svg">util/images/desktopEntry.svg</file>
+        <file alias="exec.svg">util/images/exec.svg</file>
+        <file alias="category.svg">util/images/category.svg</file>
+        <file alias="type.svg">util/images/type.svg</file>
+        <file alias="terminal.svg">util/images/terminal.svg</file>
+        <file alias="name.svg">util/images/name.svg</file>
+        <file alias="keywords.svg">util/images/keywords.svg</file>
+        <file alias="comment.svg">util/images/comment.svg</file>
+        <file alias="cancel.svg">util/images/cancel.svg</file>
     </qresource>
     <qresource prefix="/i18n">
         <file alias="persian.qm">util/i18n/persian.qm</file>
@@ -126,5 +137,15 @@
         <file alias="PacmanUpdatePKGs.qml">modules/pacman/view/PacmanUpdatePKGs.qml</file>
         <file alias="PacmanUpdateSize.qml">modules/pacman/view/PacmanUpdateSize.qml</file>
         <file alias="PacmanSummary.qml">modules/pacman/view/PacmanSummary.qml</file>
+    </qresource>
+    <qresource prefix="/subFixer">
+        <file alias="subFixer.qml">modules/subFixer/view/subFixer.qml</file>
+        <file alias="SubFixerPillar.qml">modules/subFixer/view/SubFixerPillar.qml</file>
+        <file alias="strings/SubFixerString.js">modules/subFixer/view/strings/SubFixerStrings.js</file>
+    </qresource>
+    <qresource prefix="/deCreator">
+        <file alias="deCreator.qml">modules/deCreator/view/deCreator.qml</file>
+        <file alias="DeCreatorPillar.qml">modules/deCreator/view/DeCreatorPillar.qml</file>
+        <file alias="strings/DeCreatorStrings.js">modules/deCreator/view/strings/DeCreatorStrings.js</file>
     </qresource>
 </RCC>

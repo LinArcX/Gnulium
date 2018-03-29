@@ -1,4 +1,4 @@
-QT += qml quick charts quickcontrols2
+QT += qml quick charts quickcontrols2 widgets
 CONFIG += c++11
 #QMAKE_CXXFLAGS += -std=c++14
 QMAKE_CXXFLAGS_WARN_OFF -= -Wunused-parameter

@@ -6,80 +6,119 @@ import "qrc:/strings/CoreStrings.js" as CStr
 
 MenuBar {
     id: menuBar
+    Component.onCompleted: {
+        JS.createMenuItem(tabView, CStr.home, CStr.tabHomeLink)
+    }
 
     Menu {
         title: qsTr(CStr.gnulium)
-        Action{
+        Action {
             text: CStr.home
-            onTriggered: JS.createMenuItem(tabView, CStr.home,
-                                           CStr.tabHomeLink);
-            icon{
-                source: CStr.imgHome; width: 15; height: 15
+            onTriggered: JS.createMenuItem(tabView, CStr.home, CStr.tabHomeLink)
+            icon {
+                source: CStr.imgHome
+                width: 15
+                height: 15
             }
         }
         Action {
             text: qsTr(CStr.settings)
             onTriggered: JS.createMenuItem(tabView, CStr.settings,
-                                           CStr.tabSettingsLink);
-            icon{
-                source: CStr.imgSettings; width: 15; height: 15
+                                           CStr.tabSettingsLink)
+            icon {
+                source: CStr.imgSettings
+                width: 15
+                height: 15
             }
         }
-        MenuSeparator { }
+        MenuSeparator {
+        }
         Action {
-            text: qsTr(CStr.quit);
-            onTriggered: Qt.quit();
-            icon{
-                source: CStr.imgPower; width: 15; height: 15
+            text: qsTr(CStr.quit)
+            onTriggered: Qt.quit()
+            icon {
+                source: CStr.imgPower
+                width: 15
+                height: 15
             }
         }
-
     }
 
     Menu {
-        title: qsTr(CStr.scripts)
+        title: qsTr(CStr.utitlity)
         Action {
             text: qsTr(CStr.histogram)
-            onTriggered:JS.createMenuItem(tabView, CStr.histogram,
-                                          CStr.tabHistogramLink);
+            onTriggered: JS.createMenuItem(tabView, CStr.histogram,
+                                           CStr.tabHistogramLink)
 
-            icon{
-                source: CStr.imgAnalytics; width: 15; height: 15
+            icon {
+                source: CStr.imgAnalytics
+                width: 15
+                height: 15
             }
         }
+
+        Action {
+            text: qsTr(CStr.deCreator)
+            onTriggered: JS.createMenuItem(tabView, CStr.deCreator,
+                                           CStr.tabDeCreator)
+
+            icon {
+                source: CStr.imgDesktopEntry
+                width: 15
+                height: 15
+            }
+        }
+
+        //        Action {
+        //            text: qsTr(CStr.subFixer)
+        //            onTriggered: JS.createMenuItem(tabView, CStr.subFixer,
+        //                                           CStr.tabSubFixer)
+
+        //            icon {
+        //                source: CStr.imgSubFixer
+        //                width: 15
+        //                height: 15
+        //            }
+        //        }
     }
 
     Menu {
         id: menuPkgMgrs
         title: qsTr(CStr.pkgManagers)
-        Action{
+        Action {
             text: CStr.pacman
-            onTriggered: JS.createMenuItem(tabView, CStr.pacman,
-                                           CStr.tabPacman);
-            icon{
-                source: CStr.imgPacman; width: 15; height: 15
+            onTriggered: JS.createMenuItem(tabView, CStr.pacman, CStr.tabPacman)
+            icon {
+                source: CStr.imgPacman
+                width: 15
+                height: 15
             }
         }
     }
 
     Menu {
         title: qsTr(CStr.help)
-        AboutGnulium{
+        AboutGnulium {
             id: mAboutGnulium
         }
 
         Action {
             text: qsTr(CStr.aboutGnulium)
-            onTriggered: mAboutGnulium.open();
-            icon{
-                source: CStr.imgGnulium; width: 15; height: 15
+            onTriggered: mAboutGnulium.open()
+            icon {
+                source: CStr.imgGnulium
+                width: 15
+                height: 15
             }
         }
         Action {
             text: qsTr(CStr.aboutQT)
             onTriggered: app.aboutQt()
-            icon{
-                source: CStr.imgQT; width: 15; height: 15
+            icon {
+                source: CStr.imgQT
+                width: 15
+                height: 15
             }
         }
     }
@@ -108,8 +147,6 @@ MenuBar {
     //            }
     //        }
     //    }
-
-
 
     //    delegate: MenuBarItem {
     //        id: menuBarItem

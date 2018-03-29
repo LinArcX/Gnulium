@@ -6,7 +6,7 @@ import "qrc:/strings/CoreStrings.js" as CStr
 import "qrc:/settings/strings/SettingsStrings.js" as Str
 
 Rectangle{
-    id: mLauncherPillar
+    id: mSettingsPillar
     color: CStr.transparent
 
     FontLoader {
@@ -17,8 +17,8 @@ Rectangle{
     Image {
         id: imgSettings
         source: CStr.imgSettings
-        sourceSize.width: parent.width/2
-        sourceSize.height: parent.height/2
+        sourceSize.width: parent.width / 2
+        sourceSize.height: parent.width / 2
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
         anchors.topMargin: 10

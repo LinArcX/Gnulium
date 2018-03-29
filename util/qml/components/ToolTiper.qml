@@ -10,6 +10,8 @@ Item {
     property color enterColor
     property color exitColor
 
+    property variant clickFunc
+
     Rectangle {
         id: toolTipRectangle
         width: toolTipText.width + 4
@@ -54,6 +56,8 @@ Item {
                 mItem.color = exitColor;
             }
         }
+
+        onClicked: clickFunc
     }
 
     Timer {

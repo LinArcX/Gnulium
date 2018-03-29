@@ -11,8 +11,8 @@ TabView {
     anchors.fill: parent
     anchors.margins: CStr.tabViewMargin
     anchors.topMargin: mAppMenuBar.height
-    //property variant pButtonClose: mButtonClose
 
+    //property variant pButtonClose: mButtonClose
     style: TabViewStyle {
         id: mStyle
         tabsMovable: true
@@ -20,7 +20,7 @@ TabView {
         property color fillColor: "#eee"
         frameOverlap: 1
         frame: Rectangle {
-            color: "#F9F9F9"//"#F1F1F1"//"#EFEFEF"//"#E6E6E6"
+            color: "#F9F9F9" //"#F1F1F1"//"#EFEFEF"//"#E6E6E6"
             border.color: frameColor
         }
         tab: Rectangle {
@@ -28,9 +28,22 @@ TabView {
             color: styleData.selected ? fillColor : frameColor
             implicitWidth: Math.max(text.width + 24, 80)
             implicitHeight: 20
-            Rectangle { height: 1 ; width: parent.width ; color: frameColor}
-            Rectangle { height: parent.height ; width: 1; color: frameColor}
-            Rectangle { x: parent.width -1; height: parent.height ; width: 1; color: frameColor}
+            Rectangle {
+                height: 1
+                width: parent.width
+                color: frameColor
+            }
+            Rectangle {
+                height: parent.height
+                width: 1
+                color: frameColor
+            }
+            Rectangle {
+                x: parent.width - 1
+                height: parent.height
+                width: 1
+                color: frameColor
+            }
             Text {
                 id: text
                 anchors.left: parent.left
@@ -39,32 +52,48 @@ TabView {
                 text: styleData.title
                 color: styleData.selected ? "black" : "white"
             }
-            Text {
+
+            Image {
                 id: mButtonClose
-                text: "\uf057"
-                color: "black"
-                font.pointSize: 11
+                source: CStr.imgError
+                sourceSize.width: parent.height / 3 * 2
+                sourceSize.height: parent.height / 3 * 2
                 anchors.right: parent.right
-                anchors.verticalCenter: parent.verticalCenter
                 anchors.rightMargin: 4
+                anchors.verticalCenter: parent.verticalCenter
+
+                states: [
+                    State {
+                        name: "normal"
+                        PropertyChanges {
+                            target: mButtonClose
+                            scale: 1
+                        }
+                    },
+                    State {
+                        name: "scale"
+                        PropertyChanges {
+                            target: mButtonClose
+                            scale: 1.2
+                        }
+                    }
+                ]
 
                 MouseArea {
                     anchors.fill: parent
                     hoverEnabled: true
-                    onEntered: mButtonClose.color = "#FF5722";
-                    onExited: mButtonClose.color = "black"
-                    onClicked:{
+                    onEntered: mButtonClose.state = "scale" //mButtonClose.color = "#FF5722"
+                    onExited: mButtonClose.state = "normal" //mButtonClose.color = "black"
+                    onClicked: {
                         //console.log(styleData.totalWidth);
-                        if(tabView.count>1){
+                        if (tabView.count > 1) {
                             tabView.removeTab(styleData.index)
-                        }else{
+                        } else {
                             //mButtonClose.visible = false;
                             console.log("Please Try again later:)")
                         }
-
                     }
                 }
-
             }
         }
     }

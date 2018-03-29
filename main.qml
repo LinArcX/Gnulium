@@ -34,7 +34,7 @@ ApplicationWindow {
     }
 
     Component.onCompleted: {
-        var component = Qt.createComponent(CStr.tabHomeLink);
-        tabView.addTab(CStr.home, component);
+//        var component = Qt.createComponent(CStr.tabHomeLink);
+//        tabView.addTab(CStr.home, component);
     }
 }
