@@ -45,8 +45,9 @@ Dispatcher::Dispatcher(QApplication& app, QObject* parent)
 
     QSqlError daoError = qx::dao::create_table<student>();
 
-    qx::IxModel* pModel = new model_view::student_model();
-    pModel->qxFetchAll(QStringList() << "*");
+    qx::IxModel* pModel = new qx::QxModel<student>(); //new model_view::student_model();
+    pModel->qxFetchAll_();
+    //pModel->qxSave_()
 
     // Get Engine, rootContext()
     mRootContext = mEngine.rootContext();

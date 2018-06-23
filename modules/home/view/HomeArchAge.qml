@@ -88,6 +88,8 @@ Rectangle {
         anchors.right: mRect.right
         anchors.bottomMargin: -10
         anchors.rightMargin: mRect.width / 2 - mData.width / 2
+        text: model.name
+
     }
 
     AnimatedImage{
@@ -102,15 +104,27 @@ Rectangle {
         anchors.centerIn: parent
     }
 
-    Connections{
-        target: mHome
-        onSingleModelReady:{
-            mGiffy.visible = false;
-            mData.text = singleModel;
-        }
+
+    TextField{
+        id: ts
+        text: model.m_name
     }
 
+    Button{
+        anchors.left: ts.right
+        onClicked: model.qxSave_()
+    }
+
+//    Connections{
+//        target: mHome
+//        onSingleModelReady:{
+//            mGiffy.visible = false;
+//            mData.text = singleModel;
+//        }
+//    }
+
     Component.onCompleted: {
-        mHome.execArchAge();
+        //mHome.execArchAge();
+        mData.text = model.name
     }
 }
