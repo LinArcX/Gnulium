@@ -1,10 +1,10 @@
 #include "modules/dispatcher/dispatcher.h"
+#include "modules/deCreator/presenter/deCreator.h"
 #include "modules/histogram/presenter/histogram.h"
 #include "modules/home/presenter/home.h"
 #include "modules/pacman/presenter/pacman.h"
 #include "modules/settings/presenter/settings.h"
 #include "modules/subFixer/presenter/subFixer.h"
-#include "modules/deCreator/presenter/deCreator.h"
 #include <QFont>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
@@ -12,6 +12,9 @@
 #include <QTranslator>
 #include <modules/dispatcher/macros/dispatcherMacro.h>
 #include <modules/utils/sortFilterProxyModel/sortfilterproxymodel.h>
+
+#include <University_all_include.gen.h>
+#include <University_all_include.model_view.gen.h>
 
 Dispatcher::Dispatcher(QApplication& app, QObject* parent)
     : mApp(app)
@@ -33,8 +36,22 @@ Dispatcher::Dispatcher(QApplication& app, QObject* parent)
     settings.loadAppStyle();
     settings.loadOS();
 
+    // QxOrm
+    qx::QxSqlDatabase::getSingleton()->setDriverName("QSQLITE");
+    qx::QxSqlDatabase::getSingleton()->setDatabaseName("./university.sqlite");
+    qx::QxSqlDatabase::getSingleton()->setHostName("localhost");
+    qx::QxSqlDatabase::getSingleton()->setUserName("root");
+    qx::QxSqlDatabase::getSingleton()->setPassword("");
+
+    QSqlError daoError = qx::dao::create_table<student>();
+
+    qx::IxModel* pModel = new model_view::student_model();
+    pModel->qxFetchAll(QStringList() << "*");
+
+    // Get Engine, rootContext()
     mRootContext = mEngine.rootContext();
 
+    mRootContext->setContextProperty("model", pModel);
     mRootContext->setContextProperty(DISPATCHER, this);
     mRootContext->setContextProperty(APP, &mApp);
     mRootContext->setContextProperty(APP_SETTINGS, &settings);
