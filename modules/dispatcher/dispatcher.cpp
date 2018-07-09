@@ -13,8 +13,8 @@
 #include <modules/dispatcher/macros/dispatcherMacro.h>
 #include <modules/utils/sortFilterProxyModel/sortfilterproxymodel.h>
 
-#include <University_all_include.gen.h>
-#include <University_all_include.model_view.gen.h>
+//#include <University_all_include.gen.h>
+//#include <University_all_include.model_view.gen.h>
 
 Dispatcher::Dispatcher(QApplication& app, QObject* parent)
     : mApp(app)
@@ -37,22 +37,22 @@ Dispatcher::Dispatcher(QApplication& app, QObject* parent)
     settings.loadOS();
 
     // QxOrm
-    qx::QxSqlDatabase::getSingleton()->setDriverName("QSQLITE");
-    qx::QxSqlDatabase::getSingleton()->setDatabaseName("./university.sqlite");
-    qx::QxSqlDatabase::getSingleton()->setHostName("localhost");
-    qx::QxSqlDatabase::getSingleton()->setUserName("root");
-    qx::QxSqlDatabase::getSingleton()->setPassword("");
+//    qx::QxSqlDatabase::getSingleton()->setDriverName("QSQLITE");
+//    qx::QxSqlDatabase::getSingleton()->setDatabaseName("./university.sqlite");
+//    qx::QxSqlDatabase::getSingleton()->setHostName("localhost");
+//    qx::QxSqlDatabase::getSingleton()->setUserName("root");
+//    qx::QxSqlDatabase::getSingleton()->setPassword("");
 
-    QSqlError daoError = qx::dao::create_table<student>();
+//    QSqlError daoError = qx::dao::create_table<student>();
 
-    qx::IxModel* pModel = new qx::QxModel<student>(); //new model_view::student_model();
-    pModel->qxFetchAll_();
+//    qx::IxModel* pModel = new qx::QxModel<student>(); //new model_view::student_model();
+   // pModel->qxFetchAll_();
     //pModel->qxSave_()
 
     // Get Engine, rootContext()
     mRootContext = mEngine.rootContext();
 
-    mRootContext->setContextProperty("model", pModel);
+    //mRootContext->setContextProperty("model", pModel);
     mRootContext->setContextProperty(DISPATCHER, this);
     mRootContext->setContextProperty(APP, &mApp);
     mRootContext->setContextProperty(APP_SETTINGS, &settings);

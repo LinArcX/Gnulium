@@ -24,21 +24,21 @@ unix: {
 }
 
 # QxORM Library
-include($$PWD/../../../../../Software/Linux/Software/QxOrm/QxOrm.pri)
-unix:!macx: LIBS += -L$$PWD/../../../../../Software/Linux/Software/QxOrm/lib/ -lQxOrm
-INCLUDEPATH += $$PWD/../../../../../Software/Linux/Software/QxOrm/include
-DEPENDPATH += $$PWD/../../../../../Software/Linux/Software/QxOrm/include
+#include($$PWD/../../../../../Software/Linux/Software/QxOrm/QxOrm.pri)
+#unix:!macx: LIBS += -L$$PWD/../../../../../Software/Linux/Software/QxOrm/lib/ -lQxOrm
+#INCLUDEPATH += $$PWD/../../../../../Software/Linux/Software/QxOrm/include
+#DEPENDPATH += $$PWD/../../../../../Software/Linux/Software/QxOrm/include
 
-# University
-unix:!macx: LIBS += -L$$PWD/../../../QxEntityEditor/University/cpp/bin/ -lUniversity
-INCLUDEPATH += $$PWD/../../../QxEntityEditor/University/cpp/bin
-DEPENDPATH += $$PWD/../../../QxEntityEditor/University/cpp/bin
-INCLUDEPATH += $$PWD/../../../QxEntityEditor/University/cpp/include
-DEPENDPATH += $$PWD/../../../QxEntityEditor/University/cpp/include
+## University
+#unix:!macx: LIBS += -L$$PWD/../../../QxEntityEditor/University/cpp/bin/ -lUniversity
+#INCLUDEPATH += $$PWD/../../../QxEntityEditor/University/cpp/bin
+#DEPENDPATH += $$PWD/../../../QxEntityEditor/University/cpp/bin
+#INCLUDEPATH += $$PWD/../../../QxEntityEditor/University/cpp/include
+#DEPENDPATH += $$PWD/../../../QxEntityEditor/University/cpp/include
 
-# University-Model
-unix:!macx: LIBS += -L$$PWD/../../../QxEntityEditor/University/modelview/bin/ -lUniversityModel
-INCLUDEPATH += $$PWD/../../../QxEntityEditor/University/modelview/bin
-DEPENDPATH += $$PWD/../../../QxEntityEditor/University/modelview/bin
-INCLUDEPATH += $$PWD/../../../QxEntityEditor/University/modelview/include
-DEPENDPATH += $$PWD/../../../QxEntityEditor/University/modelview/include
+## University-Model
+#unix:!macx: LIBS += -L$$PWD/../../../QxEntityEditor/University/modelview/bin/ -lUniversityModel
+#INCLUDEPATH += $$PWD/../../../QxEntityEditor/University/modelview/bin
+#DEPENDPATH += $$PWD/../../../QxEntityEditor/University/modelview/bin
+#INCLUDEPATH += $$PWD/../../../QxEntityEditor/University/modelview/include
+#DEPENDPATH += $$PWD/../../../QxEntityEditor/University/modelview/include
