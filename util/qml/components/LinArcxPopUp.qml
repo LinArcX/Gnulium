@@ -14,12 +14,12 @@ Popup {
     focus: true
     closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
 
-    parent: mParent
-    width: mWidth
-    height: mHeight
+//    parent: mParent
+//    width: mWidth
+//    height: mHeight
 
-    x: mParent.width / 2 - mPopUp.width / 2
-    y: mParent.height / 2 - mPopUp.height
+    x: parent.width / 2 - mPopUp.width / 2
+    y: parent.height / 2 - mPopUp.height
 
     enter: Transition {
         NumberAnimation { property: "opacity"; from: 0.0; to: 1.0; duration: 200 }

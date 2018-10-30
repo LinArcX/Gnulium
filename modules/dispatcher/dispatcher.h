@@ -1,35 +1,58 @@
 #ifndef DISPATCHER_H
 #define DISPATCHER_H
 
-#include <QApplication>
+#include <QGuiApplication>
 #include <QObject>
-#include <QProcess>
+#include <QQmlApplicationEngine>
 #include <QQmlContext>
-#include <QString>
 
-class QQmlApplicationEngine;
-class QApplication;
+#include "modules/dispatcher/macros/dispatcherMacro.h"
 
 class Dispatcher : public QObject {
     Q_OBJECT
+
     Q_PROPERTY(QString appVer READ appVer CONSTANT)
+
 public:
-    explicit Dispatcher(QApplication&, QObject* parent = nullptr);
+    Dispatcher(QGuiApplication&, QObject* parent = nullptr);
+    Dispatcher(QObject* parent = nullptr);
     QString appVer() const { return APP_VER; }
-    QQmlApplicationEngine& getEngine() const { return mEngine; }
-    QApplication& getApp() const { return mApp; }
-    void loadLanguage();
 
-    Q_INVOKABLE void getAppFeatures();
+    static Dispatcher* getInstance()
+    {
+        static Dispatcher* instance;
+        if (!instance)
+            instance = new Dispatcher();
+        return instance;
+    }
 
-signals:
+    static QQmlApplicationEngine* getEngine()
+    {
+        static QQmlApplicationEngine* engine;
+        if (!engine) {
+            engine = new QQmlApplicationEngine();
+        }
+        return engine;
+    }
 
-public slots:
+    static QQmlContext* getContext()
+    {
+        static QQmlContext* context;
+        if (!context)
+            context = getEngine()->rootContext();
+        return context;
+    }
+
+    //    static QGuiApplication* getApp()
+    //    {
+    //        return app;
+    //    }
+
+    void registerTypes();
+    void setTitleBar();
 
 private:
-    QQmlApplicationEngine& mEngine;
-    QApplication& mApp;
-    QQmlContext* mRootContext = nullptr;
+    // static QGuiApplication* app;
 };
 
 #endif // DISPATCHER_H

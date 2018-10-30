@@ -14,4 +14,7 @@ TableView{
     TableViewColumn{
         role: CStr.secondRole; title: secondTitle; width: mParent.width / 2;
     }
+
+
+    sortIndicatorVisible: true
 }

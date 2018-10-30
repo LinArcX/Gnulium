@@ -7,16 +7,17 @@ import "qrc:/strings/CoreStrings.js" as CStr
 MenuBar {
     id: menuBar
     Component.onCompleted: {
-        JS.createMenuItem(tabView, CStr.home, CStr.tabHomeLink)
+        JS.createMenuItem(tabView, CStr.dashBoard, CStr.dashBoardLink)
     }
 
     Menu {
         title: qsTr(CStr.gnulium)
         Action {
-            text: CStr.home
-            onTriggered: JS.createMenuItem(tabView, CStr.home, CStr.tabHomeLink)
+            text: CStr.dashBoard
+            onTriggered: JS.createMenuItem(tabView, CStr.dashBoard, CStr.dashBoardLink)
             icon {
-                source: CStr.imgHome
+                color: "transparent"
+                source: CStr.imgDashBoard
                 width: 15
                 height: 15
             }
@@ -45,7 +46,7 @@ MenuBar {
     }
 
     Menu {
-        title: qsTr(CStr.utitlity)
+        title: qsTr(CStr.Utility)
         Action {
             text: qsTr(CStr.histogram)
             onTriggered: JS.createMenuItem(tabView, CStr.histogram,
@@ -59,12 +60,81 @@ MenuBar {
         }
 
         Action {
-            text: qsTr(CStr.deCreator)
-            onTriggered: JS.createMenuItem(tabView, CStr.deCreator,
+            text: qsTr(CStr.DesktopEntryCreator)
+            onTriggered: JS.createMenuItem(tabView, CStr.DesktopEntryCreator,
                                            CStr.tabDeCreator)
 
             icon {
+                color: "transparent"
                 source: CStr.imgDesktopEntry
+                width: 15
+                height: 15
+            }
+        }
+
+        Action {
+            text: qsTr(CStr.Processes)
+            onTriggered: JS.createMenuItem(tabView, CStr.Processes,
+                                           CStr.tabProcesses)
+
+            icon {
+                source: CStr.imgRam
+                width: 15
+                height: 15
+            }
+        }
+
+        Action {
+            text: qsTr(CStr.Services)
+            onTriggered: JS.createMenuItem(tabView, CStr.Services,
+                                           CStr.tabServices)
+
+            icon {
+                source: CStr.imgService
+                width: 15
+                height: 15
+            }
+        }
+
+        Action {
+            text: qsTr(CStr.Disks)
+            onTriggered: JS.createMenuItem(tabView, CStr.Disks, CStr.tabDisks)
+
+            icon {
+                source: CStr.imgHardDisk
+                width: 15
+                height: 15
+            }
+        }
+
+        Action {
+            text: qsTr(CStr.Environments)
+            onTriggered: JS.createMenuItem(tabView, CStr.Environments, CStr.tabEnvironments)
+
+            icon {
+                source: CStr.imgPalette
+                width: 15
+                height: 15
+            }
+        }
+
+        Action {
+            text: qsTr(CStr.SystemdAnalyze)
+            onTriggered: JS.createMenuItem(tabView, CStr.SystemdAnalyze, CStr.tabSystemdAnalyze)
+
+            icon {
+                source: CStr.imgAnalytics
+                width: 15
+                height: 15
+            }
+        }
+
+        Action {
+            text: qsTr(CStr.OpenPorts)
+            onTriggered: JS.createMenuItem(tabView, CStr.OpenPorts, CStr.tabPorts)
+
+            icon {
+                source: CStr.imgCircuit
                 width: 15
                 height: 15
             }
@@ -85,7 +155,7 @@ MenuBar {
 
     Menu {
         id: menuPkgMgrs
-        title: qsTr(CStr.pkgManagers)
+        title: qsTr(CStr.PackageManagers)
         Action {
             text: CStr.pacman
             onTriggered: JS.createMenuItem(tabView, CStr.pacman, CStr.tabPacman)

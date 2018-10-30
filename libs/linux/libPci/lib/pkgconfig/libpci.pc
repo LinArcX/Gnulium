@@ -1,0 +1,10 @@
+prefix=/mnt/E/Downloads/pciutils-gittup/build
+includedir=/mnt/E/Downloads/pciutils-gittup/build/include
+libdir=/mnt/E/Downloads/pciutils-gittup/build/lib
+idsdir=/mnt/E/Downloads/pciutils-gittup/build/share
+
+Name: libpci
+Description: libpci
+Version: 3.1.4
+Libs: -L${libdir} -lpci  -lz -lresolv
+Cflags: -I${includedir}

@@ -4,22 +4,16 @@
         <file alias="strings/CoreStrings.js">util/strings/CoreStrings.js</file>
         <file>main.qml</file>
     </qresource>
-    <qresource prefix="/home">
-        <file alias="Home.qml">modules/home/view/Home.qml</file>
-        <file alias="HomeProcess.qml">modules/home/view/HomeProcess.qml</file>
-        <file alias="HomeMemory.qml">modules/home/view/HomeMemory.qml</file>
-        <file alias="HomeHardDisk.qml">modules/home/view/HomeHardDisk.qml</file>
-        <file alias="HomeActiveServices.qml">modules/home/view/HomeActiveServices.qml</file>
-        <file alias="strings/HomeStrings.js">modules/home/view/strings/HomeStrings.js</file>
-        <file alias="HomeOpenPorts.qml">modules/home/view/HomeOpenPorts.qml</file>
-        <file alias="HomeSystemdAnalyze.qml">modules/home/view/HomeSystemdAnalyze.qml</file>
-        <file alias="HomePillar.qml">modules/home/view/HomePillar.qml</file>
-        <file alias="HomeBootTime.qml">modules/home/view/HomeBootTime.qml</file>
-        <file alias="HomeArchAge.qml">modules/home/view/HomeArchAge.qml</file>
-        <file alias="HomeUpTime.qml">modules/home/view/HomeUpTime.qml</file>
-        <file alias="HomeEnv.qml">modules/home/view/HomeEnv.qml</file>
-        <file alias="HomeVGAs.qml">modules/home/view/HomeVGAs.qml</file>
-        <file alias="HomeTorStatus.qml">modules/home/view/HomeTorStatus.qml</file>
+    <qresource prefix="/dashBoard">
+        <file alias="DashBoard.qml">modules/dashBoard/view/DashBoard.qml</file>
+        <file alias="DashBoardProcess.qml">modules/dashBoard/view/DashBoardProcess.qml</file>
+        <file alias="strings/DashBoardStrings.js">modules/dashBoard/view/strings/DashBoardStrings.js</file>
+        <file alias="DashBoardPillar.qml">modules/dashBoard/view/DashBoardPillar.qml</file>
+        <file alias="DashBoardBootTime.qml">modules/dashBoard/view/DashBoardBootTime.qml</file>
+        <file alias="DashBoardSystemAge.qml">modules/dashBoard/view/DashBoardSystemAge.qml</file>
+        <file alias="DashBoardUpTime.qml">modules/dashBoard/view/DashBoardUpTime.qml</file>
+        <file alias="DashBoardVGAs.qml">modules/dashBoard/view/DashBoardVGAs.qml</file>
+        <file alias="DashBoardTorStatus.qml">modules/dashBoard/view/DashBoardTorStatus.qml</file>
     </qresource>
     <qresource prefix="/util">
         <file alias="qml/AppMenuBar.qml">util/qml/AppMenuBar.qml</file>
@@ -42,6 +36,7 @@
         <file alias="qml/TableSixColumn.qml">util/qml/components/TableSixColumn.qml</file>
         <file alias="qml/LinArcxTableViewStyle.qml">util/qml/components/LinArcxTableViewStyle.qml</file>
         <file alias="qml/DragAndDropTextItem.qml">util/qml/DragAndDropTextItem.qml</file>
+        <file alias="qml/TableProcesses.qml">util/qml/components/TableProcesses.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="diskette.svg">util/images/diskette.svg</file>
@@ -60,7 +55,7 @@
         <file alias="radar.svg">util/images/radar.svg</file>
         <file alias="qtLogo.png">util/images/qtLogo.png</file>
         <file alias="tvdoon.png">util/images/tvdoon.png</file>
-        <file alias="home.svg">util/images/home.svg</file>
+        <file alias="dashBoard.svg">util/images/dashBoard.svg</file>
         <file alias="pacman.png">util/images/pacman.png</file>
         <file alias="settings.svg">util/images/settings-4.svg</file>
         <file alias="text.svg">util/images/text.svg</file>
@@ -147,5 +142,23 @@
         <file alias="deCreator.qml">modules/deCreator/view/deCreator.qml</file>
         <file alias="DeCreatorPillar.qml">modules/deCreator/view/DeCreatorPillar.qml</file>
         <file alias="strings/DeCreatorStrings.js">modules/deCreator/view/strings/DeCreatorStrings.js</file>
+    </qresource>
+    <qresource prefix="/processes">
+        <file alias="processes.qml">modules/processes/view/processes.qml</file>
+    </qresource>
+    <qresource prefix="/services">
+        <file alias="services.qml">modules/services/view/services.qml</file>
+    </qresource>
+    <qresource prefix="/disks">
+        <file alias="disks.qml">modules/disks/view/disks.qml</file>
+    </qresource>
+    <qresource prefix="/environments">
+        <file alias="environments.qml">modules/environments/view/environments.qml</file>
+    </qresource>
+    <qresource prefix="/systemdAnalyze">
+        <file alias="systemdAnalyze.qml">modules/systemdAnalyze/view/systemdAnalyze.qml</file>
+    </qresource>
+    <qresource prefix="/ports">
+        <file alias="ports.qml">modules/ports/view/ports.qml</file>
     </qresource>
 </RCC>
