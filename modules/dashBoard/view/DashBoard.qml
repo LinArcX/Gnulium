@@ -34,6 +34,11 @@ Row {
                 width: (parent.width / 4) * 1
                 height: (parent.height / 2)
             }
+
+            DashBoardDownloadUpload {
+                width: (parent.width / 4) * 1
+                height: (parent.height / 2)
+            }
         }
         Rectangle {
             color: CStr.transparent

@@ -1,18 +1,18 @@
 import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3
-import linarcx.gnulium.home 1.0
+import linarcx.gnulium.DashBoard 1.0
 
 import "qrc:/util/qml/"
 import "qrc:/strings/CoreStrings.js" as CStr
-import "qrc:/home/strings/HomeStrings.js" as Str
+import "qrc:/dashBoard/strings/DashBoardStrings.js" as Str
 
 Rectangle {
     id: mParent
     color: CStr.transparent
 
-    Home{
-        id: mHome
+    DashBoard{
+        id: qDashBoard
     }
 
     FontLoader {
@@ -23,7 +23,6 @@ Rectangle {
     ////// Popup
     LinArcxPopUp{
         id: mPopUp
-        mParent: mHomeTab
         mWidth: appWidth / 2
         mHeight: appHeight / 2
         mImage: CStr.imgOnion
@@ -103,7 +102,7 @@ Rectangle {
     }
 
     Connections{
-        target: mHome
+        target: qDashBoard
         onSingleModelReady:{
             mGiffy.visible = false;
             mData.text = singleModel;
@@ -111,6 +110,6 @@ Rectangle {
     }
 
     Component.onCompleted: {
-        mHome.execTorStatus();
+        qDashBoard.updateNetworkBar()
     }
 }

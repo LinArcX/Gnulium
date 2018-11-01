@@ -80,6 +80,15 @@ public:
     };
     ProcessModel(QObject* parent = nullptr);
 
+    // = overloading
+    void operator=(const ProcessModel& p)
+    {
+        m_process = p.m_process;
+    }
+
+    // copy constructor
+    ProcessModel(const ProcessModel&);
+
     void addProcess(const Process& proc);
 
     int rowCount(const QModelIndex& parent = QModelIndex()) const;

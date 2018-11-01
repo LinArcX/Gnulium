@@ -73,60 +73,60 @@ Column {
             placeholderText: qsTr(Str.topMemoryTitle)
         }
 
-        TableProcesses {
-            id: mTable
-            width: mParent.width
-            height: mParent.height - (mLogo.height + 10)
-            sortIndicatorVisible: true
-            anchors.left: parent.left
-            anchors.top: mLogo.bottom
-            anchors.topMargin: 5
-            z: CStr.mOne
+//        TableProcesses {
+//            id: mTable
+//            width: mParent.width
+//            height: mParent.height - (mLogo.height + 10)
+//            sortIndicatorVisible: true
+//            anchors.left: parent.left
+//            anchors.top: mLogo.bottom
+//            anchors.topMargin: 5
+//            z: CStr.mOne
 
 
-            //            firstTitle: qsTr(Str.lmFirst)
-            //            secondTitle: qsTr(Str.lmSecond)
-            //            thirdTitle: qsTr(Str.lmThird)
-            MouseArea {
-                anchors.fill: parent
-                acceptedButtons: Qt.RightButton
-                onClicked: contextMenu.popup()
-                Menu {
-                    id: contextMenu
-                    Action {
-                        text: "Clear"
-                        onTriggered: {
-                            if (mTable.model) {
-                                mTable.model.source = null
-                            }
-                        }
-                        icon {
-                            source: CStr.imgSweep
-                            width: 20
-                            height: 20
-                        }
-                    }
-                    Action {
-                        text: "What's This?"
-                        onTriggered: mPopUp.open()
-                        icon {
-                            source: CStr.imgQuestionMark
-                            width: 20
-                            height: 20
-                        }
-                    }
-                }
-            }
-        }
+//            //            firstTitle: qsTr(Str.lmFirst)
+//            //            secondTitle: qsTr(Str.lmSecond)
+//            //            thirdTitle: qsTr(Str.lmThird)
+//            MouseArea {
+//                anchors.fill: parent
+//                acceptedButtons: Qt.RightButton
+//                onClicked: contextMenu.popup()
+//                Menu {
+//                    id: contextMenu
+//                    Action {
+//                        text: "Clear"
+//                        onTriggered: {
+//                            if (mTable.model) {
+//                                mTable.model.source = null
+//                            }
+//                        }
+//                        icon {
+//                            source: CStr.imgSweep
+//                            width: 20
+//                            height: 20
+//                        }
+//                    }
+//                    Action {
+//                        text: "What's This?"
+//                        onTriggered: mPopUp.open()
+//                        icon {
+//                            source: CStr.imgQuestionMark
+//                            width: 20
+//                            height: 20
+//                        }
+//                    }
+//                }
+//            }
+//        }
 
-        SortFilterProxyModel {
-            id: proxyModel
-            sortOrder: mTable.sortIndicatorOrder
-            sortCaseSensitivity: Qt.CaseInsensitive
-            filterString: "*" + searchBox.text + "*"
-            filterSyntax: SortFilterProxyModel.Wildcard
-            filterCaseSensitivity: Qt.CaseInsensitive
-        }
+//        SortFilterProxyModel {
+//            id: proxyModel
+//            sortOrder: mTable.sortIndicatorOrder
+//            sortCaseSensitivity: Qt.CaseInsensitive
+//            filterString: "*" + searchBox.text + "*"
+//            filterSyntax: SortFilterProxyModel.Wildcard
+//            filterCaseSensitivity: Qt.CaseInsensitive
+//        }
 
 
         //        Component{
@@ -149,20 +149,28 @@ Column {
         //                mTable.model = JS.createProxyModel(sourceModel, proxyModel, mTable);
         //            }
         //        }
-        AnimatedImage {
-            id: mGiffy
-            z: 1
-            width: 50
-            height: 50
-            opacity: 1
-            visible: false
-            source: CStr.gifLoader
-            anchors.centerIn: mTable
+//        AnimatedImage {
+//            id: mGiffy
+//            z: 1
+//            width: 50
+//            height: 50
+//            opacity: 1
+//            visible: false
+//            source: CStr.gifLoader
+//            anchors.centerIn: mTable
+//        }
+
+        Connections{
+           target: mProc
+           onNumChanged:{
+               console.log(mProc.num)
+           }
         }
 
         Component.onCompleted: {
             //JS.toogleGif(mGiffy, true, mTable, 0.5);
             mProc.execProc()
+            console.log(mProc.num)
             //mTimer.createObject(mParent);
         }
     }

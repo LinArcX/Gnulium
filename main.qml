@@ -7,7 +7,7 @@ import "qrc:/util/qml/"
 import "qrc:/strings/CoreStrings.js" as CStr
 
 ApplicationWindow {
-    id : myApp
+    id: myApp
     property int appWidth: myApp.width
     property int appHeight: myApp.height
     property int appX: myApp.x
@@ -20,21 +20,25 @@ ApplicationWindow {
     maximumWidth: Screen.width
     maximumHeight: Screen.height
 
-    background: Rectangle{
+    background: Rectangle {
         anchors.fill: parent
-        color: "#eee"
+        color: "#546E7A" //"#eee"
     }
 
-    AppTabView{
-        id: tabView
+    LinArcxAccordion{
+
     }
 
-    AppMenuBar{
-        id: mAppMenuBar
-    }
+    //    AppTabView {
+    //        id: tabView
+    //    }
 
+    //    AppMenuBar {
+    //        id: mAppMenuBar
+    //    }
     Component.onCompleted: {
-//        var component = Qt.createComponent(CStr.tabHomeLink);
-//        tabView.addTab(CStr.home, component);
+
+        //        var component = Qt.createComponent(CStr.tabHomeLink);
+        //        tabView.addTab(CStr.home, component);
     }
 }

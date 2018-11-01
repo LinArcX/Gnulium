@@ -1,11 +1,13 @@
 #ifndef DASHBOARD_H
 #define DASHBOARD_H
 
+#include "modules/managers/info_manager.h"
 #include "modules/utils/macros/PropertyHelper.h"
 
 #include <QObject>
 #include <QProcess>
 #include <QString>
+#include <QTimer>
 #include <QVariant>
 #include <regex>
 
@@ -28,6 +30,7 @@ public:
     QProcess* pTorStatus;
     QProcess* pVGA;
 
+    Q_INVOKABLE void updateNetworkBar();
     Q_INVOKABLE void execTopProcess();
     Q_INVOKABLE void execTime();
     Q_INVOKABLE void execBootTime();
@@ -61,6 +64,8 @@ signals:
 
 private:
     int mCounter;
+    QTimer* mTimer;
+    InfoManager* im;
 };
 
 #endif // DASHBOARD_H

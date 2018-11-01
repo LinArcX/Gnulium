@@ -7,21 +7,22 @@ var tabViewMargin = 10
 var rowSpacing = 5
 
 // values-menu
-var gnulium = "&Gnulium"
+var gnulium = "Gnulium"
 var dashBoard = "DashBoard"
-var quit = "&Quit"
+var quit = "Quit"
 
-var hardware = "&Hardware"
-var memory = "&Memory"
+var hardware = "Hardware"
+var memory = "Memory"
 
-var distribiutions = "&Distributions"
+var distribiutions = "Distributions"
 var PackageManagers = "Package Managers"
 var arch = "Arch"
 var pacman = "Pacman"
 
-var Utility = "&Utility"
+var Utility = "Utility"
+var info = "Info"
 var scripts = "Scripts"
-var tvdoon = "&TvDoon"
+var tvdoon = "TvDoon"
 var histogram = "Histogram"
 var subFixer = "Sub Fixer"
 var DesktopEntryCreator = "Desktop Entry Creator"
@@ -32,7 +33,7 @@ var Environments = "Environments"
 var SystemdAnalyze = "SystemD Analyze"
 var OpenPorts = "Open Ports"
 
-var help = "&Help"
+var help = "Help"
 var aboutQT = "About Qt"
 var aboutGnulium = "About Gnulium"
 var settings = "Settings"
@@ -120,6 +121,7 @@ var imgAnalytics = "qrc:/images/analytics.svg"
 var imgPacmanLogo = "qrc:/images/pacmanLogo.jpg"
 var imgRepository = "qrc:/images/repository.svg"
 var imgAlarmClock = "qrc:/images/alarmClock.svg"
+var imgInformation = "qrc:/images/information.svg"
 var imgAccumulator = "qrc:/images/accumulator.svg"
 var imgDesktopEntry = "qrc:/images/desktopEntry.svg"
 var imgQuestionMark = "qrc:/images/questionMark.svg"
@@ -140,3 +142,9 @@ var fontCaviarDreams = "qrc:/fonts/CaviarDreams.ttf"
 
 // colors
 var transparent = "transparent"
+var accordionBackGroundColor = "#424242"
+var accordionItemBackGroundColor = "#616161"
+
+// values
+var accordionWidth = 100
+var accordionHeight = 50

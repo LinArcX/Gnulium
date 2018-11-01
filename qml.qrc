@@ -14,6 +14,7 @@
         <file alias="DashBoardUpTime.qml">modules/dashBoard/view/DashBoardUpTime.qml</file>
         <file alias="DashBoardVGAs.qml">modules/dashBoard/view/DashBoardVGAs.qml</file>
         <file alias="DashBoardTorStatus.qml">modules/dashBoard/view/DashBoardTorStatus.qml</file>
+        <file alias="DashBoardDownloadUpload.qml">modules/dashBoard/view/DashBoardDownloadUpload.qml</file>
     </qresource>
     <qresource prefix="/util">
         <file alias="qml/AppMenuBar.qml">util/qml/AppMenuBar.qml</file>
@@ -37,6 +38,9 @@
         <file alias="qml/LinArcxTableViewStyle.qml">util/qml/components/LinArcxTableViewStyle.qml</file>
         <file alias="qml/DragAndDropTextItem.qml">util/qml/DragAndDropTextItem.qml</file>
         <file alias="qml/TableProcesses.qml">util/qml/components/TableProcesses.qml</file>
+        <file alias="qml/LinArcxAccordion.qml">util/qml/components/LinArcxAccordion.qml</file>
+        <file alias="qml/LinArcxAccordionItem.qml">util/qml/components/LinArcxAccordionItem.qml</file>
+        <file alias="qml/LinArcxAccordionTemplate.qml">util/qml/components/LinArcxAccordionTemplate.qml</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="diskette.svg">util/images/diskette.svg</file>
@@ -94,6 +98,8 @@
         <file alias="keywords.svg">util/images/keywords.svg</file>
         <file alias="comment.svg">util/images/comment.svg</file>
         <file alias="cancel.svg">util/images/cancel.svg</file>
+        <file alias="ask.svg">util/images/ask.svg</file>
+        <file alias="information.svg">util/images/info.svg</file>
     </qresource>
     <qresource prefix="/i18n">
         <file alias="persian.qm">util/i18n/persian.qm</file>
