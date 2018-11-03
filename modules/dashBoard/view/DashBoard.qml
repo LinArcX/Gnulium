@@ -9,34 +9,39 @@ Row {
     spacing: CStr.rowSpacing
     anchors.fill: parent
 
-    DashBoardPillar {
-        width: parent.width / 5 * 1
-        height: parent.height
-    }
+//    DashBoardPillar {
+//        width: parent.width / 5 * 1
+//        height: parent.height
+//    }
 
-    SpacerVertical {
-    }
+//    SpacerVertical {
+//    }
 
     Rectangle {
         color: CStr.transparent
         height: parent.height
-        width: (parent.width / 5 * 4) - (2 * CStr.tabViewMargin)
+        width: (parent.width) - (2 * CStr.tabViewMargin)
 
         Grid {
             id: mGrid
             width: parent.width
             height: parent.height / 6 * 5
             anchors.top: parent.top
-            columns: 4
+            columns: 3
             columnSpacing: 2
 
             DashBoardBootTime {
-                width: (parent.width / 4) * 1
+                width: (parent.width / 3) * 1
                 height: (parent.height / 2)
             }
 
+            DashBoardTime{
+
+
+            }
+
             DashBoardDownloadUpload {
-                width: (parent.width / 4) * 1
+                width: (parent.width / 3) * 1
                 height: (parent.height / 2)
             }
         }

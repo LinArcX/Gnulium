@@ -30,7 +30,7 @@ Dispatcher::Dispatcher(QGuiApplication& mApp, QObject* parent)
 
     //app = &mApp;
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QQuickStyle::setStyle("Material");
+    QQuickStyle::setStyle("Fusion");
 
     registerTypes();
 

@@ -3,59 +3,45 @@ import QtQuick.Controls 2.3
 
 import "qrc:/util/qml/"
 import "qrc:/strings/CoreStrings.js" as CStr
+import "qrc:/dashBoard/strings/DashBoardStrings.js" as Str
 
 Rectangle {
+    id: qParent
     color: CStr.accordionBackGroundColor
     width: CStr.accordionWidth
     height: parent.height
+
+    Item {
+        id: qDashBoardd
+        width: mScrollView.width
+        anchors.top: qParent.top
+        height: 50
+
+        LinArcxAccordionItem {
+            mTitle: CStr.dashBoard
+            mImage: CStr.imgDashBoard
+            isHeader: true
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                pageLoader.source = CStr.dashBoardLink
+            }
+        }
+    }
 
     ScrollView {
         id: mScrollView
         clip: true
         width: CStr.accordionWidth
-        height: parent.height - 50
-        anchors.top: parent.top
+        height: parent.height - 100
+        anchors.top: qDashBoardd.bottom
         anchors.left: parent.left
         ScrollBar.vertical.policy: ScrollBar.AsNeeded
         ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
 
         Column {
-            LinArcxAccordionTemplate {
-                qTitle: CStr.gnulium
-                qImage: CStr.imgGnulium
-
-                Column {
-                    Item {
-                        width: mScrollView.width
-                        height: 50
-
-                        LinArcxAccordionItem {
-                            mTitle: CStr.dashBoard
-                            mImage: CStr.imgDashBoard
-                        }
-                    }
-
-                    Item {
-                        width: mScrollView.width
-                        height: 50
-
-                        LinArcxAccordionItem {
-                            mTitle: CStr.settings
-                            mImage: CStr.imgSettings
-                        }
-                    }
-
-                    Item {
-                        width: mScrollView.width
-                        height: 50
-
-                        LinArcxAccordionItem {
-                            mTitle: CStr.quit
-                            mImage: CStr.imgError
-                        }
-                    }
-                }
-            }
 
             LinArcxAccordionTemplate {
                 qTitle: CStr.info
@@ -70,6 +56,13 @@ Rectangle {
                             mTitle: CStr.Processes
                             mImage: CStr.imgRam
                         }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                pageLoader.source = CStr.processesLink
+                            }
+                        }
                     }
 
                     Item {
@@ -79,6 +72,13 @@ Rectangle {
                         LinArcxAccordionItem {
                             mTitle: CStr.Services
                             mImage: CStr.imgService
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                pageLoader.source = CStr.servicesLink
+                            }
                         }
                     }
 
@@ -191,6 +191,26 @@ Rectangle {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    Item {
+        width: mScrollView.width
+        height: 50
+        anchors.bottom: qParent.bottom
+
+        LinArcxAccordionItem {
+            mTitle: CStr.settings
+            mImage: CStr.imgSettings
+            isHeader: true
+            imageOnly: true
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                pageLoader.source = CStr.settingsLink
             }
         }
     }

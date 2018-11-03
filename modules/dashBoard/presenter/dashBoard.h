@@ -17,22 +17,27 @@ class DashBoard : public QObject {
 public:
     explicit DashBoard(QObject* parent = nullptr);
 
+    QProcess* pGregorianDate;
+    QProcess* pCurrentTime;
+
     QProcess* pMainInfo;
     QProcess* pReadMemory;
     QProcess* pReadProcess;
     QProcess* pReadHardDisk;
     QProcess* pOpenPorts;
     QProcess* pSystemdAnalyze;
-    QProcess* pTime;
     QProcess* pBootTime;
     QProcess* pArchAge;
     QProcess* pUpTime;
     QProcess* pTorStatus;
     QProcess* pVGA;
 
+    Q_INVOKABLE void getGregorianDate();
+    Q_INVOKABLE void getCurrentTime();
+
     Q_INVOKABLE void updateNetworkBar();
     Q_INVOKABLE void execTopProcess();
-    Q_INVOKABLE void execTime();
+    Q_INVOKABLE void execTimePersian();
     Q_INVOKABLE void execBootTime();
     Q_INVOKABLE void execArchAge();
     Q_INVOKABLE void execUpTime();
@@ -41,7 +46,9 @@ public:
 
     void returnTopMemory();
     void returnTopProcess();
-    void returnTime();
+    void gregorianDate();
+    void currentTime();
+    void returnTimePersian();
     void returnBootTime();
     void returnArchAge();
     void returnUpTime();
@@ -60,6 +67,8 @@ public slots:
 signals:
     void modelReady(QVariantList model);
     void singleModelReady(QVariant singleModel);
+    void gregorianDateReady(QVariant gregorianDate);
+    void currentTimeReady(QVariant currentTime);
     void valueChanged();
 
 private:

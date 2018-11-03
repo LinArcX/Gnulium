@@ -2,11 +2,14 @@ import QtQuick 2.11
 import QtQuick.Controls 2.4
 import "qrc:/strings/CoreStrings.js" as CStr
 
-Item {
+Rectangle {
+    id: qRectItem
+    anchors.verticalCenter: parent.verticalCenter
+
     property string mTitle
     property string mImage
     property bool isHeader
-    anchors.verticalCenter: parent.verticalCenter
+    property bool imageOnly
 
     Image {
         id: qImage
@@ -14,8 +17,15 @@ Item {
         sourceSize.height: isHeader ? parent.parent.height / 3 * 2 : parent.parent.height / 3 * 1
         sourceSize.width: isHeader ? parent.parent.height / 3 * 2 : parent.parent.height / 3 * 1
         anchors.verticalCenter: parent.verticalCenter
-        anchors.left: parent.left
-        anchors.leftMargin: isHeader ? 3 : 7
+        Component.onCompleted: {
+            if (imageOnly) {
+                qRectItem.anchors.horizontalCenter = parent.parent.horizontalCenter
+                anchors.horizontalCenter = parent.horizontalCenter
+            } else {
+                anchors.left = parent.left
+                anchors.leftMargin = isHeader ? 3 : 7
+            }
+        }
     }
 
     Text {
@@ -27,6 +37,7 @@ Item {
         anchors.left: qImage.right
         anchors.leftMargin: 5
         anchors.verticalCenter: parent.verticalCenter
+        visible: imageOnly ? false : true
     }
 
     //    ScrollView {

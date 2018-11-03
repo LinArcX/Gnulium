@@ -56,17 +56,17 @@ var sixthRole = "sixthRole"
 
 // qml's
 var dashBoardLink = "qrc:/dashBoard/DashBoard.qml"
-var tabSettingsLink = "qrc:/settings/settings.qml"
-var tabHistogramLink = "qrc:/histogram/histogram.qml"
-var tabPacman = "qrc:/pacman/pacman.qml"
-var tabSubFixer = "qrc:/subFixer/subFixer.qml"
-var tabDeCreator = "qrc:/deCreator/deCreator.qml"
-var tabProcesses = "qrc:/processes/processes.qml"
-var tabServices = "qrc:/services/services.qml"
-var tabDisks = "qrc:/disks/disks.qml"
-var tabEnvironments = "qrc:/environments/environments.qml"
-var tabSystemdAnalyze= "qrc:/systemdAnalyze/systemdAnalyze.qml"
-var tabPorts= "qrc:/ports/ports.qml"
+var settingsLink = "qrc:/settings/settings.qml"
+var histogramLink = "qrc:/histogram/histogram.qml"
+var pacmanLink = "qrc:/pacman/pacman.qml"
+var subFixerLink = "qrc:/subFixer/subFixer.qml"
+var DesktopCreatorLink = "qrc:/deCreator/deCreator.qml"
+var processesLink = "qrc:/processes/processes.qml"
+var servicesLink = "qrc:/services/services.qml"
+var disksLink = "qrc:/disks/disks.qml"
+var environmentsLink = "qrc:/environments/environments.qml"
+var systemdAnalyzeLink = "qrc:/systemdAnalyze/systemdAnalyze.qml"
+var portsLink = "qrc:/ports/ports.qml"
 
 // images
 var imgGnu = "qrc:/images/gnu.png"
@@ -143,7 +143,8 @@ var fontCaviarDreams = "qrc:/fonts/CaviarDreams.ttf"
 // colors
 var transparent = "transparent"
 var accordionBackGroundColor = "#424242"
-var accordionItemBackGroundColor = "#616161"
+var accordionItemBackGroundColor = "#616161" //"#1B252f"
+var appColor = "white"//"#37474F"//"#546E7A"
 
 // values
 var accordionWidth = 100

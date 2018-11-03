@@ -3,7 +3,10 @@
 #define TOP_MEMORY "ps -Ao pid,comm,pmem --sort=-pmem | head -n 11"
 #define TOP_CPU "ps -Ao pid,comm,pcpu --sort=-pcpu | head -n 11"
 
-#define TIME "date +\"%H:%M %p\"; date -u +\"%H:%M %p\"; date +%A,' '%d' '%B,' '%Y; jdate +%G' '%d' '%V' '%Y"
+// date -u +\"%H:%M %p\";
+#define TIME "jdate +%G' '%d' '%V' '%Y"
+#define CURRENT_TIME "date +\"%H:%M %p\""
+#define DATE_JEORGIAN "date +%A,' '%d' '%B,' '%Y"
 //echo "Date=$(date +"%H:%M%p" )";echo "DateGMT=$(date -u +"%H:%M%p")";echo "DateDesc=$(date +%A,' '%d' '%B,' '%Y)";echo "DatePersian=$(jdate +%G' '%d' '%V','%Y|fribidi --ltr)";
 //date +"%H:%M%p"; date -u +"%H:%M%p"; date +%A,' '%d' '%B,' '%Y; jdate +%G' '%d' '%V','%Y|fribidi --ltr;
 

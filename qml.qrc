@@ -15,6 +15,7 @@
         <file alias="DashBoardVGAs.qml">modules/dashBoard/view/DashBoardVGAs.qml</file>
         <file alias="DashBoardTorStatus.qml">modules/dashBoard/view/DashBoardTorStatus.qml</file>
         <file alias="DashBoardDownloadUpload.qml">modules/dashBoard/view/DashBoardDownloadUpload.qml</file>
+        <file alias="DashBoardTime.qml">modules/dashBoard/view/DashBoardTime.qml</file>
     </qresource>
     <qresource prefix="/util">
         <file alias="qml/AppMenuBar.qml">util/qml/AppMenuBar.qml</file>

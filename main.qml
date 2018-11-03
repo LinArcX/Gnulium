@@ -22,23 +22,22 @@ ApplicationWindow {
 
     background: Rectangle {
         anchors.fill: parent
-        color: "#546E7A" //"#eee"
+        color: CStr.appColor //"#eee"
     }
 
-    LinArcxAccordion{
-
+    LinArcxAccordion {
+        id: qAccordion
+        z: 2
     }
 
-    //    AppTabView {
-    //        id: tabView
-    //    }
+    Loader {
+        width: myApp.width - 100
+        anchors.left: qAccordion.right
+        height: parent.height
+        id: pageLoader
+    }
 
-    //    AppMenuBar {
-    //        id: mAppMenuBar
-    //    }
     Component.onCompleted: {
-
-        //        var component = Qt.createComponent(CStr.tabHomeLink);
-        //        tabView.addTab(CStr.home, component);
+        pageLoader.source = CStr.dashBoardLink
     }
 }

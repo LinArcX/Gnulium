@@ -16,6 +16,34 @@ DashBoard::DashBoard(QObject* parent)
 {
 }
 
+void DashBoard::getGregorianDate()
+{
+    pGregorianDate = new QProcess(this);
+    connect(pGregorianDate, &QProcess::readyReadStandardOutput, this, &DashBoard::gregorianDate);
+    pGregorianDate->start("sh", QStringList() << "-c" << DATE_JEORGIAN);
+}
+
+void DashBoard::getCurrentTime()
+{
+    pCurrentTime = new QProcess(this);
+    connect(pCurrentTime, &QProcess::readyReadStandardOutput, this, &DashBoard::currentTime);
+    pCurrentTime->start("sh", QStringList() << "-c" << CURRENT_TIME);
+}
+
+void DashBoard::gregorianDate()
+{
+    QString outPut = QString(pGregorianDate->readAllStandardOutput());
+    QStringList list = outPut.split("\n");
+    emit gregorianDateReady(list.first());
+}
+
+void DashBoard::currentTime()
+{
+    QString outPut = QString(pCurrentTime->readAllStandardOutput());
+    QStringList list = outPut.split("\n");
+    emit currentTimeReady(list.first());
+}
+
 void DashBoard::updateNetworkBar()
 {
     static quint64 l_RXbytes = im->getRXbytes();
@@ -75,11 +103,11 @@ void DashBoard::returnTopMemory()
     emit modelReady(parent);
 }
 
-void DashBoard::execTime()
+void DashBoard::execTimePersian()
 {
-    pTime = new QProcess(this);
-    connect(pTime, &QProcess::readyReadStandardOutput, this, &DashBoard::returnTime);
-    pTime->start("sh", QStringList() << "-c" << TIME);
+    //    pTime = new QProcess(this);
+    //    connect(pTime, &QProcess::readyReadStandardOutput, this, &DashBoard::returnTimePersian);
+    //    pTime->start("sh", QStringList() << "-c" << TIME);
 }
 
 void DashBoard::execBootTime()
@@ -117,16 +145,16 @@ void DashBoard::execVGA()
     pVGA->start("sh", QStringList() << "-c" << VGA);
 }
 
-void DashBoard::returnTime()
+void DashBoard::returnTimePersian()
 {
-    QString outPut = QString(pTime->readAllStandardOutput());
-    QStringList list = outPut.split("\n");
-    list.removeLast();
-    QVariantList lst;
-    foreach (QString item, list) {
-        lst.append(item);
-    }
-    emit modelReady(lst);
+    //    QString outPut = QString(pTime->readAllStandardOutput());
+    //    QStringList list = outPut.split("\n");
+    //    list.removeLast();
+    //    QVariantList lst;
+    //    foreach (QString item, list) {
+    //        lst.append(item);
+    //    }
+    //    emit modelReady(lst);
 }
 
 void DashBoard::returnBootTime()
