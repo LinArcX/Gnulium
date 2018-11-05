@@ -16,18 +16,25 @@ DashBoard::DashBoard(QObject* parent)
 {
 }
 
-void DashBoard::getGregorianDate()
-{
-    pGregorianDate = new QProcess(this);
-    connect(pGregorianDate, &QProcess::readyReadStandardOutput, this, &DashBoard::gregorianDate);
-    pGregorianDate->start("sh", QStringList() << "-c" << DATE_JEORGIAN);
-}
-
 void DashBoard::getCurrentTime()
 {
     pCurrentTime = new QProcess(this);
     connect(pCurrentTime, &QProcess::readyReadStandardOutput, this, &DashBoard::currentTime);
     pCurrentTime->start("sh", QStringList() << "-c" << CURRENT_TIME);
+}
+
+void DashBoard::currentTime()
+{
+    QString outPut = QString(pCurrentTime->readAllStandardOutput());
+    QStringList list = outPut.split("\n");
+    emit currentTimeReady(list.first());
+}
+
+void DashBoard::getGregorianDate()
+{
+    pGregorianDate = new QProcess(this);
+    connect(pGregorianDate, &QProcess::readyReadStandardOutput, this, &DashBoard::gregorianDate);
+    pGregorianDate->start("sh", QStringList() << "-c" << GREGORIAN_DATE);
 }
 
 void DashBoard::gregorianDate()
@@ -37,11 +44,59 @@ void DashBoard::gregorianDate()
     emit gregorianDateReady(list.first());
 }
 
-void DashBoard::currentTime()
+void DashBoard::getPersianDate()
 {
-    QString outPut = QString(pCurrentTime->readAllStandardOutput());
+    pPersianDate = new QProcess(this);
+    connect(pPersianDate, &QProcess::readyReadStandardOutput, this, &DashBoard::persianDate);
+    pPersianDate->start("sh", QStringList() << "-c" << PERSIAN_DATE);
+}
+void DashBoard::persianDate()
+{
+    QString outPut = QString(pPersianDate->readAllStandardOutput());
     QStringList list = outPut.split("\n");
-    emit currentTimeReady(list.first());
+    emit persianDateReady(list.first());
+}
+
+void DashBoard::getKernelTime()
+{
+    pKernelTime = new QProcess(this);
+    connect(pKernelTime, &QProcess::readyReadStandardOutput, this, &DashBoard::kernelTime);
+    pKernelTime->start("sh", QStringList() << "-c" << KERNEL_TIME);
+}
+
+void DashBoard::kernelTime()
+{
+    QString outPut = QString(pKernelTime->readAllStandardOutput());
+    QStringList list = outPut.split("\n");
+    emit kernelTimeReady(list.first());
+}
+
+void DashBoard::getUserSpaceTime()
+{
+    pUserSpaceTime = new QProcess(this);
+    connect(pUserSpaceTime, &QProcess::readyReadStandardOutput, this, &DashBoard::userSpaceTime);
+    pUserSpaceTime->start("sh", QStringList() << "-c" << USERSPACE_TIME);
+}
+
+void DashBoard::userSpaceTime()
+{
+    QString outPut = QString(pUserSpaceTime->readAllStandardOutput());
+    QStringList list = outPut.split("\n");
+    emit userSpaceTimeReady(list.first());
+}
+
+void DashBoard::getTotlaTime()
+{
+    pTotalTime = new QProcess(this);
+    connect(pTotalTime, &QProcess::readyReadStandardOutput, this, &DashBoard::totlaTime);
+    pTotalTime->start("sh", QStringList() << "-c" << TOTAL_TIME);
+}
+
+void DashBoard::totlaTime()
+{
+    QString outPut = QString(pTotalTime->readAllStandardOutput());
+    QStringList list = outPut.split("\n");
+    emit totalTimeReady(list.first());
 }
 
 void DashBoard::updateNetworkBar()
@@ -110,13 +165,6 @@ void DashBoard::execTimePersian()
     //    pTime->start("sh", QStringList() << "-c" << TIME);
 }
 
-void DashBoard::execBootTime()
-{
-    pBootTime = new QProcess(this);
-    connect(pBootTime, &QProcess::readyReadStandardOutput, this, &DashBoard::returnBootTime);
-    pBootTime->start("sh", QStringList() << "-c" << BOOT_TIME);
-}
-
 void DashBoard::execArchAge()
 {
     pArchAge = new QProcess(this);
@@ -155,13 +203,6 @@ void DashBoard::returnTimePersian()
     //        lst.append(item);
     //    }
     //    emit modelReady(lst);
-}
-
-void DashBoard::returnBootTime()
-{
-    QString outPut = QString(pBootTime->readAllStandardOutput());
-    QVariantList lst = Utils::beautifer(outPut);
-    emit modelReady(lst);
 }
 
 void DashBoard::returnArchAge()

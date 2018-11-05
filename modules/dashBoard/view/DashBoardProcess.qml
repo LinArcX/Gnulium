@@ -6,7 +6,7 @@ import linarcx.gnulium.sortFilterProxyModel 0.1
 import "qrc:/util/qml/"
 import "qrc:/util/js/ElementCreator.js" as JS
 import "qrc:/strings/CoreStrings.js" as CStr
-import "qrc:/home/strings/HomeStrings.js" as Str
+import "qrc:/dashBoard/strings/DashBoardStrings.js" as Str
 
 Column {
     id: mParent
@@ -117,9 +117,9 @@ Column {
 
         SortFilterProxyModel{
             id: proxyModel
+            filterString: "*" + searchBox.text + "*"
             sortOrder: mTable.sortIndicatorOrder
             sortCaseSensitivity: Qt.CaseInsensitive
-            filterString: "*" + searchBox.text + "*"
             filterSyntax: SortFilterProxyModel.Wildcard
             filterCaseSensitivity: Qt.CaseInsensitive
         }

@@ -41,15 +41,14 @@
 #ifndef SORTFILTERPROXYMODEL_H
 #define SORTFILTERPROXYMODEL_H
 
+#include <QObject>
 #include <QtCore/qsortfilterproxymodel.h>
 #include <QtQml/qjsvalue.h>
-#include <QObject>
 
-class SortFilterProxyModel : public QSortFilterProxyModel
-{
+class SortFilterProxyModel : public QSortFilterProxyModel {
     Q_OBJECT
     Q_PROPERTY(int count READ count NOTIFY countChanged)
-    Q_PROPERTY(QObject *source READ source WRITE setSource)
+    Q_PROPERTY(QObject* source READ source WRITE setSource)
 
     Q_PROPERTY(QByteArray sortRole READ sortRole WRITE setSortRole)
     Q_PROPERTY(Qt::SortOrder sortOrder READ sortOrder WRITE setSortOrder)
@@ -61,21 +60,22 @@ class SortFilterProxyModel : public QSortFilterProxyModel
     Q_ENUMS(FilterSyntax)
 
 public:
-    explicit SortFilterProxyModel(QObject *parent = 0);
+    explicit SortFilterProxyModel(QObject* parent = 0);
 
-    QObject *source() const;
-    void setSource(QObject *source);
+    QObject* source() const;
+    void setSource(QObject* source);
 
     QByteArray sortRole() const;
-    void setSortRole(const QByteArray &role);
+    void setSortRole(const QByteArray& role);
 
-    void setSortOrder(Qt::SortOrder order);
+    Q_INVOKABLE Qt::SortOrder sortOrder() const;
+    Q_INVOKABLE void setSortOrder(bool checked);
 
     QByteArray filterRole() const;
-    void setFilterRole(const QByteArray &role);
+    void setFilterRole(const QByteArray& role);
 
     QString filterString() const;
-    void setFilterString(const QString &filter);
+    void setFilterString(const QString& filter);
 
     enum FilterSyntax {
         RegExp,
@@ -93,9 +93,9 @@ signals:
     void countChanged();
 
 protected:
-    int roleKey(const QByteArray &role) const;
+    int roleKey(const QByteArray& role) const;
     QHash<int, QByteArray> roleNames() const;
-    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const;
+    bool filterAcceptsRow(int sourceRow, const QModelIndex& sourceParent) const;
 };
 
 #endif // SORTFILTERPROXYMODEL_H

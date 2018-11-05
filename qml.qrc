@@ -62,7 +62,7 @@
         <file alias="tvdoon.png">util/images/tvdoon.png</file>
         <file alias="dashBoard.svg">util/images/dashBoard.svg</file>
         <file alias="pacman.png">util/images/pacman.png</file>
-        <file alias="settings.svg">util/images/settings-4.svg</file>
+        <file alias="settings.svg">util/images/settings.svg</file>
         <file alias="text.svg">util/images/text.svg</file>
         <file alias="fontSize.svg">util/images/fontSize.svg</file>
         <file alias="alarmClock.svg">util/images/alarm-clock.svg</file>
@@ -101,6 +101,9 @@
         <file alias="cancel.svg">util/images/cancel.svg</file>
         <file alias="ask.svg">util/images/ask.svg</file>
         <file alias="information.svg">util/images/info.svg</file>
+        <file alias="sortDesc.svg">util/images/sortDesc.svg</file>
+        <file alias="sortAsc.svg">util/images/sortAsc.svg</file>
+        <file alias="scripts.svg">util/images/scripts.svg</file>
     </qresource>
     <qresource prefix="/i18n">
         <file alias="persian.qm">util/i18n/persian.qm</file>

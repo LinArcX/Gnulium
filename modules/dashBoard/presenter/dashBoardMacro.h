@@ -1,12 +1,18 @@
 #pragma once
 
+// SystemD-Analyze
+#define KERNEL_TIME "echo \"Kernel=$(systemd-analyze | head -n1 | cut -d\" \" -f4)\""
+#define USERSPACE_TIME "echo \"UserSpace=$(systemd-analyze | head -n1 | awk '{print $7}')\""
+#define TOTAL_TIME "echo \"Total=$(systemd-analyze | head -n1 | cut -d\"=\" -f2)\";"
+
+// date -u +\"%H:%M %p\";
+#define CURRENT_TIME "date +\"%H:%M %p\""
+#define GREGORIAN_DATE "date +%A,' '%d' '%B,' '%Y"
+#define PERSIAN_DATE "jdate +%G' '%d' '%V' '%Y"
+
 #define TOP_MEMORY "ps -Ao pid,comm,pmem --sort=-pmem | head -n 11"
 #define TOP_CPU "ps -Ao pid,comm,pcpu --sort=-pcpu | head -n 11"
 
-// date -u +\"%H:%M %p\";
-#define TIME "jdate +%G' '%d' '%V' '%Y"
-#define CURRENT_TIME "date +\"%H:%M %p\""
-#define DATE_JEORGIAN "date +%A,' '%d' '%B,' '%Y"
 //echo "Date=$(date +"%H:%M%p" )";echo "DateGMT=$(date -u +"%H:%M%p")";echo "DateDesc=$(date +%A,' '%d' '%B,' '%Y)";echo "DatePersian=$(jdate +%G' '%d' '%V','%Y|fribidi --ltr)";
 //date +"%H:%M%p"; date -u +"%H:%M%p"; date +%A,' '%d' '%B,' '%Y; jdate +%G' '%d' '%V','%Y|fribidi --ltr;
 
@@ -18,7 +24,6 @@
 // distint words with only one tab: (\S*?)(\s|$) or .+?(?=\s|$)
 // get all words: (\S*)(\s*)
 
-#define BOOT_TIME "echo \"kernel=$(systemd-analyze | head -n1 | cut -d\" \" -f4)\";echo \"UserSpace=$(systemd-analyze | head -n1 | awk '{print $7}')\";echo \"Total=$(systemd-analyze | head -n1 | cut -d\"=\" -f2)\";"
 //systemd-analyze | head -n1 | cut -d" " -f4;systemd-analyze | head -n1 | cut -d" " -f7 ;systemd-analyze | head -n1 | cut -d" " -f10;
 
 #define ARCH_AGE "todaySecond=$(date -d \"$date\" +\"%s\");installTime=$(cat /var/log/pacman.log | head -1 | cut -d\"]\" -f1 | cut -d\"[\" -f2 |  awk '{print $1}');installTimeSecond=$(date -d \"$installTime\" +\"%s\");ageSecond=$((todaySecond - installTimeSecond));alldays=$((ageSecond / 86400 ));monthfirst=$((alldays/30));year=$((monthfirst/12));month=$((monthfirst%12));day=$((alldays%30));echo \"$year year,$month month,$day day\";"

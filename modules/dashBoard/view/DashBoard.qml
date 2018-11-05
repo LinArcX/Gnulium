@@ -4,52 +4,57 @@ import QtQuick.Controls 2.3
 import "qrc:/util/qml"
 import "qrc:/strings/CoreStrings.js" as CStr
 
-Row {
+Rectangle {
     id: qDashboardTab
-    spacing: CStr.rowSpacing
     anchors.fill: parent
-
-//    DashBoardPillar {
-//        width: parent.width / 5 * 1
-//        height: parent.height
-//    }
-
-//    SpacerVertical {
-//    }
 
     Rectangle {
         color: CStr.transparent
+        width: parent.width
         height: parent.height
-        width: (parent.width) - (2 * CStr.tabViewMargin)
 
-        Grid {
-            id: mGrid
+        Rectangle {
+            color: CStr.transparent
             width: parent.width
             height: parent.height / 6 * 5
             anchors.top: parent.top
-            columns: 3
-            columnSpacing: 2
 
             DashBoardBootTime {
-                width: (parent.width / 3) * 1
-                height: (parent.height / 2)
+                id: qDashboardBootTime
+                anchors.left: parent.left
+                anchors.top: parent.top
+                anchors.leftMargin: 5
+                anchors.topMargin: 5
             }
 
-            DashBoardTime{
-
-
+            DashBoardTime {
+                id: qDashboardTime
+                anchors.left: qDashboardBootTime.right
+                anchors.top: parent.top
+                anchors.leftMargin: 5
+                anchors.topMargin: 5
             }
 
-            DashBoardDownloadUpload {
-                width: (parent.width / 3) * 1
-                height: (parent.height / 2)
-            }
+//            DashBoardProcess {
+//                anchors.left: qDashboardTime.right
+//                anchors.top: parent.top
+//                anchors.leftMargin: 5
+//                anchors.topMargin: 5
+//                width: (parent.width / 3) * 1
+//                height: parent.height / 2
+//            }
+
+            //            DashBoardDownloadUpload {
+            //                width: (parent.width / 3) * 1
+            //                height: (parent.height / 2)
+            //            }
         }
+
         Rectangle {
             color: CStr.transparent
             width: parent.width
             height: parent.height / 6 * 1
-            anchors.top: mGrid.bottom
+            //            anchors.top: mGrid.bottom
             anchors.bottom: parent.bottom
 
             DashBoardSystemAge {

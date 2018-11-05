@@ -124,7 +124,7 @@ Rectangle {
 
             LinArcxAccordionTemplate {
                 qTitle: CStr.Utility
-                qImage: CStr.imgCategory
+                qImage: CStr.imgScripts
 
                 Column {
                     Item {
@@ -161,33 +161,6 @@ Rectangle {
                         LinArcxAccordionItem {
                             mTitle: CStr.pacman
                             mImage: CStr.imgPacman
-                        }
-                    }
-                }
-            }
-
-            LinArcxAccordionTemplate {
-                qTitle: CStr.help
-                qImage: CStr.imgQuestionMark
-
-                Column {
-                    Item {
-                        width: mScrollView.width
-                        height: 50
-
-                        LinArcxAccordionItem {
-                            mTitle: CStr.aboutGnulium
-                            mImage: CStr.imgGnulium
-                        }
-                    }
-
-                    Item {
-                        width: mScrollView.width
-                        height: 50
-
-                        LinArcxAccordionItem {
-                            mTitle: CStr.aboutQT
-                            mImage: CStr.imgQT
                         }
                     }
                 }
