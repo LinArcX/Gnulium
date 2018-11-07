@@ -1,6 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
 
+
 //    TextScroll{
 //        mWidth: parent.width
 //        mHeight: parent.height - imgSettings.height
@@ -8,7 +9,6 @@ import QtQuick.Controls 2.2
 //        mTop: imgSettings.bottom
 //        mText: Str.settingsStrings
 //    }
-
 Rectangle {
     property int mWidth
     property int mHeight
@@ -47,7 +47,7 @@ Rectangle {
         active: hovered || pressed
         orientation: Qt.Vertical
         size: frame.height / content.height
-        onHoveredChanged: active=true;
+        onHoveredChanged: active = true
         anchors.top: parent.top
         anchors.right: parent.right
         anchors.bottom: parent.bottom

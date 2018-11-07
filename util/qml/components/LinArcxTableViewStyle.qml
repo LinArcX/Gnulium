@@ -3,10 +3,10 @@ import QtQuick.Controls 1.1
 import QtQuick.Controls.Private 1.0
 import QtQuick.Controls.Styles 1.4
 
-TableViewStyle{
+TableViewStyle {
     id: mTableViewStyle
     backgroundColor: "transparent"
-    textColor: "black"//"#616161"
+    textColor: "black" //"#616161"
     //    __scrollBarFadeDuration : 20
     //    __scrollBarSpacing: 10
 

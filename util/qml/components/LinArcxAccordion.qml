@@ -1,9 +1,9 @@
 import QtQuick 2.10
 import QtQuick.Controls 2.3
 
-import "qrc:/util/qml/"
+import "qrc:/components/qml/"
 import "qrc:/strings/CoreStrings.js" as CStr
-import "qrc:/dashBoard/strings/DashBoardStrings.js" as Str
+import "qrc:/strings/DashBoardStrings.js" as Str
 
 Rectangle {
     id: qParent
@@ -90,6 +90,13 @@ Rectangle {
                             mTitle: CStr.Disks
                             mImage: CStr.imgHardDisk
                         }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                pageLoader.source = CStr.disksLink
+                            }
+                        }
                     }
 
                     Item {
@@ -100,6 +107,13 @@ Rectangle {
                             mTitle: CStr.Environments
                             mImage: CStr.imgPalette
                         }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                pageLoader.source = CStr.environmentsLink
+                            }
+                        }
                     }
                     Item {
                         width: mScrollView.width
@@ -109,6 +123,13 @@ Rectangle {
                             mTitle: CStr.SystemdAnalyze
                             mImage: CStr.imgAnalytics
                         }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                pageLoader.source = CStr.systemdAnalyzeLink
+                            }
+                        }
                     }
                     Item {
                         width: mScrollView.width
@@ -117,6 +138,13 @@ Rectangle {
                         LinArcxAccordionItem {
                             mTitle: CStr.OpenPorts
                             mImage: CStr.imgCircuit
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                pageLoader.source = CStr.portsLink
+                            }
                         }
                     }
                 }
@@ -135,6 +163,13 @@ Rectangle {
                             mTitle: CStr.histogram
                             mImage: CStr.imgAnalytics
                         }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                pageLoader.source = CStr.histogramLink
+                            }
+                        }
                     }
 
                     Item {
@@ -144,6 +179,13 @@ Rectangle {
                         LinArcxAccordionItem {
                             mTitle: CStr.DesktopEntryCreator
                             mImage: CStr.imgDesktopEntry
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                pageLoader.source = CStr.DesktopEntryCreatorLink
+                            }
                         }
                     }
                 }
@@ -161,6 +203,13 @@ Rectangle {
                         LinArcxAccordionItem {
                             mTitle: CStr.pacman
                             mImage: CStr.imgPacman
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                pageLoader.source = CStr.pacmanLink
+                            }
                         }
                     }
                 }

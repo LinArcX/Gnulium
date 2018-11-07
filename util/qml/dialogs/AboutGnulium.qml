@@ -1,9 +1,9 @@
 import QtQuick 2.9
 import QtQuick.Dialogs 1.3
 
-import "qrc:/util/qml"
+import "qrc:/components/qml"
 import "qrc:/strings/CoreStrings.js" as CStr
-import "qrc:/dialogs/strings/DialogStrings.js" as Str
+import "qrc:/strings/DialogStrings.js" as Str
 
 Dialog {
     id: dlgAboutQT
@@ -13,9 +13,9 @@ Dialog {
     height: 480
 
     standardButtons: StandardButton.Close
-    Column{
+    Column {
         anchors.fill: parent
-        Row{
+        Row {
             Image {
                 id: imgGnu
                 width: 150
@@ -27,7 +27,7 @@ Dialog {
                 }
 
                 MouseArea {
-                    onClicked: Qt.openUrlExternally(Str.gnuLink);
+                    onClicked: Qt.openUrlExternally(Str.gnuLink)
                     anchors.fill: parent
                 }
             }
@@ -35,11 +35,11 @@ Dialog {
                 text: qsTr(Str.gnu)
                 anchors.verticalCenter: imgGnu.verticalCenter
                 anchors.leftMargin: 50
-                width: dlgAboutQT.width - (imgGnu.width  + 20)
+                width: dlgAboutQT.width - (imgGnu.width + 20)
                 wrapMode: Text.WordWrap
             }
         }
-        Row{
+        Row {
             Image {
                 id: imgLinux
                 width: 150
@@ -51,7 +51,7 @@ Dialog {
                 }
 
                 MouseArea {
-                    onClicked: Qt.openUrlExternally(Str.linuxLink);
+                    onClicked: Qt.openUrlExternally(Str.linuxLink)
                     anchors.fill: parent
                 }
             }
@@ -59,25 +59,25 @@ Dialog {
                 text: qsTr(Str.linux)
                 anchors.verticalCenter: imgLinux.verticalCenter
                 anchors.leftMargin: 50
-                width: dlgAboutQT.width - (imgGnu.width  + 20)
+                width: dlgAboutQT.width - (imgGnu.width + 20)
                 wrapMode: Text.WordWrap
             }
         }
-        Row{
+        Row {
             id: mRowGnulium
             Image {
                 id: imgGnulium
                 width: 150
                 height: 150
                 source: CStr.imgGnulium
-                z:-1
+                z: -1
 
                 ToolTiper {
                     toolTip: Str.lilyToolTip
                 }
 
                 MouseArea {
-                    onClicked: Qt.openUrlExternally(Str.liliumLink);
+                    onClicked: Qt.openUrlExternally(Str.liliumLink)
                     anchors.fill: parent
                 }
             }
@@ -85,12 +85,12 @@ Dialog {
                 text: qsTr(Str.lilium)
                 anchors.verticalCenter: imgGnulium.verticalCenter
                 anchors.leftMargin: 50
-                width: dlgAboutQT.width - (imgGnulium.width  + 20)
+                width: dlgAboutQT.width - (imgGnulium.width + 20)
                 wrapMode: Text.WordWrap
             }
         }
 
-        Rectangle{
+        Rectangle {
             id: rectLinks
             anchors.top: mRowGnulium.Bottom
             anchors.bottom: parent.bottom
@@ -116,10 +116,9 @@ Dialog {
                 id: lnkGithub
                 anchors.left: gitVersion.right
                 anchors.bottom: gitVersion.bottom
-                anchors.leftMargin:
-                    dlgAboutQT.width / 2 -
-                    (gitVersionTitle.width + gitVersion.width +
-                     lnkGithub.width + lnkTelegram.width + lnkSite.width)
+                anchors.leftMargin: dlgAboutQT.width / 2
+                                    - (gitVersionTitle.width + gitVersion.width
+                                       + lnkGithub.width + lnkTelegram.width + lnkSite.width)
                 font.family: fontAwesome.name
                 font.pointSize: 15
                 text: "\uf09b"
@@ -132,7 +131,7 @@ Dialog {
                 }
 
                 MouseArea {
-                    onClicked: Qt.openUrlExternally(Str.githubLink);
+                    onClicked: Qt.openUrlExternally(Str.githubLink)
                     anchors.fill: parent
                 }
             }
@@ -154,7 +153,7 @@ Dialog {
                 }
 
                 MouseArea {
-                    onClicked: Qt.openUrlExternally(Str.telegramLink);
+                    onClicked: Qt.openUrlExternally(Str.telegramLink)
                     anchors.fill: parent
                 }
             }
@@ -176,7 +175,7 @@ Dialog {
                 }
 
                 MouseArea {
-                    onClicked: Qt.openUrlExternally(Str.websiteLink);
+                    onClicked: Qt.openUrlExternally(Str.websiteLink)
                     anchors.fill: parent
                 }
             }

@@ -1,32 +1,13 @@
 <RCC>
     <qresource prefix="/">
         <file alias="qtquickcontrols2.conf">appconf/qtquickcontrols2.conf</file>
-        <file alias="strings/CoreStrings.js">util/strings/CoreStrings.js</file>
-        <file>main.qml</file>
     </qresource>
-    <qresource prefix="/dashBoard">
-        <file alias="DashBoard.qml">modules/dashBoard/view/DashBoard.qml</file>
-        <file alias="DashBoardProcess.qml">modules/dashBoard/view/DashBoardProcess.qml</file>
-        <file alias="strings/DashBoardStrings.js">modules/dashBoard/view/strings/DashBoardStrings.js</file>
-        <file alias="DashBoardPillar.qml">modules/dashBoard/view/DashBoardPillar.qml</file>
-        <file alias="DashBoardBootTime.qml">modules/dashBoard/view/DashBoardBootTime.qml</file>
-        <file alias="DashBoardSystemAge.qml">modules/dashBoard/view/DashBoardSystemAge.qml</file>
-        <file alias="DashBoardUpTime.qml">modules/dashBoard/view/DashBoardUpTime.qml</file>
-        <file alias="DashBoardVGAs.qml">modules/dashBoard/view/DashBoardVGAs.qml</file>
-        <file alias="DashBoardTorStatus.qml">modules/dashBoard/view/DashBoardTorStatus.qml</file>
-        <file alias="DashBoardDownloadUpload.qml">modules/dashBoard/view/DashBoardDownloadUpload.qml</file>
-        <file alias="DashBoardTime.qml">modules/dashBoard/view/DashBoardTime.qml</file>
-    </qresource>
-    <qresource prefix="/util">
-        <file alias="qml/AppMenuBar.qml">util/qml/AppMenuBar.qml</file>
-        <file alias="qml/AppTabView.qml">util/qml/AppTabView.qml</file>
-        <file alias="js/MenuCreator.js">util/js/MenuCreator.js</file>
+    <qresource prefix="/components">
         <file alias="qml/ToolTipArea.qml">util/qml/components/ToolTipArea.qml</file>
         <file alias="qml/ToolTiper.qml">util/qml/components/ToolTiper.qml</file>
         <file alias="qml/Scaler.qml">util/qml/components/Scaler.qml</file>
         <file alias="qml/SpacerVertical.qml">util/qml/components/SpacerVertical.qml</file>
         <file alias="qml/TextScroll.qml">util/qml/components/TextScroll.qml</file>
-        <file alias="js/ElementCreator.js">util/js/ElementCreator.js</file>
         <file alias="qml/Opacitor.qml">util/qml/components/Opacitor.qml</file>
         <file alias="qml/LinArcxTextField.qml">util/qml/components/LinArcxTextField.qml</file>
         <file alias="qml/TableThreeColumn.qml">util/qml/components/TableThreeColumn.qml</file>
@@ -37,11 +18,26 @@
         <file alias="qml/TableFifthColumn.qml">util/qml/components/TableFifthColumn.qml</file>
         <file alias="qml/TableSixColumn.qml">util/qml/components/TableSixColumn.qml</file>
         <file alias="qml/LinArcxTableViewStyle.qml">util/qml/components/LinArcxTableViewStyle.qml</file>
-        <file alias="qml/DragAndDropTextItem.qml">util/qml/DragAndDropTextItem.qml</file>
         <file alias="qml/TableProcesses.qml">util/qml/components/TableProcesses.qml</file>
         <file alias="qml/LinArcxAccordion.qml">util/qml/components/LinArcxAccordion.qml</file>
         <file alias="qml/LinArcxAccordionItem.qml">util/qml/components/LinArcxAccordionItem.qml</file>
         <file alias="qml/LinArcxAccordionTemplate.qml">util/qml/components/LinArcxAccordionTemplate.qml</file>
+        <file alias="qml/LinArcxDialog.qml">util/qml/components/LinArcxDialog.qml</file>
+        <file alias="qml/LinArcxSplashScreen.qml">util/qml/components/LinArcxSplashScreen.qml</file>
+        <file alias="js/ElementCreator.js">util/js/ElementCreator.js</file>
+        <file alias="js/MenuCreator.js">util/js/MenuCreator.js</file>
+    </qresource>
+    <qresource prefix="/dialogs">
+        <file alias="AboutGnulium.qml">util/qml/dialogs/AboutGnulium.qml</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file alias="Vazir.ttf">util/fonts/Vazir.ttf</file>
+        <file alias="Shabnam.ttf">util/fonts/Shabnam.ttf</file>
+        <file alias="Adele.ttf">util/fonts/Adele.ttf</file>
+        <file alias="RadioSpace.ttf">util/fonts/RadioSpace.ttf</file>
+        <file alias="XmYekan.ttf">util/fonts/XMYekan.ttf</file>
+        <file alias="FontAwesome.ttf">util/fonts/FontAwesome.ttf</file>
+        <file alias="CaviarDreams.ttf">util/fonts/CaviarDreams.ttf</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="diskette.svg">util/images/diskette.svg</file>
@@ -104,71 +100,58 @@
         <file alias="sortDesc.svg">util/images/sortDesc.svg</file>
         <file alias="sortAsc.svg">util/images/sortAsc.svg</file>
         <file alias="scripts.svg">util/images/scripts.svg</file>
+        <file alias="internetInfo.svg">util/images/internetInfo.svg</file>
+        <file alias="gif/ellipsis.gif">util/images/gifs/ellipsis.gif</file>
+        <file alias="gif/pacman.gif">util/images/gifs/pacman.gif</file>
     </qresource>
     <qresource prefix="/i18n">
         <file alias="persian.qm">util/i18n/persian.qm</file>
     </qresource>
-    <qresource prefix="/fonts">
-        <file alias="Vazir.ttf">util/fonts/Vazir.ttf</file>
-        <file alias="Shabnam.ttf">util/fonts/Shabnam.ttf</file>
-        <file alias="Adele.ttf">util/fonts/Adele.ttf</file>
-        <file alias="RadioSpace.ttf">util/fonts/RadioSpace.ttf</file>
-        <file alias="XmYekan.ttf">util/fonts/XMYekan.ttf</file>
-        <file alias="FontAwesome.ttf">util/fonts/FontAwesome.ttf</file>
-        <file alias="CaviarDreams.ttf">util/fonts/CaviarDreams.ttf</file>
+    <qresource prefix="/pages">
+        <file alias="launcher/app.qml">modules/pages/launcher/app.qml</file>
+        <file alias="launcher/launcher.qml">modules/pages/launcher/launcher.qml</file>
+        <file alias="dashBoard/DashBoard.qml">modules/core/dashBoard/view/DashBoard.qml</file>
+        <file alias="dashBoard/DashBoardProcess.qml">modules/core/dashBoard/view/DashBoardProcess.qml</file>
+        <file alias="dashBoard/DashBoardPillar.qml">modules/core/dashBoard/view/DashBoardPillar.qml</file>
+        <file alias="dashBoard/DashBoardBootTime.qml">modules/core/dashBoard/view/DashBoardBootTime.qml</file>
+        <file alias="dashBoard/DashBoardSystemAge.qml">modules/core/dashBoard/view/DashBoardSystemAge.qml</file>
+        <file alias="dashBoard/DashBoardUpTime.qml">modules/core/dashBoard/view/DashBoardUpTime.qml</file>
+        <file alias="dashBoard/DashBoardVGAs.qml">modules/core/dashBoard/view/DashBoardVGAs.qml</file>
+        <file alias="dashBoard/DashBoardTorStatus.qml">modules/core/dashBoard/view/DashBoardTorStatus.qml</file>
+        <file alias="dashBoard/DashBoardDownloadUpload.qml">modules/core/dashBoard/view/DashBoardDownloadUpload.qml</file>
+        <file alias="dashBoard/DashBoardTime.qml">modules/core/dashBoard/view/DashBoardTime.qml</file>
+        <file alias="disks/disks.qml">modules/pages/disks/view/disks.qml</file>
+        <file alias="services/services.qml">modules/pages/services/view/services.qml</file>
+        <file alias="processes/processes.qml">modules/pages/processes/view/processes.qml</file>
+        <file alias="ports/ports.qml">modules/pages/ports/view/ports.qml</file>
+        <file alias="settings/settings.qml">modules/pages/settings/view/settings.qml</file>
+        <file alias="settings/SettingsPillar.qml">modules/pages/settings/view/SettingsPillar.qml</file>
+        <file alias="subtitleFixer/subtitleFixer.qml">modules/pages/subTitleFixer/view/subFixer.qml</file>
+        <file alias="subtitleFixer/SubtitleFixerPillar.qml">modules/pages/subTitleFixer/view/SubFixerPillar.qml</file>
+        <file alias="systemdAnalyze/systemdAnalyze.qml">modules/pages/systemdAnalyze/view/systemdAnalyze.qml</file>
+        <file alias="desktopEntryCreator/desktopEntryCreator.qml">modules/pages/desktopEntryCreator/view/desktopEntryCreator.qml</file>
+        <file alias="desktopEntryCreator/DesktopEntryCreatorPillar.qml">modules/pages/desktopEntryCreator/view/DesktopEntryCreatorPillar.qml</file>
+        <file alias="environments/environments.qml">modules/pages/environments/view/environments.qml</file>
+        <file alias="histogram/histogram.qml">modules/pages/histogram/view/histogram.qml</file>
+        <file alias="histogram/HistogramPillar.qml">modules/pages/histogram/view/HistogramPillar.qml</file>
+        <file alias="pacman/pacman.qml">modules/pages/pacman/view/pacman.qml</file>
+        <file alias="pacman/PacmanPillar.qml">modules/pages/pacman/view/PacmanPillar.qml</file>
+        <file alias="pacman/PacmanRepositories.qml">modules/pages/pacman/view/PacmanRepositories.qml</file>
+        <file alias="pacman/PacmanMyAurHelper.qml">modules/pages/pacman/view/PacmanMyAurHelper.qml</file>
+        <file alias="pacman/PacmanLastUpdateTime.qml">modules/pages/pacman/view/PacmanLastUpdateTime.qml</file>
+        <file alias="pacman/PacmanQueryFileDB.qml">modules/pages/pacman/view/PacmanQueryFileDB.qml</file>
+        <file alias="pacman/PacmanUpdatePKGs.qml">modules/pages/pacman/view/PacmanUpdatePKGs.qml</file>
+        <file alias="pacman/PacmanUpdateSize.qml">modules/pages/pacman/view/PacmanUpdateSize.qml</file>
+        <file alias="pacman/PacmanSummary.qml">modules/pages/pacman/view/PacmanSummary.qml</file>
     </qresource>
-    <qresource prefix="/dialogs">
-        <file alias="AboutGnulium.qml">util/qml/dialogs/AboutGnulium.qml</file>
-        <file alias="strings/DialogStrings.js">util/qml/dialogs/strings/DialogsStrings.js</file>
-    </qresource>
-    <qresource prefix="/settings">
-        <file alias="settings.qml">modules/settings/view/settings.qml</file>
-        <file alias="SettingsPillar.qml">modules/settings/view/SettingsPillar.qml</file>
-        <file alias="strings/SettingsStrings.js">modules/settings/view/strings/SettingsStrings.js</file>
-    </qresource>
-    <qresource prefix="/histogram">
-        <file alias="histogram.qml">modules/histogram/view/histogram.qml</file>
-        <file alias="HistogramPillar.qml">modules/histogram/view/HistogramPillar.qml</file>
-        <file alias="strings/HistogramStrings.js">modules/histogram/view/strings/HistogramStrings.js</file>
-    </qresource>
-    <qresource prefix="/pacman">
-        <file alias="pacman.qml">modules/pacman/view/pacman.qml</file>
-        <file alias="PacmanPillar.qml">modules/pacman/view/PacmanPillar.qml</file>
-        <file alias="strings/PacmanStrings.js">modules/pacman/view/strings/PacmanStrings.js</file>
-        <file alias="PacmanRepositories.qml">modules/pacman/view/PacmanRepositories.qml</file>
-        <file alias="PacmanMyAurHelper.qml">modules/pacman/view/PacmanMyAurHelper.qml</file>
-        <file alias="PacmanLastUpdateTime.qml">modules/pacman/view/PacmanLastUpdateTime.qml</file>
-        <file alias="PacmanQueryFileDB.qml">modules/pacman/view/PacmanQueryFileDB.qml</file>
-        <file alias="PacmanUpdatePKGs.qml">modules/pacman/view/PacmanUpdatePKGs.qml</file>
-        <file alias="PacmanUpdateSize.qml">modules/pacman/view/PacmanUpdateSize.qml</file>
-        <file alias="PacmanSummary.qml">modules/pacman/view/PacmanSummary.qml</file>
-    </qresource>
-    <qresource prefix="/subFixer">
-        <file alias="subFixer.qml">modules/subFixer/view/subFixer.qml</file>
-        <file alias="SubFixerPillar.qml">modules/subFixer/view/SubFixerPillar.qml</file>
-        <file alias="strings/SubFixerString.js">modules/subFixer/view/strings/SubFixerStrings.js</file>
-    </qresource>
-    <qresource prefix="/deCreator">
-        <file alias="deCreator.qml">modules/deCreator/view/deCreator.qml</file>
-        <file alias="DeCreatorPillar.qml">modules/deCreator/view/DeCreatorPillar.qml</file>
-        <file alias="strings/DeCreatorStrings.js">modules/deCreator/view/strings/DeCreatorStrings.js</file>
-    </qresource>
-    <qresource prefix="/processes">
-        <file alias="processes.qml">modules/processes/view/processes.qml</file>
-    </qresource>
-    <qresource prefix="/services">
-        <file alias="services.qml">modules/services/view/services.qml</file>
-    </qresource>
-    <qresource prefix="/disks">
-        <file alias="disks.qml">modules/disks/view/disks.qml</file>
-    </qresource>
-    <qresource prefix="/environments">
-        <file alias="environments.qml">modules/environments/view/environments.qml</file>
-    </qresource>
-    <qresource prefix="/systemdAnalyze">
-        <file alias="systemdAnalyze.qml">modules/systemdAnalyze/view/systemdAnalyze.qml</file>
-    </qresource>
-    <qresource prefix="/ports">
-        <file alias="ports.qml">modules/ports/view/ports.qml</file>
+    <qresource prefix="/strings">
+        <file alias="SubFixerString.js">util/strings/SubTitleFixerStrings.js</file>
+        <file alias="PacmanStrings.js">util/strings/PacmanStrings.js</file>
+        <file alias="HistogramStrings.js">util/strings/HistogramStrings.js</file>
+        <file alias="SettingsStrings.js">util/strings/SettingsStrings.js</file>
+        <file alias="DesktopEntryCreatorStrings.js">util/strings/DesktopEntryCreatorStrings.js</file>
+        <file alias="DialogStrings.js">util/strings/DialogsStrings.js</file>
+        <file alias="CoreStrings.js">util/strings/CoreStrings.js</file>
+        <file alias="DashBoardStrings.js">util/strings/DashBoardStrings.js</file>
     </qresource>
 </RCC>

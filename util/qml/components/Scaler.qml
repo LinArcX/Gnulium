@@ -6,22 +6,30 @@ Item {
     property real initValue
     property real endValue
     property real mDuration
-    //    topPadding: 5
 
+    //    topPadding: 5
     states: [
         State {
             name: "normal"
-            PropertyChanges { target: mTarget; scale: initValue }
+            PropertyChanges {
+                target: mTarget
+                scale: initValue
+            }
         },
         State {
             name: "scale"
-            PropertyChanges { target: mTarget; scale: endValue }
+            PropertyChanges {
+                target: mTarget
+                scale: endValue
+            }
         }
     ]
 
     transitions: Transition {
         //RotationAnimation { duration: 100; direction: RotationAnimation.Counterclockwise; }
-        ScaleAnimator { duration: mDuration; }
+        ScaleAnimator {
+            duration: mDuration
+        }
     }
 
     MouseArea {
@@ -32,7 +40,7 @@ Item {
             mTarget.state = "scale"
             //console.log("scaled")
         }
-        onExited:{
+        onExited: {
             mTarget.state = "normal"
             //console.log("normal")
         }

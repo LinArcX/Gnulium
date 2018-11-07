@@ -1,83 +1,90 @@
-// app
-var appName = "Gnulium"
+// values
 var mOne = -1
+var rowSpacing = 5
 var appWidth = 640
 var appHeight = 480
 var tabViewMargin = 10
-var rowSpacing = 5
+var accordionWidth = 100
+var accordionHeight = 50
 
-// values-menu
-var gnulium = "Gnulium"
-var dashBoard = "DashBoard"
-var quit = "Quit"
+// fonts
+var fontVazir = "qrc:/fonts/Vazir.ttf"
+var fontAdele = "qrc:/fonts/Adele.ttf"
+var fontShabnam = "qrc:/fonts/Shabnam.ttf"
+var fontXmYekan = "qrc:/fonts/XmYekan.ttf"
+var fontAwesome = "qrc:/fonts/FontAwesome.ttf"
+var fontRadioSpace = "qrc:/fonts/RadioSpace.ttf"
+var fontCaviarDreams = "qrc:/fonts/CaviarDreams.ttf"
 
-var hardware = "Hardware"
-var memory = "Memory"
+// URLs
+var portsLink = "qrc:/pages/ports/ports.qml"
+var disksLink = "qrc:/pages/disks/disks.qml"
+var pacmanLink = "qrc:/pages/pacman/pacman.qml"
+var settingsLink = "qrc:/pages/settings/settings.qml"
+var servicesLink = "qrc:/pages/services/services.qml"
+var dashBoardLink = "qrc:/pages/dashBoard/DashBoard.qml"
+var histogramLink = "qrc:/pages/histogram/histogram.qml"
+var processesLink = "qrc:/pages/processes/processes.qml"
+var environmentsLink = "qrc:/pages/environments/environments.qml"
+var subTitleFixerLink = "qrc:/pages/subtitleFixer/subtitleFixer.qml"
+var systemdAnalyzeLink = "qrc:/pages/systemdAnalyze/systemdAnalyze.qml"
+var DesktopEntryCreatorLink = "qrc:/pages/desktopEntryCreator/desktopEntryCreator.qml"
 
-var distribiutions = "Distributions"
-var PackageManagers = "Package Managers"
+// colors
+var transparent = "transparent"
+var accordionBackGroundColor = "#424242"
+var accordionItemBackGroundColor = "#616161" //"#1B252f"
+var appColor = "white" //"#37474F"//"#546E7A"
+
+// labels
 var arch = "Arch"
-var pacman = "Pacman"
-
-var Utility = "Utility"
-var info = "Info"
-var scripts = "Scripts"
-var tvdoon = "TvDoon"
-var histogram = "Histogram"
-var subFixer = "Sub Fixer"
-var DesktopEntryCreator = "Desktop Entry Creator"
-var Processes = "Processes"
-var Services = "Services"
-var Disks = "Disks"
-var Environments = "Environments"
-var SystemdAnalyze = "SystemD Analyze"
-var OpenPorts = "Open Ports"
-
 var help = "Help"
-var aboutQT = "About Qt"
-var aboutGnulium = "About Gnulium"
-var settings = "Settings"
-
-// values-global
-var referesh = "Refresh"
 var save = "Save"
-var newDE = "New .desktop"
+var quit = "Quit"
+var info = "Info"
 var edit = "Edit"
+var Disks = "Disks"
+var pacman = "Pacman"
+var memory = "Memory"
+var tvdoon = "TvDoon"
+var Utility = "Utility"
+var gnulium = "Gnulium"
+var appName = "Gnulium"
+var scripts = "Scripts"
 var preview = "Preview"
+var referesh = "Refresh"
+var aboutQT = "About Qt"
+var hardware = "Hardware"
+var settings = "Settings"
 var defaults = "Defaults"
-
-// values-JS
+var Services = "Services"
+var subFixer = "Sub Fixer"
+var newDE = "New .desktop"
+var dashBoard = "DashBoard"
+var Processes = "Processes"
+var OpenPorts = "Open Ports"
 var firstRole = "firstRole"
-var secondRole = "secondRole"
+var histogram = "Histogram"
 var thirdRole = "thirdRole"
 var forthRole = "forthRole"
 var fifthRole = "fifthRole"
 var sixthRole = "sixthRole"
-
-// qml's
-var dashBoardLink = "qrc:/dashBoard/DashBoard.qml"
-var settingsLink = "qrc:/settings/settings.qml"
-var histogramLink = "qrc:/histogram/histogram.qml"
-var pacmanLink = "qrc:/pacman/pacman.qml"
-var subFixerLink = "qrc:/subFixer/subFixer.qml"
-var DesktopCreatorLink = "qrc:/deCreator/deCreator.qml"
-var processesLink = "qrc:/processes/processes.qml"
-var servicesLink = "qrc:/services/services.qml"
-var disksLink = "qrc:/disks/disks.qml"
-var environmentsLink = "qrc:/environments/environments.qml"
-var systemdAnalyzeLink = "qrc:/systemdAnalyze/systemdAnalyze.qml"
-var portsLink = "qrc:/ports/ports.qml"
+var secondRole = "secondRole"
+var Environments = "Environments"
+var aboutGnulium = "About Gnulium"
+var distribiutions = "Distributions"
+var SystemdAnalyze = "SystemD Analyze"
+var PackageManagers = "Package Managers"
+var DesktopEntryCreator = "Desktop Entry Creator"
 
 // images
 var imgGnu = "qrc:/images/gnu.png"
 var imgTux = "qrc:/images/tux.png"
-var imgGnulium = "qrc:/images/gnulium.svg"
-
-// images-menu
 var imgRam = "qrc:/images/ram.svg"
 var imgMan = "qrc:/images/man.svg"
 var imgBox = "qrc:/images/box.svg"
 var imgKey = "qrc:/images/key.svg"
+var imgAsk = "qrc:/images/ask.svg"
 var imgLock = "qrc:/images/lock.svg"
 var imgQT = "qrc:/images/qtLogo.png"
 var imgArch = "qrc:/images/arch.svg"
@@ -98,6 +105,7 @@ var imgBorder = "qrc:/images/border.png"
 var imgTvdoon = "qrc:/images/tvdoon.png"
 var imgPacman = "qrc:/images/pacman.png"
 var imgNvidia = "qrc:/images/nvidia.svg"
+var imgGnulium = "qrc:/images/gnulium.svg"
 var imgSummary = "qrc:/images/summary.svg"
 var imgComment = "qrc:/images/comment.svg"
 var imgCircuit = "qrc:/images/circuit.svg"
@@ -126,29 +134,13 @@ var imgRepository = "qrc:/images/repository.svg"
 var imgAlarmClock = "qrc:/images/alarmClock.svg"
 var imgInformation = "qrc:/images/information.svg"
 var imgAccumulator = "qrc:/images/accumulator.svg"
+var imgInternetInfo = "qrc:/images/internetInfo.svg"
 var imgDesktopEntry = "qrc:/images/desktopEntry.svg"
 var imgQuestionMark = "qrc:/images/questionMark.svg"
 
 // GIf's
-var gifPacman = "qrc:/images/gif/pacmanGIF.gif"
-var gifLoader = "qrc:/images/gif/loader.gif"
 var gifCirlo = "qrc:/images/gif/cirlo.gif"
-
-// fonts
-var fontVazir = "qrc:/fonts/Vazir.ttf"
-var fontAdele = "qrc:/fonts/Adele.ttf"
-var fontShabnam = "qrc:/fonts/Shabnam.ttf"
-var fontXmYekan = "qrc:/fonts/XmYekan.ttf"
-var fontAwesome = "qrc:/fonts/FontAwesome.ttf"
-var fontRadioSpace = "qrc:/fonts/RadioSpace.ttf"
-var fontCaviarDreams = "qrc:/fonts/CaviarDreams.ttf"
-
-// colors
-var transparent = "transparent"
-var accordionBackGroundColor = "#424242"
-var accordionItemBackGroundColor = "#616161" //"#1B252f"
-var appColor = "white"//"#37474F"//"#546E7A"
-
-// values
-var accordionWidth = 100
-var accordionHeight = 50
+var gifLoader = "qrc:/images/gif/loader.gif"
+var gifPacman = "qrc:/images/gif/pacman.gif"
+var gifEllipsis = "qrc:/images/gif/ellipsis.gif"
+var gifPacmanGif = "qrc:/images/gif/pacmanGIF.gif"

@@ -1,8 +1,9 @@
 import QtQuick 2.9
 import QtQuick.Controls 1.4
+
 import "qrc:/strings/CoreStrings.js" as CStr
 
-TableView{
+TableView {
     property string firstTitle
     property string secondTitle
     property string thirdTitle
@@ -17,36 +18,37 @@ TableView{
     property int fifthW
     property int sixthW
 
-    style: LinArcxTableViewStyle{}
+    style: LinArcxTableViewStyle {
+    }
 
-    TableViewColumn{
-        role: CStr.firstRole;
-        title: firstTitle;
-        width: firstW ? firstW : mParent.width / 6;
+    TableViewColumn {
+        role: CStr.firstRole
+        title: firstTitle
+        width: firstW ? firstW : mParent.width / 6
     }
-    TableViewColumn{
-        role: CStr.secondRole;
-        title: secondTitle;
-        width: secondW ? secondW : mParent.width / 6;
+    TableViewColumn {
+        role: CStr.secondRole
+        title: secondTitle
+        width: secondW ? secondW : mParent.width / 6
     }
-    TableViewColumn{
-        role: CStr.thirdRole;
-        title: thirdTitle;
-        width: thirdW ? thirdW : mParent.width / 6;
+    TableViewColumn {
+        role: CStr.thirdRole
+        title: thirdTitle
+        width: thirdW ? thirdW : mParent.width / 6
     }
-    TableViewColumn{
-        role: CStr.forthRole;
-        title: forthTitle;
-        width: forthW ? forthW : mParent.width / 6;
+    TableViewColumn {
+        role: CStr.forthRole
+        title: forthTitle
+        width: forthW ? forthW : mParent.width / 6
     }
-    TableViewColumn{
-        role: CStr.fifthRole;
-        title: fifthTitle;
-        width: fifthW ? fifthW : mParent.width / 6;
+    TableViewColumn {
+        role: CStr.fifthRole
+        title: fifthTitle
+        width: fifthW ? fifthW : mParent.width / 6
     }
-    TableViewColumn{
-        role: CStr.sixthRole;
-        title: sixthTitle;
-        width: sixthW ? sixthW : mParent.width / 6;
+    TableViewColumn {
+        role: CStr.sixthRole
+        title: sixthTitle
+        width: sixthW ? sixthW : mParent.width / 6
     }
 }

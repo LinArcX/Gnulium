@@ -43,17 +43,17 @@ Item {
         anchors.fill: parent
 
         onEntered: {
-            showTimer.start();
-            if (typeof mItem != 'undefined'){
-                mItem.color = enterColor;
+            showTimer.start()
+            if (typeof mItem != 'undefined') {
+                mItem.color = enterColor
             }
         }
 
         onExited: {
-            showToolTip = false;
-            showTimer.stop();
-            if (typeof mItem != 'undefined'){
-                mItem.color = exitColor;
+            showToolTip = false
+            showTimer.stop()
+            if (typeof mItem != 'undefined') {
+                mItem.color = exitColor
             }
         }
 
@@ -64,7 +64,7 @@ Item {
         id: showTimer
         interval: 250
         onTriggered: {
-            showToolTip = true;
+            showToolTip = true
         }
     }
 }

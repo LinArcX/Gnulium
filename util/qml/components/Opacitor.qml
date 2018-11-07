@@ -1,4 +1,5 @@
 import QtQuick 2.9
+
 Item {
     anchors.fill: parent
     property variant mTarget
@@ -12,7 +13,7 @@ Item {
         onEntered: {
             mTarget.opacity = endValue
         }
-        onExited:{
+        onExited: {
             mTarget.opacity = initValue
         }
     }
