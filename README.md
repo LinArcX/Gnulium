@@ -86,10 +86,5 @@ Github Repo:[https://github.com/LinArcX](https://github.com/LinArcX)
 
 E-Mail:linarcx@gmail.com
 
-
-## Special Thanks
-<img src="https://avatars.githubusercontent.com/esasharahi" width="48"> [esasharahi](https://github.com/esasharahi)
-
-
 ## License
 ![License](https://img.shields.io/github/license/LinArcX/Gnulium.svg?style=flat-square)
