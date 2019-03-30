@@ -28,8 +28,8 @@ public:
     Q_INVOKABLE void execNextUpdateList();
     Q_INVOKABLE void execRepoSummary();
     Q_INVOKABLE void execNextUpdateSize();
-    Q_INVOKABLE void execLastUpgradeTime();
     Q_INVOKABLE void execMyAurHelper();
+    Q_INVOKABLE void execLastUpgradeTime();
     Q_INVOKABLE void execQueryFileDB(QString file);
 
     void returnPackages();
@@ -45,6 +45,8 @@ public slots:
 signals:
     void modelReady(QVariantList model);
     void singleModelReady(QVariant singleModel);
+    void lastUpdateTimeReady(QVariant lastUpdateTime);
+    void myAurHelperReady(QVariant myAurHelper);
 
 private:
 };

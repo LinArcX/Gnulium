@@ -212,6 +212,22 @@ Rectangle {
                             }
                         }
                     }
+                    Item {
+                        width: mScrollView.width
+                        height: 50
+
+                        LinArcxAccordionItem {
+                            mTitle: CStr.packages
+                            mImage: CStr.imgPacman
+                        }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                pageLoader.source = CStr.pacmanPackagesLink
+                            }
+                        }
+                    }
                 }
             }
         }

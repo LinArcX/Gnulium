@@ -88,11 +88,27 @@ void Pacman::execLastUpgradeTime()
     pLastUpgradeTime->start("sh", QStringList() << "-c" << LAST_UPGRADE_TIME);
 }
 
+void Pacman::returnLastUpgradeTime()
+{
+    QString outPut = QString(pLastUpgradeTime->readAllStandardOutput());
+    QVariant parent;
+    parent = outPut.split("\n").first();
+    emit lastUpdateTimeReady(parent);
+}
+
 void Pacman::execMyAurHelper()
 {
     pMyAurHelper = new QProcess(this);
     connect(pMyAurHelper, &QProcess::readyReadStandardOutput, this, &Pacman::returnMyAurHelper);
     pMyAurHelper->start("sh", QStringList() << "-c" << MY_AUR_HELPER);
+}
+
+void Pacman::returnMyAurHelper()
+{
+    QString outPut = QString(pMyAurHelper->readAllStandardOutput());
+    QVariant parent;
+    parent = outPut.split("\n").first();
+    emit myAurHelperReady(parent);
 }
 
 void Pacman::execQueryFileDB(QString file)
@@ -132,22 +148,6 @@ void Pacman::returnRepoSummary()
 void Pacman::returnNextUpdateSize()
 {
     QString outPut = QString(pNextUpdateSize->readAllStandardOutput());
-    QVariant parent;
-    parent = outPut.split("\n").first();
-    emit singleModelReady(parent);
-}
-
-void Pacman::returnLastUpgradeTime()
-{
-    QString outPut = QString(pLastUpgradeTime->readAllStandardOutput());
-    QVariant parent;
-    parent = outPut.split("\n").first();
-    emit singleModelReady(parent);
-}
-
-void Pacman::returnMyAurHelper()
-{
-    QString outPut = QString(pMyAurHelper->readAllStandardOutput());
     QVariant parent;
     parent = outPut.split("\n").first();
     emit singleModelReady(parent);

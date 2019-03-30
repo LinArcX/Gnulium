@@ -137,7 +137,7 @@
         <file alias="pacman/pacman.qml">modules/pages/pacman/view/pacman.qml</file>
         <file alias="pacman/PacmanPillar.qml">modules/pages/pacman/view/PacmanPillar.qml</file>
         <file alias="pacman/PacmanRepositories.qml">modules/pages/pacman/view/PacmanRepositories.qml</file>
-        <file alias="pacman/PacmanMyAurHelper.qml">modules/pages/pacman/view/PacmanMyAurHelper.qml</file>
+        <file alias="pacman/PacmanPackages.qml">modules/pages/pacman/view/PacmanPackages.qml</file>
         <file alias="pacman/PacmanLastUpdateTime.qml">modules/pages/pacman/view/PacmanLastUpdateTime.qml</file>
         <file alias="pacman/PacmanQueryFileDB.qml">modules/pages/pacman/view/PacmanQueryFileDB.qml</file>
         <file alias="pacman/PacmanUpdatePKGs.qml">modules/pages/pacman/view/PacmanUpdatePKGs.qml</file>

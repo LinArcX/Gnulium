@@ -1,5 +1,5 @@
-QT += qml quick charts quickcontrols2 widgets
 ############### General ###############
+QT += qml quick charts quickcontrols2 widgets
 CONFIG += c++11
 
 VERSION = $$system(git log --pretty=format:'%h' -n 1)
