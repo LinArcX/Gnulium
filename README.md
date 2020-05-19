@@ -29,7 +29,7 @@ Gnulium is a Utility app that want to manage all users scripts in a new modern w
 ## Installation
 
 ### Arch
-1. if you have arch, life is easy:). just go to AUR: 
+1. if you have arch, life is easy:). just go to AUR:
 
     `packer -S gnulium-git`
 
@@ -48,43 +48,22 @@ Gnulium is a Utility app that want to manage all users scripts in a new modern w
 3. clone the repo:
 
     `git clone https://github.com/LinArcX/Gnulium/`
-    
+
 4. go to cloned directory and make the project with qmake build tools:
 
     `cd Gnulium`
-    
+
     `qmake`
-    
+
     `make`
-    
+
 5. run the application:
 
     `./gnulium`
 
-
-## Contributing
-![Open PR](https://img.shields.io/github/issues-pr-raw/LinArcX/Gnulium.svg?style=flat-square) ![Closed PR](https://img.shields.io/github/issues-pr-closed/LinArcX/Gnulium.svg?style=flat-square)
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-
-
-## Bugs
-![Open Issues](https://img.shields.io/github/issues-raw/LinArcX/Gnulium.svg?style=flat-square) ![Issues](https://img.shields.io/github/issues-closed-raw/LinArcX/Gnulium.svg?style=flat-square) 
-
-Bugs should be reported [here](https://github.com/LinArcX/Gnulium/issues) on the Github issues page.
-
-## VisitUs
-[bbs.archusers.ir](http://bbs.archusers.ir/index.php)
-
-
-## Credits
-LinArcX
-Github Repo:[https://github.com/LinArcX](https://github.com/LinArcX)
-
-E-Mail:linarcx@gmail.com
+## Donate
+- Monero: `48VdRG9BNePEcrUr6Vx6sJeVz6EefGq5e2F5S9YV2eJtd5uAwjJ7Afn6YeVTWsw6XGS6mXueLywEea3fBPztUbre2Lhia7e`
+<img src="donate/monero.png" align="center" />
 
 ## License
 ![License](https://img.shields.io/github/license/LinArcX/Gnulium.svg?style=flat-square)
